@@ -1,0 +1,246 @@
+@use "sass:math";
+
+@import "../vars/vars.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Montserrat;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: $site-width;
+  min-height: 100vh;
+  @include flex-vertical();
+  justify-content: space-between;
+  background-color: $color-background;
+  .top {
+    margin: 0 auto;
+    width: $site-width;
+    height: auto;
+    @include flex-vertical();
+    justify-content: flex-start;
+    flex-grow: 1;
+    header {
+      margin: 0 auto;
+      width: $site-width;
+      height: $header-height;
+      @include flex-vertical();
+      background-color: $color-background-dark;
+      .header-block {
+        margin: 0 auto;
+        width: $block-width;
+        height: $menu-height;
+        @include flex-horizontal();
+        justify-content: space-between;
+        &__logo {
+          margin: 0 auto;
+          height: 80%;
+          @include flex-vertical();
+        }
+        &__services {
+          margin: 0 auto;
+          height: inherit;
+          @include flex-horizontal();
+          &__service {
+            margin-left: 30px;
+            height: inherit;
+            cursor: pointer;
+          }
+          &__service:hover {
+            img {
+              background-color: $color-button-to-cart;
+            }
+          }
+        }
+        &__navigation {
+          margin: 0 auto;
+          height: $menu-height;
+          @include flex-horizontal();
+          &__nav-item {
+            margin: 0 auto;
+            margin-left: 30px;
+            height: inherit;
+            @include flex-horizontal();
+            &__text {
+              margin: 0 auto;
+              @include flex-vertical();
+              @include font-menu();
+              text-decoration: none;
+              cursor: pointer;
+              color: $color-white;
+            }
+            &__text:hover {
+              color: $color-button-to-cart;
+            }
+            .promo:hover {
+              color: $color-banner;
+            }
+            &__image {
+              margin: 0 auto;
+              margin-left: 10px;
+              height: 80%;
+            }
+            &__button {
+              margin: 0 auto;
+              margin-left: 10px;
+              @include flex-vertical();
+              @include font-mix();
+              text-decoration: none;
+              cursor: pointer;
+              color: $color-white;
+            }
+          }
+        }
+      }
+      main {
+        margin: 0 auto;
+        width: $site-width;
+        min-height: $slide-height + $input-height;
+        @include flex-vertical();
+        border: 1px solid violet;
+      }
+    }
+  }
+  footer {
+    margin: 0 auto;
+    width: $site-width;
+    height: $footer-height;
+    @include flex-vertical();
+    background-color: $color-background-dark;
+
+    .footer-top {
+      margin: 0 auto;
+      width: $block-width;
+      height: 70%;
+      @include flex-horizontal();
+      justify-content: space-between;
+      &__left {
+        margin: 0 auto;
+        width: 50%;
+        height: 100%;
+        @include flex-vertical();
+        &__box {
+          margin: 0 auto;
+          width: 100%;
+          @include flex-horizontal();
+          justify-content: space-between;
+          &__logo {
+            margin: 0 auto;
+            height: $menu-height;
+            @include flex-horizontal();
+            justify-content: flex-start;
+            img {
+              height: inherit;
+            }
+          }
+          &__navigation {
+            margin: 0 auto;
+            height: $menu-height;
+            @include flex-horizontal();
+            &__nav-item {
+              margin: 0 auto;
+              margin-left: 20px;
+              height: inherit;
+              @include flex-horizontal();
+              &__text {
+                margin: 0 auto;
+                @include flex-vertical();
+                @include font-menu();
+                text-decoration: none;
+                cursor: pointer;
+                color: $color-white;
+              }
+              &__text:hover {
+                color: $color-button-to-cart;
+              }
+              .last {
+                margin-right: 20px;
+              }
+            }
+          }
+        }
+      }
+      &__right {
+        margin: 0 auto;
+        width: 50%; // 0.5 * $block-width; // // 0.5 * $site-width;
+        height: 100%; // $footer-top-height;
+        @include flex-vertical();
+        &__box {
+          margin: 0 auto;
+          width: 100%;
+          @include flex-horizontal();
+          justify-content: flex-end;
+          &__contacts {
+            margin: 0 auto;
+            &__text {
+              margin: 0 auto;
+              margin-left: 20px;
+              @include font-menu();
+              text-decoration: none;
+              cursor: pointer;
+              color: $color-white;
+            }
+            .email:hover {
+              color: $color-button-to-cart;
+            }
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      margin: 0 auto;
+      width: $block-width;
+      height: 30%;
+      @include flex-horizontal();
+      justify-content: space-between;
+      &__left {
+        margin: 0 auto;
+        width: 50%;
+        height: 100%;
+        @include flex-vertical();
+        &__box {
+          margin: 0 auto;
+          width: 100%;
+          @include flex-horizontal();
+          justify-content: flex-start;
+          &__copyrights {
+            margin: 0 auto;
+            @include font-menu();
+            text-decoration: none;
+            color: $color-white;
+          }
+        }
+      }
+      &__right {
+        margin: 0 auto;
+        width: 50%;
+        height: 100%;
+        @include flex-vertical();
+        &__box {
+          margin: 0 auto;
+          width: 100%;
+          @include flex-horizontal();
+          justify-content: flex-end;
+          &__roles {
+            margin: 0 auto;
+            &__text {
+              margin: 0 auto;
+              margin-left: 20px;
+              @include font-menu();
+              text-decoration: none;
+              cursor: pointer;
+              color: $color-button-to-cart;
+            }
+            &__text:hover {
+              color: $color-banner;
+            }
+          }
+        }
+      }
+    }
+  }
+}

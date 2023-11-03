@@ -1,0 +1,202 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/font/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../assets/font/Montserrat-Black.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Montserrat;
+}
+
+footer {
+  margin: 0 auto;
+  width: 100%;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #040e1f;
+}
+footer .footer-top {
+  margin: 0 auto;
+  width: 93.75%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+footer .footer-top__left {
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+footer .footer-top__left__box {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+footer .footer-top__left__box__logo {
+  margin: 0 auto;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+footer .footer-top__left__box__logo img {
+  height: inherit;
+}
+footer .footer-top__left__box__navigation {
+  margin: 0 auto;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+footer .footer-top__left__box__navigation__nav-item {
+  margin: 0 auto;
+  margin-left: 20px;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+footer .footer-top__left__box__navigation__nav-item__text {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+footer .footer-top__left__box__navigation__nav-item__text:hover {
+  color: #fbd13e;
+}
+footer .footer-top__left__box__navigation__nav-item .last {
+  margin-right: 20px;
+}
+footer .footer-top__right {
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+footer .footer-top__right__box {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+footer .footer-top__right__box__contacts {
+  margin: 0 auto;
+}
+footer .footer-top__right__box__contacts__text {
+  margin: 0 auto;
+  margin-left: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+footer .footer-top__right__box__contacts .email:hover {
+  color: #fbd13e;
+}
+footer .footer-bottom {
+  margin: 0 auto;
+  width: 93.75%;
+  height: 30%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+footer .footer-bottom__left {
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+footer .footer-bottom__left__box {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+footer .footer-bottom__left__box__copyrights {
+  margin: 0 auto;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-decoration: none;
+  color: #ffffff;
+}
+footer .footer-bottom__right {
+  margin: 0 auto;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+footer .footer-bottom__right__box {
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+footer .footer-bottom__right__box__roles {
+  margin: 0 auto;
+}
+footer .footer-bottom__right__box__roles__text {
+  margin: 0 auto;
+  margin-left: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-decoration: none;
+  cursor: pointer;
+  color: #fbd13e;
+}
+footer .footer-bottom__right__box__roles__text:hover {
+  color: #b70000;
+}/*# sourceMappingURL=footer.css.map */
