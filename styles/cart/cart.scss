@@ -1,8 +1,35 @@
 @use "sass:math";
 
 @import "../vars/vars.scss";
+@import "../components/header/header.scss";
+@import "../components/footer/footer.scss";
 
 * {
   margin: 0;
   padding: 0;
+}
+body {
+  font-family: Montserrat;
+}
+.wrapper {
+  margin: 0 auto;
+  width: $site-width;
+  min-height: 100vh;
+  @include flex-vertical();
+  justify-content: space-between;
+  background-color: $color-background;
+  .top {
+    margin: 0 auto;
+    width: $site-width;
+    height: auto;
+    @include flex-vertical();
+    justify-content: flex-start;
+    flex-grow: 1;
+    header {
+      @include header();
+    }
+  }
+  footer {
+    @include footer();
+  }
 }
