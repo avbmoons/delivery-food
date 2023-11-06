@@ -5,17 +5,21 @@ $site-maket-width: 1600px;
 $site-height: 3321px;
 $block-maket-width: 1500px;
 $block-width: math.div($block-maket-width, $site-maket-width) * $site-width;
+$item-maket-width: 233px;
+$item-width: math.div($item-maket-width, $site-maket-width) * $site-width;
+
+$coeff: math.div($site-width, $site-maket-width);
 
 $header-height: 90px;
 $menu-height: 30px;
-$slide-width: 1170px;
-$slide-height: 680px;
+//$slide-width: 1170px; //* $coeff; // 1170px;
+$slide-height: 680px; //* $coeff; // 680px;
 $banner-width: 355px;
 $banner-height: 358px;
-$button-to-cart-width: 42px;
+$button-to-cart-size: 42px;
 $footer-height: 190px;
 $footer-top-height: 0.7 * $footer-height;
-$item-width: 233px;
+//$item-width: 233px;
 $item-height: 444px;
 $cart-item-height: 180px;
 $cart-button-height: 20px;
@@ -25,6 +29,9 @@ $crumbs-height: 20px;
 
 $color-black: #000000; //rgb(0,0,0)
 $color-white: #ffffff; //rgb(255,255,255)
+$color-grey-light: #f0f0f0; //rgb(240,240,240)
+$color-grey-middle: #b8b8b8; //rgb(184,184,184)
+$color-grey-dark: #7d7d7d; //rgb(125,125,125)
 $color-background: #051329; //rgb(5,19,41)
 $color-background-dark: #040e1f;
 $color-background-gradient: #09234e; //rgb(9,35,78)
@@ -58,7 +65,7 @@ $color-banner: #b70000; // rgb(183,0,0)
   letter-spacing: $letter-spacing;
 }
 @mixin head-1 {
-  @include text-font(80px, 600, 90px, 0%);
+  @include text-font(48px, 600, 90px, 0%); //  80px
 }
 @mixin head-2 {
   @include text-font(50px, 500, 55px, 0%);
@@ -73,7 +80,7 @@ $color-banner: #b70000; // rgb(183,0,0)
   @include text-font(24px, 800, 24px, 0%);
 }
 @mixin font-description {
-  @include text-font(14px, 500, 18px, 0%);
+  @include text-font(14px, 400, 18px, 0%);
 }
 @mixin font-info {
   @include text-font(26px, 500, 26px, 0%);
