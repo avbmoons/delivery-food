@@ -743,12 +743,13 @@ body {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  justify-content: space-between;
+  justify-content: flex-start;
   flex-wrap: wrap;
 }
 .wrapper .top main .catalog__block__item {
-  margin: 0 auto;
+  margin: 0;
   margin-top: 40px;
+  margin-left: 10px;
   width: 14.5625%;
   height: 444px;
   display: flex;

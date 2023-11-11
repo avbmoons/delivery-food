@@ -220,6 +220,7 @@ body {
       }
       .catalog {
         margin: 0 auto;
+        //margin: 0;
         width: 100%; // $block-width;
         min-height: $item-height;
         @include flex-vertical();
@@ -232,16 +233,18 @@ body {
           text-align: left;
           color: $color-white;
         }
-
         &__block {
           margin: 0 auto;
           width: 100%;
           @include flex-horizontal();
-          justify-content: space-between;
+          justify-content: flex-start; // space-between;
           flex-wrap: wrap;
+          //background-color: orange;
           &__item {
-            margin: 0 auto;
+            //margin: 0 auto;
+            margin: 0;
             margin-top: 40px;
+            margin-left: 10px;
             width: $item-width;
             height: $item-height;
             @include flex-vertical();

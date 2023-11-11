@@ -28,6 +28,390 @@ body {
     header {
       @include header();
     }
+    main {
+      margin: 0 auto;
+      width: $block-width;
+      min-height: $slide-height; //400px; //
+      @include flex-vertical();
+      justify-content: flex-start;
+      border: 1px solid orange;
+      .cart {
+        margin: 0 auto;
+        width: 100%; // $block-width;
+        min-height: $item-height;
+        @include flex-vertical();
+        justify-content: flex-start;
+        border: 1px solid yellowgreen;
+        &__heading {
+          margin: 0 auto;
+          width: 100%;
+          @include flex-horizontal();
+          justify-content: flex-start; // space-between;
+          &__text {
+            margin: 0; // 0 auto;
+            //margin-top: 40px;
+            width: auto; // 50%; // 100%; // $block-width;
+            @include head-1();
+            text-align: left;
+            color: $color-white;
+            border: 1px solid orange;
+          }
+          &__cart-counter {
+            margin: 0; // 0 auto;
+            margin-left: 20px;
+            width: auto; // 50%; // fit-content;
+            height: fit-content;
+            @include flex-horizontal();
+            //justify-content: flex-start;
+            text-align: center;
+            border: 1px solid orange;
+            &__value {
+              margin: 0 auto;
+              //width: auto; // fit-content;
+              height: fit-content;
+              @include text-font(28px, 700, 28px, 0);
+              text-align: right;
+              color: $color-button-to-cart;
+            }
+            &__label {
+              margin: 0 auto;
+              margin-left: 10px;
+              height: auto;
+              @include font-description();
+              line-height: 28px;
+              color: $color-button-to-cart;
+            }
+          }
+        }
+        .crumbs {
+          margin: 0;
+          max-width: $block-width;
+          @include flex-horizontal();
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          &__link {
+            margin-left: 10px;
+            text-decoration: none;
+            text-align: left;
+            @include font-menu();
+            color: $color-grey-middle;
+          }
+          &__link:hover {
+            text-decoration: underline;
+          }
+          &__link:first-child {
+            font-weight: 600;
+          }
+        }
+        &__titles {
+          margin: 0 auto;
+          margin-top: 40px;
+          width: 100%;
+          @include flex-horizontal();
+          justify-content: flex-end; // space-between;
+          border: 1px solid green;
+          &__point {
+            color: $color-white;
+          }
+          &__point:first-child {
+            width: 15%;
+            border: 1px solid yellow;
+          }
+          &__point:nth-child(2) {
+            width: 35%;
+            border: 1px solid yellow;
+          }
+          &__point:nth-child(3) {
+            width: 15%;
+            text-align: center;
+            border: 1px solid yellow;
+          }
+          &__point:nth-child(4) {
+            width: 15%;
+            text-align: center;
+            border: 1px solid yellow;
+          }
+          &__point:nth-child(5) {
+            width: 15%;
+            text-align: center;
+            border: 1px solid yellow;
+          }
+          &__point:last-child {
+            width: 5%;
+            border: 1px solid yellow;
+          }
+        }
+        &__block {
+          margin: 0 auto;
+          margin-top: 10px;
+          width: 100%;
+          min-height: $cart-item-height;
+          @include flex-horizontal();
+          justify-content: space-between;
+          background-color: $color-background-dark;
+          border: 1px solid green;
+          &__props {
+            margin: 0 auto;
+            //margin-left: 40px;
+            width: 100%; // 85%;
+            @include flex-vertical();
+            justify-content: center; // flex-start;
+            border: 1px solid blue;
+            &__item {
+              margin: 0 auto;
+              //margin-top: 20px;
+              //margin-bottom: 20px;
+              width: 100%;
+              @include flex-horizontal();
+              justify-content: space-between;
+              &__image {
+                margin: 0;
+                width: 15%;
+                @include flex-vertical();
+                border: 1px solid yellow;
+                img {
+                  width: $cart-item-height;
+                }
+              }
+              &__name-box {
+                margin: 0 auto;
+                width: 35%;
+                @include flex-vertical();
+                border: 1px solid orange;
+                &__name {
+                  @include font-mix();
+                  text-align: left;
+                  color: $color-white;
+                }
+                &__weight {
+                  @include font-description();
+                  text-align: left;
+                  color: $color-white;
+                }
+              }
+              &__price-box {
+                margin: 0 auto;
+                width: 15%;
+                height: inherit;
+                @include flex-vertical();
+                @include font-price();
+                color: $color-white;
+                border: 1px solid orange;
+                &__origin {
+                  @include text-font(18px, 400, 18px, 0%);
+                  font-style: italic;
+                  text-decoration: line-through;
+                  text-align: center;
+                  color: $color-grey-middle;
+                  display: none;
+                }
+                &__active {
+                  @include font-price();
+                  text-align: center;
+                  color: $color-white;
+                }
+              }
+              &__counter-box {
+                margin: 0 auto;
+                width: 15%;
+                height: inherit;
+                @include flex-vertical();
+                border: 1px solid orange;
+                .counter {
+                  margin: 0 auto;
+                  width: 75%;
+                  height: fit-content;
+                  vertical-align: middle;
+                  @include flex-horizontal();
+                  border: 1px solid orange;
+                  &__minus {
+                    width: 25%;
+                    @include font-mix();
+                    color: $color-white;
+                    background-color: $color-background-dark;
+                    cursor: pointer;
+                  }
+                  &__value {
+                    width: 50%;
+                    @include font-mix();
+                    text-align: center;
+                    color: $color-white;
+                    background-color: $color-background;
+                    border: none;
+                  }
+                  &__plus {
+                    width: 25%;
+                    @include font-mix();
+                    color: $color-white;
+                    background-color: $color-background-dark;
+                    cursor: pointer;
+                  }
+                }
+              }
+
+              &__total-box {
+                margin: 0 auto;
+                width: 15%;
+                height: inherit;
+                @include flex-vertical();
+                @include font-price();
+                color: $color-white;
+                border: 1px solid orange;
+                &__origin {
+                  @include text-font(18px, 400, 18px, 0%);
+                  font-style: italic;
+                  text-decoration: line-through;
+                  text-align: center;
+                  color: $color-grey-middle;
+                  display: none;
+                }
+                &__active {
+                  @include font-price();
+                  text-align: center;
+                  color: $color-white;
+                }
+              }
+              &__button-box {
+                margin: 0 auto;
+                width: 5%;
+                height: 100%; // $button-to-cart-size;
+                @include flex-vertical();
+                @include font-price();
+                color: $color-white;
+                border: 1px solid orange;
+                .button-delete {
+                  margin: 0 auto;
+                  padding: 0;
+                  width: $button-to-cart-size;
+                  height: $button-to-cart-size; // 100%;
+                  background-color: $color-background-dark;
+                  border: 1px solid orange;
+                  cursor: pointer;
+                }
+              }
+            }
+          }
+        }
+        &__promocode {
+          margin: 0 auto;
+          margin-top: 40px;
+          width: 100%;
+          min-height: $input-height;
+          @include flex-horizontal();
+          justify-content: flex-end;
+          border: 1px solid orange;
+          &__input {
+            margin: 0; // 0 auto;
+            width: 15%;
+            min-height: $input-height;
+            @include flex-vertical();
+            border: 1px solid green;
+            &__label {
+              @include font-description();
+              text-transform: uppercase;
+              color: $color-white;
+            }
+            &__field {
+              margin-top: 10px;
+              //padding-left: 20px;
+              width: 100%;
+              height: $input-height;
+              background-color: $color-grey-light;
+            }
+          }
+          &__button {
+            margin: 0; // 0 auto;
+            padding-left: 20px;
+            width: 20%;
+            min-height: $input-height;
+            @include flex-vertical();
+            justify-content: flex-end;
+            border: 1px solid blue;
+            &__apply {
+              width: 70%;
+              height: $input-height;
+              @include font-description();
+              color: $color-button-to-cart;
+              text-transform: uppercase;
+              background-color: $color-background-dark;
+              border: 1px solid $color-button-to-cart;
+            }
+          }
+        }
+        &__total {
+          margin: 0 auto;
+          margin-top: 40px;
+          width: 100%;
+          min-height: $input-height;
+          @include flex-horizontal();
+          justify-content: flex-end;
+          border: 1px solid yellowgreen;
+          &__block {
+            margin: 0;
+            width: 35%;
+            min-height: $input-height;
+            @include flex-vertical();
+            border: 1px solid orange;
+            &__input {
+              margin: 0;
+              width: auto; // 45%;
+              height: fit-content;
+              @include flex-horizontal();
+              justify-content: flex-start;
+              border: 1px solid green;
+              align-items: flex-end;
+              &__label {
+                margin-right: 20px;
+                @include font-description();
+                text-transform: uppercase;
+                color: $color-white;
+              }
+              &__value {
+                margin-top: 10px;
+                padding: 0;
+                //width: 100%;
+                height: fit-content;
+                @include font-price();
+                text-align: center;
+                background-color: $color-background;
+                color: $color-white;
+                border: none;
+                //border: 1px solid yellow;
+              }
+              &__currency {
+                margin-left: 10px;
+                @include font-price();
+                font-weight: 300;
+                color: $color-white;
+              }
+            }
+            &__button {
+              margin: 0; // 0 auto;
+              margin-top: 40px;
+              width: 100%;
+              min-height: $input-height;
+              //@include flex-vertical();
+              //justify-content: flex-end;
+              @include flex-horizontal();
+              justify-content: flex-start;
+              align-self: flex-start;
+              //align-items: flex-end;
+              border: 1px solid blue;
+              &__apply {
+                width: 150px; // 50%;
+                height: $input-height;
+                //align-items: flex-end;
+                @include font-description();
+                color: $color-button-to-cart;
+                text-transform: uppercase;
+                background-color: $color-background-dark;
+                border: 1px solid $color-button-to-cart;
+              }
+            }
+          }
+        }
+      }
+    }
   }
   footer {
     @include footer();

@@ -17,15 +17,21 @@ $slide-height: 680px; //* $coeff; // 680px;
 $banner-width: 355px;
 $banner-height: 358px;
 $button-to-cart-size: 42px;
+$button-confirm-maket-width: 234px;
+$button-confirm-width: math.div($button-confirm-maket-width, $site-maket-width) *
+  $site-width;
 $footer-height: 190px;
 $footer-top-height: 0.7 * $footer-height;
 //$item-width: 233px;
 $item-height: 444px;
-$cart-item-height: 180px;
+$item-order-height: 100px;
+$cart-item-height: 150px; // 180px;
 $cart-button-height: 20px;
 $input-height: 42px;
 $textarea-height: 96px;
 $crumbs-height: 20px;
+$payment-type-height: 130px;
+$payment-icon-height: 24px;
 
 $color-black: #000000; //rgb(0,0,0)
 $color-white: #ffffff; //rgb(255,255,255)
@@ -69,6 +75,9 @@ $color-banner: #b70000; // rgb(183,0,0)
 }
 @mixin head-2 {
   @include text-font(50px, 500, 55px, 0%);
+}
+@mixin head-3 {
+  @include text-font(26px, 500, 26px, 0%);
 }
 @mixin font-menu {
   @include text-font(12px, 500, 12px, 0%);

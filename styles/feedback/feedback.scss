@@ -14,7 +14,8 @@ body {
 .wrapper {
   margin: 0 auto;
   width: $site-width;
-  min-height: 100vh;
+  //min-height: 100vh;
+  height: 100vh;
   @include flex-vertical();
   justify-content: space-between;
   background-color: $color-background;
@@ -27,6 +28,151 @@ body {
     flex-grow: 1;
     header {
       @include header();
+    }
+    main {
+      margin: 0 auto;
+      width: $block-width;
+      min-height: $input-height; // 400px; //
+      @include flex-vertical();
+      justify-content: flex-start;
+      border: 1px solid orange;
+      .feedback {
+        margin: 0 auto;
+        width: 100%;
+        min-height: $input-height;
+        @include flex-horizontal();
+        justify-content: space-between;
+        border: 1px solid yellowgreen;
+        &__message {
+          margin: 0 auto;
+          width: 50%;
+          height: auto;
+          @include flex-vertical();
+          justify-content: flex-start;
+          border: 1px solid green;
+          &__heading {
+            margin: 0 auto;
+            //margin-top: 40px;
+            width: 100%; // $block-width;
+            @include head-1();
+            text-align: left;
+            color: $color-white;
+          }
+          .crumbs {
+            margin: 0;
+            max-width: $block-width;
+            @include flex-horizontal();
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            &__link {
+              margin-left: 10px;
+              text-decoration: none;
+              text-align: left;
+              @include font-menu();
+              color: $color-grey-middle;
+            }
+            &__link:hover {
+              text-decoration: underline;
+            }
+            &__link:first-child {
+              font-weight: 600;
+            }
+          }
+          &__form {
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 100%;
+            min-height: $textarea-height; // $input-height;
+            @include flex-vertical();
+            border: 1px solid green;
+            &__input {
+              margin: 0 auto; // 20px auto 0 50%;
+              margin-top: 20px;
+              width: 100%;
+              height: $textarea-height; // $input-height;
+              //@include flex-horizontal();
+              @include flex-vertical();
+              justify-content: flex-start; // space-between; // flex-end;
+              &__message {
+                margin-top: 20px;
+                padding-top: 10px;
+                width: 80%; // 50%;
+                height: $textarea-height; // $input-height;
+                @include font-menu();
+                color: $color-white;
+                border: none; // 1px solid blue;
+              }
+              &__useremail {
+                margin-top: 20px;
+                width: 60%; // 50%;
+                height: $input-height;
+                @include font-menu();
+                color: $color-white;
+                border: none; // 1px solid blue;
+              }
+              &__label {
+                width: 48%;
+                margin-right: 20px;
+                @include flex-vertical();
+                &__text {
+                  @include font-menu();
+                  text-align: left; // right;
+                  color: $color-white;
+                  text-transform: uppercase;
+                }
+              }
+            }
+            &__button {
+              margin: 0;
+              margin-top: 20px;
+              margin-bottom: 20px;
+              &__send {
+                width: 30%; // $button-confirm-maket-width;
+                height: $button-to-cart-size;
+                @include font-description();
+                font-weight: 700;
+                text-transform: uppercase;
+                color: $color-button-to-cart;
+                background-color: $color-background;
+                border: 1px solid $color-button-to-cart;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        &__decor {
+          margin: 0 auto;
+          width: 50%;
+          height: auto;
+          @include flex-vertical();
+          //justify-content: flex-end; // flex-start;
+          background-image: url(../../assets/images/bg-2.png);
+          background-size: 40%;
+          background-position: bottom;
+          background-repeat: no-repeat;
+          border: 1px solid blue;
+          &__block {
+            margin: auto; // 0; // 0 auto;
+            width: 100%;
+            height: auto;
+            @include flex-horizontal();
+            justify-content: flex-end;
+            border: 1px solid yellow;
+            // background-image: url(../../assets/images/bg-1.png);
+            // background-position: bottom;
+            // background-repeat: no-repeat;
+
+            &__image {
+              margin: auto 0; // 0 auto;
+              width: 30%; // 50%; // auto;
+              @include flex-horizontal();
+              justify-content: flex-end;
+              //height: 50%;
+              border: 1px solid orange;
+            }
+          }
+        }
+      }
     }
   }
   footer {
