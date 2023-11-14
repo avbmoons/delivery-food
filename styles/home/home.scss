@@ -147,7 +147,7 @@ body {
       .poster {
         margin: 0 auto;
         width: 100%;
-        height: $slide-height;
+        height: 80vh; // $slide-height;
         @include flex-horizontal();
         &__info {
           margin: 0 auto;
@@ -184,10 +184,11 @@ body {
         }
         &__slide {
           margin: 0 auto;
-          width: 75%;
+          width: auto; // 75%;
           height: inherit;
           @include flex-vertical();
           justify-content: flex-start;
+          //display: none; //////
           &__image {
             margin: 0 auto;
             width: 100%;
