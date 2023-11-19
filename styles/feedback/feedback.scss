@@ -14,7 +14,6 @@ body {
 .wrapper {
   margin: 0 auto;
   width: $site-width;
-  //min-height: 100vh;
   height: 100vh;
   @include flex-vertical();
   justify-content: space-between;
@@ -32,28 +31,24 @@ body {
     main {
       margin: 0 auto;
       width: $block-width;
-      min-height: $input-height; // 400px; //
+      min-height: $input-height;
       @include flex-vertical();
       justify-content: flex-start;
-      border: 1px solid orange;
       .feedback {
         margin: 0 auto;
         width: 100%;
         min-height: $input-height;
         @include flex-horizontal();
         justify-content: space-between;
-        border: 1px solid yellowgreen;
         &__message {
           margin: 0 auto;
           width: 50%;
           height: auto;
           @include flex-vertical();
           justify-content: flex-start;
-          border: 1px solid green;
           &__heading {
             margin: 0 auto;
-            //margin-top: 40px;
-            width: 100%; // $block-width;
+            width: 100%;
             @include head-1();
             text-align: left;
             color: $color-white;
@@ -82,33 +77,31 @@ body {
             margin: 0 auto;
             margin-top: 20px;
             width: 100%;
-            min-height: $textarea-height; // $input-height;
+            min-height: $textarea-height;
             @include flex-vertical();
-            border: 1px solid green;
             &__input {
-              margin: 0 auto; // 20px auto 0 50%;
+              margin: 0 auto;
               margin-top: 20px;
               width: 100%;
-              height: $textarea-height; // $input-height;
-              //@include flex-horizontal();
+              height: $textarea-height;
               @include flex-vertical();
-              justify-content: flex-start; // space-between; // flex-end;
+              justify-content: flex-start;
               &__message {
                 margin-top: 20px;
                 padding-top: 10px;
-                width: 80%; // 50%;
-                height: $textarea-height; // $input-height;
+                width: 80%;
+                height: $textarea-height;
                 @include font-menu();
                 color: $color-white;
-                border: none; // 1px solid blue;
+                border: none;
               }
               &__useremail {
                 margin-top: 20px;
-                width: 60%; // 50%;
+                width: 60%;
                 height: $input-height;
                 @include font-menu();
                 color: $color-white;
-                border: none; // 1px solid blue;
+                border: none;
               }
               &__label {
                 width: 48%;
@@ -116,7 +109,7 @@ body {
                 @include flex-vertical();
                 &__text {
                   @include font-menu();
-                  text-align: left; // right;
+                  text-align: left;
                   color: $color-white;
                   text-transform: uppercase;
                 }
@@ -127,7 +120,7 @@ body {
               margin-top: 20px;
               margin-bottom: 20px;
               &__send {
-                width: 30%; // $button-confirm-maket-width;
+                width: 30%;
                 height: $button-to-cart-size;
                 @include font-description();
                 font-weight: 700;
@@ -145,30 +138,21 @@ body {
           width: 50%;
           height: auto;
           @include flex-vertical();
-          //justify-content: flex-end; // flex-start;
           background-image: url(../../assets/images/bg-2.png);
           background-size: 40%;
           background-position: bottom;
           background-repeat: no-repeat;
-          border: 1px solid blue;
           &__block {
-            margin: auto; // 0; // 0 auto;
+            margin: auto;
             width: 100%;
             height: auto;
             @include flex-horizontal();
             justify-content: flex-end;
-            border: 1px solid yellow;
-            // background-image: url(../../assets/images/bg-1.png);
-            // background-position: bottom;
-            // background-repeat: no-repeat;
-
             &__image {
-              margin: auto 0; // 0 auto;
-              width: 30%; // 50%; // auto;
+              margin: auto 0;
+              width: 30%;
               @include flex-horizontal();
               justify-content: flex-end;
-              //height: 50%;
-              border: 1px solid orange;
             }
           }
         }

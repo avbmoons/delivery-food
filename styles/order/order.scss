@@ -31,28 +31,24 @@ body {
     main {
       margin: 0 auto;
       width: $block-width;
-      min-height: $slide-height; //400px; //
+      min-height: $slide-height;
       @include flex-vertical();
       justify-content: flex-start;
-      border: 1px solid orange;
       .order {
         margin: 0 auto;
         width: 100%;
         min-height: $input-height;
         @include flex-horizontal();
         justify-content: space-between;
-        border: 1px solid yellowgreen;
         &__checkout {
           margin: 0 auto;
           width: 50%;
           height: auto;
           @include flex-vertical();
           justify-content: flex-start;
-          border: 1px solid green;
           &__heading {
             margin: 0 auto;
-            //margin-top: 40px;
-            width: 100%; // $block-width;
+            width: 100%;
             @include head-1();
             text-align: left;
             color: $color-white;
@@ -84,7 +80,6 @@ body {
             min-height: $input-height;
             @include flex-vertical();
             justify-content: flex-start;
-            border: 1px solid violet;
             &__heading {
               margin: 0;
               @include head-3();
@@ -97,7 +92,6 @@ body {
               width: 100%;
               min-height: $input-height;
               @include flex-vertical();
-              border: 1px solid green;
               &__info {
                 margin: 0 auto 0 50%;
                 width: 50%;
@@ -105,42 +99,41 @@ body {
                 justify-content: flex-end;
                 @include font-menu();
                 color: $color-white;
-                border: 1px solid blue;
               }
               &__input {
-                margin: 0 auto; // 20px auto 0 50%;
+                margin: 0 auto;
                 margin-top: 20px;
                 width: 100%;
                 height: $input-height;
                 @include flex-horizontal();
-                justify-content: space-between; // flex-end;
+                justify-content: space-between;
                 &__username {
                   width: 50%;
                   height: $input-height;
                   @include font-menu();
                   color: $color-white;
-                  border: none; // 1px solid blue;
+                  border: none;
                 }
                 &__userphone {
                   width: 50%;
                   height: $input-height;
                   @include font-menu();
                   color: $color-white;
-                  border: none; // 1px solid blue;
+                  border: none;
                 }
                 &__useremail {
                   width: 50%;
                   height: $input-height;
                   @include font-menu();
                   color: $color-white;
-                  border: none; // 1px solid blue;
+                  border: none;
                 }
                 &__persons {
                   width: 15%;
                   height: $input-height;
                   @include font-menu();
                   color: $color-white;
-                  border: none; // 1px solid blue;
+                  border: none;
                 }
                 &__label {
                   width: 48%;
@@ -166,7 +159,6 @@ body {
             min-height: $input-height;
             @include flex-vertical();
             justify-content: flex-start;
-            border: 1px solid violet;
             &__heading {
               margin: 0;
               @include head-3();
@@ -180,25 +172,21 @@ body {
               height: 0.4 * $banner-height;
               @include flex-horizontal();
               justify-content: space-between;
-              border: 1px solid red;
               &__courier {
                 margin: 0 auto;
                 width: 45%;
-                //height: 0.5 * $banner-height; // auto; // 100%;
                 height: inherit;
                 @include flex-horizontal();
                 justify-content: space-between;
-                border: 1px dotted $color-button-to-cart;
+                border: 1px dotted $color-grey-middle;
                 @include font-menu();
                 color: $color-white;
-                border: 1px solid green;
                 &__text-box {
                   margin: 0;
                   width: 70%;
                   height: 100%;
                   @include flex-vertical();
                   justify-content: flex-start;
-                  border: 1px solid yellow;
                   &__link {
                     margin: 0;
                     margin-top: 20px;
@@ -208,7 +196,6 @@ body {
                     text-decoration: none;
                     color: $color-white;
                     cursor: pointer;
-                    //border: 1px solid yellow;
                   }
                   &__info {
                     margin: 0;
@@ -223,7 +210,6 @@ body {
                   height: 100%;
                   @include flex-vertical();
                   justify-content: flex-start;
-                  border: 1px solid yellowgreen;
                   &__price {
                     margin: 0 auto;
                     margin-top: 20px;
@@ -235,7 +221,6 @@ body {
                   }
                   &__plus {
                     margin: 0 auto;
-                    //margin-top: 20px;
                     width: $button-to-cart-size;
                     height: $button-to-cart-size;
                     @include font-mix();
@@ -246,24 +231,24 @@ body {
                   }
                 }
               }
+              &__courier:hover {
+                border-color: $color-button-to-cart;
+              }
               &__pickup {
                 margin: 0 auto;
                 width: 45%;
-                //height: 0.5 * $banner-height; // auto; // 100%;
                 height: inherit;
                 @include flex-horizontal();
                 justify-content: space-between;
-                border: 1px dotted $color-button-to-cart;
+                border: 1px dotted $color-grey-middle;
                 @include font-menu();
                 color: $color-white;
-                border: 1px solid green;
                 &__text-box {
                   margin: 0;
                   width: 70%;
                   height: 100%;
                   @include flex-vertical();
                   justify-content: flex-start;
-                  border: 1px solid yellow;
                   &__link {
                     margin: 0;
                     margin-top: 20px;
@@ -273,7 +258,6 @@ body {
                     text-decoration: none;
                     color: $color-white;
                     cursor: pointer;
-                    //border: 1px solid yellow;
                   }
                   &__info {
                     margin: 0;
@@ -288,7 +272,6 @@ body {
                   height: 100%;
                   @include flex-vertical();
                   justify-content: flex-start;
-                  border: 1px solid yellowgreen;
                   &__price {
                     margin: 0 auto;
                     margin-top: 20px;
@@ -300,7 +283,6 @@ body {
                   }
                   &__plus {
                     margin: 0 auto;
-                    //margin-top: 20px;
                     width: $button-to-cart-size;
                     height: $button-to-cart-size;
                     @include font-mix();
@@ -310,6 +292,9 @@ body {
                     cursor: pointer;
                   }
                 }
+              }
+              &__pickup:hover {
+                border-color: $color-button-to-cart;
               }
             }
             &__form {
@@ -318,7 +303,6 @@ body {
               width: 100%;
               min-height: $input-height;
               @include flex-vertical();
-              border: 1px solid green;
               &__info {
                 margin: 0 auto 0 50%;
                 width: 50%;
@@ -326,28 +310,27 @@ body {
                 justify-content: flex-start;
                 @include font-menu();
                 color: $color-white;
-                //border: 1px solid blue;
               }
               &__input {
-                margin: 0 auto; // 20px auto 0 50%;
+                margin: 0 auto;
                 margin-top: 20px;
                 width: 100%;
                 min-height: $input-height;
                 @include flex-horizontal();
-                justify-content: flex-end; // space-between; // flex-end;
+                justify-content: flex-end;
                 &__userlocality {
                   width: 50%;
                   height: $input-height;
                   @include font-menu();
                   color: $color-white;
-                  border: none; // 1px solid blue;
+                  border: none;
                 }
                 &__userstreet {
                   width: 50%;
                   height: $input-height;
                   @include font-menu();
                   color: $color-white;
-                  border: none; // 1px solid blue;
+                  border: none;
                 }
                 &__house-flat {
                   width: 50%;
@@ -355,24 +338,22 @@ body {
                   @include font-menu();
                   @include flex-horizontal();
                   justify-content: flex-end;
-                  //color: $color-white;
-                  //border: 1px solid orange;
                   &__userhouse {
-                    width: 50%; // 25%; //50%;
+                    width: 50%;
                     height: $input-height;
                     @include font-menu();
                     color: $color-white;
-                    border: none; // 1px solid green;
+                    border: none;
                   }
                   &__userflat {
-                    width: 50%; // 25%; // 50%;
+                    width: 50%;
                     height: $input-height;
                     @include font-menu();
                     color: $color-white;
-                    border: none; // 1px solid blue;
+                    border: none;
                   }
                   &__label {
-                    width: 48%; // 23%; //48%;
+                    width: 48%;
                     margin-right: 20px;
                     @include flex-vertical();
                     &__text {
@@ -389,7 +370,7 @@ body {
                   height: $textarea-height;
                   @include font-menu();
                   color: $color-white;
-                  border: none; // 1px solid blue;
+                  border: none;
                 }
                 &__label {
                   width: 48%;
@@ -415,7 +396,6 @@ body {
             min-height: $payment-type-height;
             @include flex-vertical();
             justify-content: flex-start;
-            border: 1px solid violet;
             &__heading {
               margin: 0;
               @include head-3();
@@ -435,17 +415,11 @@ body {
                 height: 60%;
                 @include flex-horizontal();
                 justify-content: flex-start;
-                border: 1px solid green;
                 input {
                   margin: auto 0;
                   width: 20px;
                   height: 20px;
-                  border: 1px solid orange;
                 }
-                // label {
-                //   margin-left: 20px;
-                //   color: $color-white;
-                // }
                 &__card-label {
                   margin: 0 auto;
                   margin-left: 20px;
@@ -453,22 +427,18 @@ body {
                   height: 100%;
                   @include flex-vertical();
                   justify-content: space-between;
-                  border: 1px solid orchid;
                   &__text {
-                    margin: 0; // 0 auto;
+                    margin: 0;
                     @include font-mix();
-                    //text-align: left;
                     color: $color-white;
                   }
                   .only {
-                    margin: auto 0; // 0 auto;
+                    margin: auto 0;
                     @include font-mix();
-                    //text-align: left;
                     color: $color-white;
                   }
                   &__images {
                     margin: 0 auto;
-                    //width: 80%;
                     @include flex-horizontal();
                     justify-content: space-between;
                     img {
@@ -501,11 +471,10 @@ body {
         }
         &__cart {
           margin: 0 auto;
-          width: 50%;
+          width: 48%;
           height: auto;
           @include flex-vertical();
           justify-content: flex-start;
-          border: 1px solid blue;
           &__block {
             margin: 0 auto;
             margin-top: 10px;
@@ -514,14 +483,12 @@ body {
             @include flex-horizontal();
             justify-content: space-between;
             background-color: $color-background-dark;
-            border: 1px solid green;
             &__props {
               margin: 0 auto;
-              width: 100%; // 85%;
+              width: 100%;
               min-height: $item-order-height;
               @include flex-vertical();
-              justify-content: center; // flex-start;
-              border: 1px solid blue;
+              justify-content: center;
               &__item {
                 margin: 0 auto;
                 width: 100%;
@@ -531,16 +498,14 @@ body {
                   margin: 0;
                   width: 15%;
                   @include flex-vertical();
-                  border: 1px solid yellow;
                   img {
                     width: $item-order-height;
                   }
                 }
                 &__name-box {
                   margin: 0 auto;
-                  width: 40%; // 35%;
+                  width: 40%;
                   @include flex-vertical();
-                  border: 1px solid orange;
                   &__name {
                     @include font-mix();
                     text-align: left;
@@ -557,14 +522,12 @@ body {
                   width: 15%;
                   height: inherit;
                   @include flex-vertical();
-                  border: 1px solid orange;
                   .counter {
                     margin: 0 auto;
                     width: 75%;
                     height: fit-content;
                     vertical-align: middle;
                     @include flex-horizontal();
-                    border: 1px solid orange;
                     &__minus {
                       width: 25%;
                       @include font-mix();
@@ -594,12 +557,11 @@ body {
 
                 &__total-box {
                   margin: 0 auto;
-                  width: 20%; // 15%;
+                  width: 20%;
                   height: inherit;
                   @include flex-vertical();
                   @include font-price();
                   color: $color-white;
-                  border: 1px solid orange;
                   &__origin {
                     @include text-font(18px, 400, 18px, 0%);
                     font-style: italic;
@@ -621,24 +583,20 @@ body {
             margin: 0 auto;
             margin-top: 40px;
             width: 100%;
-            //min-height: $input-height;
             height: $item-order-height;
             @include flex-horizontal();
             justify-content: flex-end;
-            border: 1px solid yellowgreen;
             &__block {
               margin: 0;
               width: 35%;
               height: $item-order-height;
               @include flex-vertical();
-              border: 1px solid orange;
               &__input {
                 margin: 0;
-                width: auto; // 45%;
+                width: auto;
                 height: fit-content;
                 @include flex-horizontal();
                 justify-content: flex-start;
-                border: 1px solid green;
                 align-items: flex-end;
                 &__label {
                   margin-right: 20px;
@@ -649,14 +607,12 @@ body {
                 &__value {
                   margin-top: 10px;
                   padding: 0;
-                  //width: 100%;
                   height: fit-content;
                   @include font-price();
                   text-align: center;
                   background-color: $color-background;
                   color: $color-white;
                   border: none;
-                  //border: 1px solid yellow;
                 }
                 &__currency {
                   margin-left: 10px;

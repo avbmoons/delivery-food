@@ -554,7 +554,6 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  border: 1px solid orange;
 }
 .wrapper .top main .product {
   margin: 0 auto;
@@ -565,7 +564,6 @@ body {
   justify-content: center;
   box-sizing: border-box;
   justify-content: flex-start;
-  border: 1px solid yellowgreen;
 }
 .wrapper .top main .product__heading {
   margin: 0 auto;
@@ -612,7 +610,6 @@ body {
   box-sizing: border-box;
   justify-content: space-between;
   background-color: #040e1f;
-  border: 1px solid green;
 }
 .wrapper .top main .product__block__image {
   margin: 0;
@@ -634,7 +631,6 @@ body {
   justify-content: center;
   box-sizing: border-box;
   justify-content: flex-start;
-  border: 1px solid blue;
 }
 .wrapper .top main .product__block__parts__heading {
   margin: 0 auto;
@@ -661,7 +657,6 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  border: 1px solid orange;
 }
 .wrapper .top main .product__block__parts__component__name-box__name {
   font-size: 20px;
@@ -685,7 +680,6 @@ body {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
-  border: 1px solid orange;
 }
 .wrapper .top main .product__block__parts__component .counter__minus {
   width: 25%;
@@ -726,7 +720,6 @@ body {
   justify-content: center;
   box-sizing: border-box;
   justify-content: flex-end;
-  border: 1px solid orange;
 }
 .wrapper .top main .product__block__parts__component .shopping-box__price-box {
   margin: 0 auto;
@@ -818,7 +811,6 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  border: 1px solid orange;
 }
 .wrapper .top main .catalog__heading {
   margin: 0 auto;
@@ -852,7 +844,6 @@ body {
   box-sizing: border-box;
   justify-content: space-between;
   background-color: #040e1f;
-  border: 1px solid green;
 }
 .wrapper .top main .catalog__block__item__image {
   margin: 0 auto;
@@ -861,7 +852,6 @@ body {
   box-sizing: border-box;
   width: 100%;
   height: auto;
-  border: 1px solid blue;
 }
 .wrapper .top main .catalog__block__item__image img {
   width: 100%;

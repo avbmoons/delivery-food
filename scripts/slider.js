@@ -3,14 +3,14 @@ showSlides();
 
 function showSlides() {
   var i;
-  var slides = document.getElementsByClassName("poster__slide");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+  var slider = document.getElementsByClassName("poster__slide");
+  for (i = 0; i < slider.length; i++) {
+    slider[i].style.display = "none";
   }
   slideIndex++;
-  if (slideIndex > slides.length) {
+  if (slideIndex > slider.length) {
     slideIndex = 1;
   }
-  slides[slideIndex - 1].style.display = "block";
+  slider[slideIndex - 1].style.display = "block";
   setTimeout(showSlides, 5000);
 }

@@ -31,19 +31,17 @@ body {
     main {
       margin: 0 auto;
       width: $block-width;
-      min-height: $slide-height; //400px; //
+      min-height: $slide-height;
       @include flex-vertical();
-      border: 1px solid orange;
       .catalog {
         margin: 0 auto;
-        width: 100%; // $block-width;
+        width: 100%;
         min-height: $item-height;
         @include flex-vertical();
-        border: 1px solid orange;
         &__heading {
           margin: 0 auto;
           margin-top: 40px;
-          width: 100%; // $block-width;
+          width: 100%;
           @include head-1();
           text-align: left;
           color: $color-white;
@@ -75,20 +73,18 @@ body {
           justify-content: space-between;
           flex-wrap: wrap;
           &__item {
-            margin: 0 auto;
+            margin: 0;
             margin-top: 40px;
             width: $item-width;
             height: $item-height;
             @include flex-vertical();
             justify-content: space-between;
             background-color: $color-background-dark;
-            border: 1px solid green;
             &__image {
               margin: 0 auto;
               @include flex-horizontal();
               width: 100%;
               height: auto;
-              border: 1px solid blue;
               img {
                 width: 100%;
               }
@@ -134,7 +130,7 @@ body {
               }
               &__button-box {
                 width: 50%;
-                height: 100%; // $button-to-cart-size;
+                height: 100%;
                 @include flex-vertical();
                 @include font-price();
                 color: $color-white;

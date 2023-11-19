@@ -69,8 +69,8 @@ body {
     }
     &__right {
       margin: 0 auto;
-      width: 50%; // 0.5 * $block-width; // // 0.5 * $site-width;
-      height: 100%; // $footer-top-height;
+      width: 50%;
+      height: 100%;
       @include flex-vertical();
       &__box {
         margin: 0 auto;

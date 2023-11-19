@@ -12,8 +12,7 @@ $coeff: math.div($site-width, $site-maket-width);
 
 $header-height: 90px;
 $menu-height: 30px;
-//$slide-width: 1170px; //* $coeff; // 1170px;
-$slide-height: 680px; //* $coeff; // 680px;
+$slide-height: 680px;
 $banner-width: 355px;
 $banner-height: 358px;
 $button-to-cart-size: 42px;
@@ -22,7 +21,6 @@ $button-confirm-width: math.div($button-confirm-maket-width, $site-maket-width) 
   $site-width;
 $footer-height: 190px;
 $footer-top-height: 0.7 * $footer-height;
-//$item-width: 233px;
 $item-height: 444px;
 $item-order-height: 100px;
 $cart-item-height: 150px; // 180px;

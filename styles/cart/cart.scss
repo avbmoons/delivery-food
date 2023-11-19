@@ -31,43 +31,36 @@ body {
     main {
       margin: 0 auto;
       width: $block-width;
-      min-height: $slide-height; //400px; //
+      min-height: $slide-height;
       @include flex-vertical();
       justify-content: flex-start;
-      border: 1px solid orange;
       .cart {
         margin: 0 auto;
-        width: 100%; // $block-width;
+        width: 100%;
         min-height: $item-height;
         @include flex-vertical();
         justify-content: flex-start;
-        border: 1px solid yellowgreen;
         &__heading {
           margin: 0 auto;
           width: 100%;
           @include flex-horizontal();
-          justify-content: flex-start; // space-between;
+          justify-content: flex-start;
           &__text {
-            margin: 0; // 0 auto;
-            //margin-top: 40px;
-            width: auto; // 50%; // 100%; // $block-width;
+            margin: 0;
+            width: auto;
             @include head-1();
             text-align: left;
             color: $color-white;
-            border: 1px solid orange;
           }
           &__cart-counter {
-            margin: 0; // 0 auto;
+            margin: 0;
             margin-left: 20px;
-            width: auto; // 50%; // fit-content;
+            width: auto;
             height: fit-content;
             @include flex-horizontal();
-            //justify-content: flex-start;
             text-align: center;
-            border: 1px solid orange;
             &__value {
               margin: 0 auto;
-              //width: auto; // fit-content;
               height: fit-content;
               @include text-font(28px, 700, 28px, 0);
               text-align: right;
@@ -108,37 +101,30 @@ body {
           margin-top: 40px;
           width: 100%;
           @include flex-horizontal();
-          justify-content: flex-end; // space-between;
-          border: 1px solid green;
+          justify-content: flex-end;
           &__point {
             color: $color-white;
           }
           &__point:first-child {
             width: 15%;
-            border: 1px solid yellow;
           }
           &__point:nth-child(2) {
             width: 35%;
-            border: 1px solid yellow;
           }
           &__point:nth-child(3) {
             width: 15%;
             text-align: center;
-            border: 1px solid yellow;
           }
           &__point:nth-child(4) {
             width: 15%;
             text-align: center;
-            border: 1px solid yellow;
           }
           &__point:nth-child(5) {
             width: 15%;
             text-align: center;
-            border: 1px solid yellow;
           }
           &__point:last-child {
             width: 5%;
-            border: 1px solid yellow;
           }
         }
         &__block {
@@ -149,18 +135,13 @@ body {
           @include flex-horizontal();
           justify-content: space-between;
           background-color: $color-background-dark;
-          border: 1px solid green;
           &__props {
             margin: 0 auto;
-            //margin-left: 40px;
-            width: 100%; // 85%;
+            width: 100%;
             @include flex-vertical();
-            justify-content: center; // flex-start;
-            border: 1px solid blue;
+            justify-content: center;
             &__item {
               margin: 0 auto;
-              //margin-top: 20px;
-              //margin-bottom: 20px;
               width: 100%;
               @include flex-horizontal();
               justify-content: space-between;
@@ -168,7 +149,6 @@ body {
                 margin: 0;
                 width: 15%;
                 @include flex-vertical();
-                border: 1px solid yellow;
                 img {
                   width: $cart-item-height;
                 }
@@ -177,7 +157,6 @@ body {
                 margin: 0 auto;
                 width: 35%;
                 @include flex-vertical();
-                border: 1px solid orange;
                 &__name {
                   @include font-mix();
                   text-align: left;
@@ -196,7 +175,6 @@ body {
                 @include flex-vertical();
                 @include font-price();
                 color: $color-white;
-                border: 1px solid orange;
                 &__origin {
                   @include text-font(18px, 400, 18px, 0%);
                   font-style: italic;
@@ -216,14 +194,12 @@ body {
                 width: 15%;
                 height: inherit;
                 @include flex-vertical();
-                border: 1px solid orange;
                 .counter {
                   margin: 0 auto;
                   width: 75%;
                   height: fit-content;
                   vertical-align: middle;
                   @include flex-horizontal();
-                  border: 1px solid orange;
                   &__minus {
                     width: 25%;
                     @include font-mix();
@@ -256,7 +232,6 @@ body {
                 @include flex-vertical();
                 @include font-price();
                 color: $color-white;
-                border: 1px solid orange;
                 &__origin {
                   @include text-font(18px, 400, 18px, 0%);
                   font-style: italic;
@@ -274,18 +249,16 @@ body {
               &__button-box {
                 margin: 0 auto;
                 width: 5%;
-                height: 100%; // $button-to-cart-size;
+                height: 100%;
                 @include flex-vertical();
                 @include font-price();
                 color: $color-white;
-                border: 1px solid orange;
                 .button-delete {
                   margin: 0 auto;
                   padding: 0;
                   width: $button-to-cart-size;
-                  height: $button-to-cart-size; // 100%;
+                  height: $button-to-cart-size;
                   background-color: $color-background-dark;
-                  border: 1px solid orange;
                   cursor: pointer;
                 }
               }
@@ -299,13 +272,11 @@ body {
           min-height: $input-height;
           @include flex-horizontal();
           justify-content: flex-end;
-          border: 1px solid orange;
           &__input {
-            margin: 0; // 0 auto;
+            margin: 0;
             width: 15%;
             min-height: $input-height;
             @include flex-vertical();
-            border: 1px solid green;
             &__label {
               @include font-description();
               text-transform: uppercase;
@@ -313,20 +284,18 @@ body {
             }
             &__field {
               margin-top: 10px;
-              //padding-left: 20px;
               width: 100%;
               height: $input-height;
               background-color: $color-grey-light;
             }
           }
           &__button {
-            margin: 0; // 0 auto;
+            margin: 0;
             padding-left: 20px;
             width: 20%;
             min-height: $input-height;
             @include flex-vertical();
             justify-content: flex-end;
-            border: 1px solid blue;
             &__apply {
               width: 70%;
               height: $input-height;
@@ -345,20 +314,17 @@ body {
           min-height: $input-height;
           @include flex-horizontal();
           justify-content: flex-end;
-          border: 1px solid yellowgreen;
           &__block {
             margin: 0;
             width: 35%;
             min-height: $input-height;
             @include flex-vertical();
-            border: 1px solid orange;
             &__input {
               margin: 0;
-              width: auto; // 45%;
+              width: auto;
               height: fit-content;
               @include flex-horizontal();
               justify-content: flex-start;
-              border: 1px solid green;
               align-items: flex-end;
               &__label {
                 margin-right: 20px;
@@ -369,14 +335,12 @@ body {
               &__value {
                 margin-top: 10px;
                 padding: 0;
-                //width: 100%;
                 height: fit-content;
                 @include font-price();
                 text-align: center;
                 background-color: $color-background;
                 color: $color-white;
                 border: none;
-                //border: 1px solid yellow;
               }
               &__currency {
                 margin-left: 10px;
@@ -386,21 +350,16 @@ body {
               }
             }
             &__button {
-              margin: 0; // 0 auto;
+              margin: 0;
               margin-top: 40px;
               width: 100%;
               min-height: $input-height;
-              //@include flex-vertical();
-              //justify-content: flex-end;
               @include flex-horizontal();
               justify-content: flex-start;
               align-self: flex-start;
-              //align-items: flex-end;
-              border: 1px solid blue;
               &__apply {
-                width: 150px; // 50%;
+                width: 150px;
                 height: $input-height;
-                //align-items: flex-end;
                 @include font-description();
                 color: $color-button-to-cart;
                 text-transform: uppercase;
