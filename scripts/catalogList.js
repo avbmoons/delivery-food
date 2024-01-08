@@ -31,23 +31,26 @@ class CatalogItem {
     this.isVegan = isVegan;
   }
   render() {
-    return `<div class="catalog__block__item">
-    <div class="catalog__block__item__image">
-      <img src="${this.image}" alt="item" />
+    return `<div class="item-box">
+    <div class="item-box__image">
+      <img
+        src="${this.image}"
+        id="image-${this.id}"
+        alt="item"
+        title="${this.name}"
+      />
     </div>
-    <a class="catalog__block__item__heading" href="#"
-      >${this.name}</a
-    >
-    <p class="catalog__block__item__weight">${this.weight}&nbsp;${this.units}</p>
-    <p class="catalog__block__item__text">${this.resume}</p>
-    <div class="catalog__block__item__shopping-box">
-      <div class="catalog__block__item__shopping-box__price-box">
-        <p class="catalog__block__item__shopping-box__price-box__origin"
-        >${this.priceOrigin}&nbsp;${this.currency}</p>
-        <p class="catalog__block__item__shopping-box__price-box__active"
-        >${this.priceActive}&nbsp;${this.currency}</p>
+    <p class="item-box__heading" href="#">${this.name}</p>
+    <p class="item-box__weight">${this.weight}&nbsp;${this.units}</p>
+    <p class="item-box__text">${this.resume}</p>
+    <div class="item-box__shopping-box">
+      <div class="item-box__shopping-box__price-box">
+        <p class="item-box__shopping-box__price-box__origin">
+          ${this.priceOrigin}&nbsp;${this.currency}</p>
+        <p class="item-box__shopping-box__price-box__active">
+          ${this.priceActive}&nbsp;${this.currency}</p>
       </div>
-      <div class="catalog__block__item__shopping-box__button-box">
+      <div class="item-box__shopping-box__button-box">
         <button class="to-cart">
           <img src="../assets/icons/cart.png" alt="to-cart" />
         </button>

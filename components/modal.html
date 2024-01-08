@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modal</title>
+    <link rel="stylesheet" href="../styles/components/modal/modal.css" />
+    <script defer src="../scripts/modal.js"></script>
+  </head>
+  <body>
+    <section class="modal" id="modal">
+      <div class="modal__block" id="modal__block">
+        <button class="modal__block__close" id="modalClose">
+          &#10006;
+        </button>
+        <div class="modal__block__items">
+          <div data-id="1" class="product">
+            <div class="product__image-box" id="productImage">
+              <img
+                class="product__image-box__image"
+                id="product-1"
+                src="../assets/catalog/image-3.png"
+                alt="photo"
+              />
+            </div>
+            <div class="product__text-box">
+              <div class="product__text-box__heading" id="productTitle">
+                <p class="product-title">Khinkali traditional</p>
+              </div>
+              <div class="product__text-box__weight" id="productWeight">
+                <p class="product-weight">110&nbsp;g</p>
+              </div>
+              <div class="product__text-box__resume" id="productResume">
+                <p class="product-resume">
+                  Beef, greens, onion, garlic; min. 5 units for order
+                </p>
+              </div>
+              <div class="product__text-box__price-box" id="productPrice">
+                <p class="product-price-origin" id="priceOrigin">
+                  1.6&nbsp;&euro;
+                </p>
+                <p class="product-price-active" id="priceActive">
+                  1.4&nbsp;&euro;
+                </p>
+              </div>
+              <div class="product__text-box__button-box">
+                <!-- <a class="to-product-page" href="#">More details...</a> -->
+                <button class="to-cart">Add to cart</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+  </body>
+</html>
