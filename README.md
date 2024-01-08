@@ -1,2 +1,2 @@
 # delivery-food
-the layout for food-delivery site
+the front part for food-delivery site
