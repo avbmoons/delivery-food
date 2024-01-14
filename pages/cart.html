@@ -5,91 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cart</title>
     <link rel="stylesheet" href="../styles/cart/cart.css" />
+    <script defer src="../data/catalog.js"></script>
     <script src="../scripts/toOrder.js"></script>
+    <script defer src="../scripts/counter.js"></script>
+    <script defer src="../scripts/showCart.js"></script>
+    <script defer src="../scripts/cartList.js"></script>
   </head>
   <body>
     <div class="wrapper">
       <div class="top">
         <header>
           <div id="headerin" class="header-block">
-            <section>
-              <div class="header-block__logo">
+            <section class="header-block__logo">
+              <div class="logo-box">
                 <a href="../index.html"
                   ><img src="../assets/logo/logo2.png" alt="logo"
                 /></a>
               </div>
             </section>
-            <nav>
-              <div class="header-block__navigation">
-                <div class="header-block__navigation__nav-item">
-                  <a
-                    class="header-block__navigation__nav-item__text promo"
-                    href="#"
-                    >PROMO</a
-                  >
+            <nav class="header-block__navigation">
+              <div class="nav-box">
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#">PROMO</a>
+                  </div>
                   <img
-                    class="header-block__navigation__nav-item__image"
+                    class="nav-item__image"
                     src="../assets/icons/fire.svg"
                     alt="promo"
                   />
                 </div>
-                <div class="header-block__navigation__nav-item">
-                  <a
-                    class="header-block__navigation__nav-item__text"
-                    href="../pages/catalog.html"
-                    target="_blank"
-                    title="Catalog"
-                    >ALL&nbsp;DISHES</a
-                  >
-                </div>
-                <div class="header-block__navigation__nav-item">
-                  <a class="header-block__navigation__nav-item__text" href="#"
-                    >HOTS</a
-                  >
-                  <div class="header-block__navigation__nav-item__button-box">
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
                     <a
-                      class="header-block__navigation__nav-item__button-box__button"
-                      href="#"
-                      >&#9660;</a
+                      class="nav-item__button-box__button"
+                      href="../pages/catalog.html"
+                      >ALL&nbsp;DISHES</a
                     >
-                    <div
-                      class="header-block__navigation__nav-item__button-box__content"
-                    >
-                      <ul
-                        class="header-block__navigation__nav-item__button-box__content__list"
-                      >
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#">VEGAN</a>
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#">HOTS</a>
+                    <div class="nav-item__button-box__content">
+                      <ul class="nav-item__button-box__content__list">
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Meat</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Fish</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Vegetables</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Vegan</a
                           >
@@ -98,54 +86,35 @@
                     </div>
                   </div>
                 </div>
-                <div class="header-block__navigation__nav-item">
-                  <a class="header-block__navigation__nav-item__text" href="#"
-                    >COLDS</a
-                  >
-                  <div class="header-block__navigation__nav-item__button-box">
-                    <a
-                      class="header-block__navigation__nav-item__button-box__button"
-                      href="#"
-                      >&#9660;</a
-                    >
-                    <div
-                      class="header-block__navigation__nav-item__button-box__content"
-                    >
-                      <ul
-                        class="header-block__navigation__nav-item__button-box__content__list"
-                      >
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#">COLDS</a>
+                    <div class="nav-item__button-box__content">
+                      <ul class="nav-item__button-box__content__list">
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Meat</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Fish</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Vegetables</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Vegan</a
                           >
@@ -154,54 +123,35 @@
                     </div>
                   </div>
                 </div>
-                <div class="header-block__navigation__nav-item">
-                  <a class="header-block__navigation__nav-item__text" href="#"
-                    >BAKERY</a
-                  >
-                  <div class="header-block__navigation__nav-item__button-box">
-                    <a
-                      class="header-block__navigation__nav-item__button-box__button"
-                      href="#"
-                      >&#9660;</a
-                    >
-                    <div
-                      class="header-block__navigation__nav-item__button-box__content"
-                    >
-                      <ul
-                        class="header-block__navigation__nav-item__button-box__content__list"
-                      >
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#">BAKERY</a>
+                    <div class="nav-item__button-box__content">
+                      <ul class="nav-item__button-box__content__list">
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Bread</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Cakes</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Rolls</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Vegan</a
                           >
@@ -210,45 +160,30 @@
                     </div>
                   </div>
                 </div>
-                <div class="header-block__navigation__nav-item">
-                  <a class="header-block__navigation__nav-item__text" href="#"
-                    >DESSERTS</a
-                  >
-                  <div class="header-block__navigation__nav-item__button-box">
-                    <a
-                      class="header-block__navigation__nav-item__button-box__button"
-                      href="#"
-                      >&#9660;</a
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#"
+                      >DESSERTS</a
                     >
-                    <div
-                      class="header-block__navigation__nav-item__button-box__content"
-                    >
-                      <ul
-                        class="header-block__navigation__nav-item__button-box__content__list"
-                      >
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                    <div class="nav-item__button-box__content">
+                      <ul class="nav-item__button-box__content__list">
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Sugar</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Sweetener</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Vegan</a
                           >
@@ -257,54 +192,37 @@
                     </div>
                   </div>
                 </div>
-                <div class="header-block__navigation__nav-item">
-                  <a class="header-block__navigation__nav-item__text" href="#"
-                    >BEVERAGE</a
-                  >
-                  <div class="header-block__navigation__nav-item__button-box">
-                    <a
-                      class="header-block__navigation__nav-item__button-box__button"
-                      href="#"
-                      >&#9660;</a
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#"
+                      >BEVERAGE</a
                     >
-                    <div
-                      class="header-block__navigation__nav-item__button-box__content"
-                    >
-                      <ul
-                        class="header-block__navigation__nav-item__button-box__content__list"
-                      >
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                    <div class="nav-item__button-box__content">
+                      <ul class="nav-item__button-box__content__list">
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Soft&nbsp;Drinks</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Coffee</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Tea</a
                           >
                         </li>
-                        <li
-                          class="header-block__navigation__nav-item__button-box__content__list__row"
-                        >
+                        <li class="nav-item__button-box__content__list__row">
                           <a
-                            class="header-block__navigation__nav-item__button-box__content__list__row__link"
+                            class="nav-item__button-box__content__list__row__link"
                             href="#"
                             >Alcogol</a
                           >
@@ -315,169 +233,200 @@
                 </div>
               </div>
             </nav>
-            <section>
-              <div class="header-block__services">
-                <a
-                  class="header-block__services__service"
-                  href="#"
-                  title="Search"
-                  ><img src="../assets/icons/search.svg" alt="search"
+            <section class="header-block__services">
+              <div class="services-box">
+                <a class="service-link" href="#" title="Search"
+                  ><img
+                    class="service-image"
+                    src="../assets/icons/search.svg"
+                    alt="search"
+                /></a>
+                <a class="service-link" href="#" title="Enter" target="_blank"
+                  ><img
+                    class="service-image"
+                    src="../assets/icons/user.svg"
+                    alt="user"
                 /></a>
                 <a
-                  class="header-block__services__service"
-                  href="#"
-                  title="Enter"
-                  target="_blank"
-                  ><img src="../assets/icons/user.svg" alt="user"
-                /></a>
-                <a
-                  class="header-block__services__service"
+                  class="service-link cart-btn"
+                  id="cartBtn"
                   href="../pages/cart.html"
                   title="Cart"
-                  ><img src="../assets/icons/cart.svg" alt="cart"
-                /></a>
+                  target="_blank"
+                  ><img
+                    class="service-image"
+                    src="../assets/icons/cart.svg"
+                    alt="cart"
+                  />
+                  <div class="cart-num" id="cartBtnNum">0</div></a
+                >
+                <!-- <a
+                  class="cart-btn"
+                  id="cartBtn"
+                  href="../pages/cart.html"
+                  title="Cart"
+                  target="_blank"
+                  ><img
+                    class="service-image"
+                    src="../assets/icons/cart.svg"
+                    alt="cart"
+                  />
+                  <div class="cart-num" id="cartBtnNum">0</div></a
+                > -->
               </div>
             </section>
           </div>
         </header>
         <main>
-          <section name="cart">
-            <div class="cart">
-              <div class="cart__heading">
-                <p class="cart__heading__text">Cart</p>
-                <div class="cart__heading__cart-counter">
-                  <p class="cart__heading__cart-counter__value">2</p>
-                  <p class="cart__heading__cart-counter__label">stuff</p>
-                </div>
+          <section class="cart" name="cart">
+            <div class="cart__heading">
+              <p class="heading-text">Cart</p>
+              <div class="heading-counter">
+                <p class="heading-counter__value" id="headingCounter"></p>
+                <p class="heading-counter__label">stuff</p>
               </div>
-              <li class="crumbs">
-                <a class="crumbs__link" href="#">Home /</a>
-                <a class="crumbs__link" href="#">Cart /</a>
-              </li>
-              <li class="cart__titles">
-                <p class="cart__titles__point" href="#"></p>
-                <p class="cart__titles__point" href="#">Dishes</p>
-                <p class="cart__titles__point" href="#">Price</p>
-                <p class="cart__titles__point" href="#">Quantity</p>
-                <p class="cart__titles__point" href="#">Amount</p>
-                <p class="cart__titles__point" href="#"></p>
-              </li>
-              <div class="cart__block">
-                <div class="cart__block__props">
-                  <div class="cart__block__props__item">
-                    <div class="cart__block__props__item__image">
-                      <img src="../assets/catalog/image-11.png" alt="photo" />
+            </div>
+            <li class="crumbs">
+              <a class="crumbs__link" href="#">Home /</a>
+              <a class="crumbs__link" href="#">Cart /</a>
+            </li>
+            <li class="cart__titles">
+              <p class="titles-point" href="#"></p>
+              <p class="titles-point" href="#">Dishes</p>
+              <p class="titles-point" href="#">Price</p>
+              <p class="titles-point" href="#">Quantity</p>
+              <p class="titles-point" href="#">Amount</p>
+              <p class="titles-point" href="#"></p>
+            </li>
+            <div class="cart-block" id="cartBlock">
+              <div class="cart-list" id="cartList">
+                <div class="cart-item">
+                  <div class="image-box"></div>
+                  <div class="name-box">
+                    <p class="name-box__name"></p>
+                    <p class="name-box__weight"></p>
+                  </div>
+                  <div class="price-box">
+                    <div class="price-origin-box">
+                      <p class="price-origin"></p>
+                      <p class="currency"></p>
                     </div>
-                    <div class="cart__block__props__item__name-box">
-                      <p class="cart__block__props__item__name-box__name">
-                        Cheese
-                      </p>
-                      <p class="cart__block__props__item__name-box__weight">
-                        100 g
-                      </p>
+                    <div class="price-active-box">
+                      <p class="price-active"></p>
+                      <p class="currency"></p>
                     </div>
-                    <div class="cart__block__props__item__price-box">
-                      <p class="cart__block__props__item__price-box__origin">
-                        620&nbsp;&#8381;
-                      </p>
-                      <p class="cart__block__props__item__price-box__active">
-                        495&nbsp;&#8381;
-                      </p>
-                    </div>
-                    <div class="cart__block__props__item__counter-box">
-                      <div class="counter">
-                        <button class="counter__minus">-</button>
-                        <input class="counter__value" type="text" value="1" />
-                        <button class="counter__plus">+</button>
-                      </div>
-                    </div>
-                    <div class="cart__block__props__item__total-box">
-                      <p class="cart__block__props__item__total-box__origin">
-                        620&nbsp;&#8381;
-                      </p>
-                      <p class="cart__block__props__item__total-box__active">
-                        495&nbsp;&#8381;
-                      </p>
-                    </div>
-                    <div class="cart__block__props__item__button-box">
-                      <button class="button-delete">
-                        <img src="../assets/icons/delete.png" alt="to-cart" />
+                  </div>
+                  <div class="counter-box">
+                    <div class="counter">
+                      <button class="counter-minus" onclick="counterMinus()">
+                        -
+                      </button>
+                      <input
+                        class="counter-value"
+                        id="counter-11"
+                        type="text"
+                        value="1"
+                        readonly
+                      />
+                      <button class="counter-plus" onclick="plusFunction()">
+                        +
                       </button>
                     </div>
                   </div>
-                  <div class="cart__block__props__item">
-                    <div class="cart__block__props__item__image">
-                      <img src="../assets/catalog/image-11.png" alt="photo" />
+                  <div class="total-box">
+                    <div class="total-origin-box">
+                      <p class="total-origin"></p>
+                      <p class="currency"></p>
                     </div>
-                    <div class="cart__block__props__item__name-box">
-                      <p class="cart__block__props__item__name-box__name">
-                        Cheese
-                      </p>
-                      <p class="cart__block__props__item__name-box__weight">
-                        100 g
-                      </p>
+                    <div class="total-active-box">
+                      <p class="total-active"></p>
+                      <p class="currency"></p>
                     </div>
-                    <div class="cart__block__props__item__price-box">
-                      <p class="cart__block__props__item__price-box__origin">
-                        620&nbsp;&#8381;
-                      </p>
-                      <p class="cart__block__props__item__price-box__active">
-                        495&nbsp;&#8381;
-                      </p>
+                  </div>
+                  <div class="button-box">
+                    <button class="button-delete"></button>
+                  </div>
+                </div>
+                <!-- <div class="cart-item">
+                  <div class="image-box">
+                    <img
+                      src="../assets/catalog/image-12.png"
+                      id="image-12"
+                      alt="photo"
+                    />
+                  </div>
+                  <div class="name-box">
+                    <p class="name-box__name">Cheese</p>
+                    <p class="name-box__weight">100 g</p>
+                  </div>
+                  <div class="price-box">
+                    <div class="price-origin-box">
+                      <p class="price-origin">3.2</p>
+                      <p class="currency">&euro;</p>
                     </div>
-                    <div class="cart__block__props__item__counter-box">
-                      <div class="counter">
-                        <button class="counter__minus">-</button>
-                        <input class="counter__value" type="text" value="1" />
-                        <button class="counter__plus">+</button>
-                      </div>
+                    <div class="price-active-box">
+                      <p class="price-active">2.95</p>
+                      <p class="currency">&euro;</p>
                     </div>
-                    <div class="cart__block__props__item__total-box">
-                      <p class="cart__block__props__item__total-box__origin">
-                        620&nbsp;&#8381;
-                      </p>
-                      <p class="cart__block__props__item__total-box__active">
-                        495&nbsp;&#8381;
-                      </p>
-                    </div>
-                    <div class="cart__block__props__item__button-box">
-                      <button class="button-delete">
-                        <img src="../assets/icons/delete.png" alt="to-cart" />
+                  </div>
+                  <div class="counter-box">
+                    <div class="counter">
+                      <button class="counter-minus" onclick="counterMinus()">
+                        -
+                      </button>
+                      <input
+                        class="counter-value"
+                        id="counter-11"
+                        type="text"
+                        value="1"
+                      />
+                      <button class="counter-plus" onclick="counterPlus()">
+                        +
                       </button>
                     </div>
                   </div>
-                </div>
+                  <div class="total-box">
+                    <div class="total-origin-box">
+                      <p class="total-origin">3.2</p>
+                      <p class="currency">&euro;</p>
+                    </div>
+                    <div class="total-active-box">
+                      <p class="total-active">2.95</p>
+                      <p class="currency">&euro;</p>
+                    </div>
+                  </div>
+                  <div class="button-box">
+                    <button class="button-delete">
+                      <img src="../assets/icons/delete.png" alt="to-cart" />
+                    </button>
+                  </div>
+                </div> -->
               </div>
-              <div class="cart__promocode">
-                <div class="cart__promocode__input">
-                  <label class="cart__promocode__input__label" for="promocode"
+              <!-- <div class="cart-promocode">
+                <div class="promocode-input">
+                  <label class="promocode-input__label" for="promocode"
                     >Apply promocode</label
                   >
                   <input
-                    class="cart__promocode__input__field"
+                    class="promocode-input__field"
                     type="text"
                     id="promocode"
                     placeholder="Enter promocode"
                   />
                 </div>
-                <div class="cart__promocode__button">
-                  <button class="cart__promocode__button__apply">Apply</button>
+                <div class="promocode-button">
+                  <button class="button-apply">Apply</button>
                 </div>
-              </div>
-              <div class="cart__total">
-                <div class="cart__total__block">
-                  <div class="cart__total__block__input">
-                    <p class="cart__total__block__input__label">
-                      Total amount:
-                    </p>
-                    <p class="cart__total__block__input__value">990</p>
-                    <p class="cart__total__block__input__currency">&#8381;</p>
+              </div> -->
+              <div class="cart-total">
+                <div class="total-block">
+                  <div class="total-input">
+                    <p class="total-input__label">Total amount:</p>
+                    <p class="total-input__value" id="cartCostTotal">0</p>
+                    <p class="total-input__currency">&euro;</p>
                   </div>
-                  <div class="cart__total__block__button">
-                    <button
-                      class="cart__total__block__button__apply"
-                      onclick="toOrder();"
-                    >
+                  <div class="total-button">
+                    <button class="button-apply" onclick="toOrder();">
                       Get order
                     </button>
                   </div>

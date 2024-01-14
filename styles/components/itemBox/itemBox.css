@@ -36,7 +36,7 @@ header {
 header .header-block {
   margin: 0 auto;
   width: 93.75%;
-  height: 30px;
+  height: 60%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
@@ -44,43 +44,83 @@ header .header-block {
 }
 header .header-block__logo {
   margin: 0 auto;
-  height: 80%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
 }
-header .header-block__services {
+header .header-block__logo .logo-box {
   margin: 0 auto;
-  height: inherit;
+  height: 100%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+  justify-content: flex-start;
 }
-header .header-block__services__service {
-  margin-left: 30px;
-  height: inherit;
-  cursor: pointer;
+header .header-block__logo .logo-box a {
+  margin: auto;
+  height: auto;
+  width: 100%;
 }
-header .header-block__services__service:hover img {
-  background-color: #fbd13e;
+header .header-block__logo .logo-box a img {
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
 }
 header .header-block__navigation {
   margin: 0 auto;
-  height: 30px;
+  width: 70%;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
 }
-header .header-block__navigation__nav-item {
+header .header-block__navigation .nav-box {
   margin: 0 auto;
-  margin-left: 30px;
-  height: inherit;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+}
+header .header-block__navigation .nav-box .nav-item {
+  margin: 0 auto;
+  width: auto;
+  max-width: 12%;
+  height: auto;
   display: flex;
   justify-content: center;
   box-sizing: border-box;
 }
-header .header-block__navigation__nav-item__text {
+header .header-block__navigation .nav-box .nav-item__text {
+  margin: 0 auto;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-decoration: none;
+  cursor: pointer;
+  color: #ffffff;
+}
+header .header-block__navigation .nav-box .nav-item__text:hover {
+  color: #fbd13e;
+}
+header .header-block__navigation .nav-box .nav-item .promo:hover {
+  color: #b70000;
+}
+header .header-block__navigation .nav-box .nav-item__image {
+  margin: 0 auto;
+  height: 80%;
+}
+header .header-block__navigation .nav-box .nav-item__button-box {
+  margin: auto 0;
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+header .header-block__navigation .nav-box .nav-item__button-box__button {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -94,43 +134,10 @@ header .header-block__navigation__nav-item__text {
   cursor: pointer;
   color: #ffffff;
 }
-header .header-block__navigation__nav-item__text:hover {
-  color: #fbd13e;
-}
-header .header-block__navigation__nav-item .promo:hover {
-  color: #b70000;
-}
-header .header-block__navigation__nav-item__image {
-  margin: 0 auto;
-  margin-left: 10px;
-  height: 80%;
-}
-header .header-block__navigation__nav-item__button-box {
-  margin: auto 0;
-  position: relative;
-  display: inline-block;
-  z-index: 1;
-  padding-right: 20px;
-}
-header .header-block__navigation__nav-item__button-box__button {
-  margin: 0 auto;
-  margin-left: 10px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  box-sizing: border-box;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 20px;
-  letter-spacing: 0%;
-  font-size: 18px;
-  text-decoration: none;
-  cursor: pointer;
-  color: #ffffff;
-}
-header .header-block__navigation__nav-item__button-box__content {
+header .header-block__navigation .nav-box .nav-item__button-box__content {
   position: absolute;
   left: 0;
+  margin-top: 5px;
   min-width: -moz-fit-content;
   min-width: fit-content;
   height: auto;
@@ -142,15 +149,15 @@ header .header-block__navigation__nav-item__button-box__content {
   box-sizing: border-box;
   display: none;
 }
-header .header-block__navigation__nav-item__button-box__content__list {
+header .header-block__navigation .nav-box .nav-item__button-box__content__list {
   list-style-type: none;
 }
-header .header-block__navigation__nav-item__button-box__content__list__row {
+header .header-block__navigation .nav-box .nav-item__button-box__content__list__row {
   margin-bottom: 10px;
   padding-left: 10px;
   padding-right: 10px;
 }
-header .header-block__navigation__nav-item__button-box__content__list__row__link {
+header .header-block__navigation .nav-box .nav-item__button-box__content__list__row__link {
   text-decoration: none;
   font-size: 12px;
   font-weight: 500;
@@ -158,14 +165,81 @@ header .header-block__navigation__nav-item__button-box__content__list__row__link
   letter-spacing: 0%;
   color: #ffffff;
 }
-header .header-block__navigation__nav-item__button-box__content__list__row__link:hover {
+header .header-block__navigation .nav-box .nav-item__button-box__content__list__row__link:hover {
   color: #fbd13e;
 }
-header .header-block__navigation__nav-item__button-box__button:hover {
+header .header-block__navigation .nav-box .nav-item__button-box__button:hover {
   color: #fbd13e;
 }
-header .header-block__navigation__nav-item__button-box:hover .header-block__navigation__nav-item__button-box__content {
+header .header-block__navigation .nav-box .nav-item__button-box:hover .nav-item__button-box__content {
   display: block;
+}
+header .header-block__services {
+  margin: 0 auto;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+header .header-block__services .services-box {
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-end;
+}
+header .header-block__services .services-box .service-link {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+header .header-block__services .services-box .service-link .service-image {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+header .header-block__services .services-box .service-link:hover img {
+  background-color: #fbd13e;
+}
+header .header-block__services .services-box .cart-btn {
+  margin: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+header .header-block__services .services-box .cart-btn .service-image {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+}
+header .header-block__services .services-box .cart-btn .cart-num {
+  position: absolute;
+  background-color: #d62240;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  align-items: center;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  top: 15px;
 }
 
 @font-face {

@@ -15,6 +15,126 @@ body {
   font-family: Montserrat;
 }
 
+.header-alt {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: 100%;
+  height: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: #040e1f;
+}
+.header-alt__block {
+  margin: 0 auto;
+  width: 93.75%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  border: 2px solid red;
+}
+.header-alt__block__logo {
+  margin: 0 auto;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 2px solid green;
+}
+.header-alt__block__logo .logo-box {
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+  border: 2px solid red;
+}
+.header-alt__block__logo .logo-box .logo-link {
+  margin: auto;
+  height: auto;
+  width: 100%;
+}
+.header-alt__block__logo .logo-box .logo-link .logo-image {
+  margin: auto;
+  height: auto;
+  width: 100%;
+}
+.header-alt__block__navigation {
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 2px solid yellowgreen;
+}
+.header-alt__block__navigation .nav-box {
+  margin: 0 auto;
+  height: auto;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: space-between;
+  border: 2px solid red;
+}
+.header-alt__block__navigation .nav-box .nav-item {
+  margin: auto;
+  width: auto;
+  max-width: 12%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 2px solid yellow;
+}
+.header-alt__block__navigation .nav-box .nav-item .nav-text {
+  margin: 0 auto;
+  width: 100%;
+  height: auto;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: 0%;
+  text-decoration: none;
+  color: #ffffff;
+}
+.header-alt__block__services {
+  margin: 0 auto;
+  width: 15%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 2px solid green;
+}
+.header-alt__block__services .services-box {
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-end;
+  border: 2px solid red;
+}
+.header-alt__block__services .services-box .service-link {
+  margin: auto;
+  margin-left: 30px;
+  width: 100%;
+  height: auto;
+}
+.header-alt__block__services .services-box .service-link .service-image {
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
 header {
   margin: 0 auto;
   width: 100%;
@@ -232,4 +352,4 @@ header .header-block__services .services-box .cart-btn .cart-num {
   font-size: 16px;
   font-weight: 500;
   top: 15px;
-}/*# sourceMappingURL=header.css.map */
+}/*# sourceMappingURL=headerTest.css.map */

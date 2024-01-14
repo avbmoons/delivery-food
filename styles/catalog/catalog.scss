@@ -28,6 +28,7 @@ body {
     justify-content: flex-start;
     flex-grow: 1;
     header {
+      //@include header();
       @include header();
     }
     main {

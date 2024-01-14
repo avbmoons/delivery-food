@@ -186,6 +186,104 @@ body {
   }
 }
 
+.header-alt {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: $site-width;
+  height: $header-height;
+  @include flex-vertical();
+  background-color: $color-background-dark;
+  &__block {
+    margin: 0 auto;
+    width: $block-width;
+    height: 60%; // $menu-height;
+    @include flex-horizontal();
+    justify-content: space-between;
+    border: 2px solid red;
+    &__logo {
+      margin: 0 auto;
+      width: 15%;
+      @include flex-vertical();
+      border: 2px solid green;
+      .logo-box {
+        margin: 0 auto;
+        height: 100%;
+        @include flex-horizontal();
+        justify-content: flex-start;
+        border: 2px solid red;
+        .logo-link {
+          margin: auto;
+          height: auto;
+          width: 100%;
+          .logo-image {
+            margin: auto;
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+    &__navigation {
+      margin: 0 auto;
+      width: 70%;
+      @include flex-vertical();
+      border: 2px solid yellowgreen;
+      .nav-box {
+        margin: 0 auto;
+        height: auto; // 100%;
+        width: 100%; // auto;
+        @include flex-horizontal();
+        justify-content: space-between;
+        border: 2px solid red;
+        .nav-item {
+          margin: auto;
+          //margin-left: 30px;
+          width: auto; // 100%;
+          max-width: 12%;
+          height: auto;
+          @include flex-horizontal();
+          border: 2px solid yellow;
+          .nav-text {
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            @include font-menu();
+            text-decoration: none;
+            color: $color-white;
+          }
+        }
+      }
+    }
+    &__services {
+      margin: 0 auto;
+      width: 15%;
+      @include flex-vertical();
+      border: 2px solid green;
+      .services-box {
+        margin: 0 auto;
+        height: 100%;
+        width: auto;
+        @include flex-horizontal();
+        justify-content: flex-end;
+        border: 2px solid red;
+        .service-link {
+          margin: auto;
+          margin-left: 30px;
+          //height: fit-content; // auto;
+          width: 100%;
+          height: auto;
+          .service-image {
+            margin: auto;
+            //height: fit-content; // auto;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
 header {
   @include header();
 }

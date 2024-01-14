@@ -11,7 +11,8 @@ const locpage = location.pathname.match(/[^/]*$/);
 console.log(locpage[0]);
 
 function init() {
-  let images = document.getElementsByTagName("img");
+  //let images = document.getElementsByTagName("img");
+  let images = document.getElementsByClassName("item-image");
   for (let i = 0; i < images.length; i++) {
     images[i].onclick = showModal;
   }
@@ -38,9 +39,6 @@ function showModal(eventObj) {
   if (locpage === "index.html") {
     imageDomElement.src.replace("../", "");
   }
-
-  console.log(imageDomElement.naturalWidth);
-  console.log(imageDomElement.naturalHeight);
 
   appDiv.appendChild(imageDomElement);
 

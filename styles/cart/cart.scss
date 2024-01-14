@@ -11,6 +11,7 @@
 body {
   font-family: Montserrat;
 }
+
 .wrapper {
   margin: 0 auto;
   width: $site-width;
@@ -45,14 +46,14 @@ body {
           width: 100%;
           @include flex-horizontal();
           justify-content: flex-start;
-          &__text {
+          .heading-text {
             margin: 0;
             width: auto;
             @include head-1();
             text-align: left;
             color: $color-white;
           }
-          &__cart-counter {
+          .heading-counter {
             margin: 0;
             margin-left: 20px;
             width: auto;
@@ -102,94 +103,140 @@ body {
           width: 100%;
           @include flex-horizontal();
           justify-content: flex-end;
-          &__point {
+          .titles-point {
+            padding-left: 10px;
             color: $color-white;
           }
-          &__point:first-child {
+          .titles-point:first-child {
             width: 15%;
           }
-          &__point:nth-child(2) {
+          .titles-point:nth-child(2) {
             width: 35%;
           }
-          &__point:nth-child(3) {
+          .titles-point:nth-child(3) {
             width: 15%;
             text-align: center;
           }
-          &__point:nth-child(4) {
+          .titles-point:nth-child(4) {
             width: 15%;
             text-align: center;
           }
-          &__point:nth-child(5) {
+          .titles-point:nth-child(5) {
             width: 15%;
             text-align: center;
           }
-          &__point:last-child {
+          .titles-point:last-child {
             width: 5%;
           }
         }
-        &__block {
+        .cart-block {
           margin: 0 auto;
-          margin-top: 10px;
           width: 100%;
-          min-height: $cart-item-height;
-          @include flex-horizontal();
-          justify-content: space-between;
-          background-color: $color-background-dark;
-          &__props {
+          min-height: auto; // $cart-item-height;
+          @include flex-vertical();
+
+          .cart-list {
             margin: 0 auto;
+            margin-top: 10px;
             width: 100%;
+            //min-height: $cart-item-height;
+            height: auto;
+            //@include flex-horizontal();
+            //justify-content: space-between;
             @include flex-vertical();
-            justify-content: center;
-            &__item {
+            justify-content: flex-start;
+            background-color: $color-background-dark;
+            //   &__props {
+            //     margin: 0 auto;
+            //     width: 100%;
+            //     @include flex-vertical();
+            //     justify-content: center;
+            .cart-item {
               margin: 0 auto;
+              margin-bottom: 10px;
               width: 100%;
+              min-height: $cart-item-height;
               @include flex-horizontal();
               justify-content: space-between;
-              &__image {
+              border: 1px solid $color-grey;
+              .image-box {
                 margin: 0;
                 width: 15%;
+                height: auto; // 100%;
                 @include flex-vertical();
                 img {
-                  width: $cart-item-height;
+                  margin: 0 auto;
+                  align-items: center;
+                  width: 100%;
+                  //width: auto;
+                  height: auto;
+                  //height: 100%;
                 }
               }
-              &__name-box {
+              .name-box {
                 margin: 0 auto;
                 width: 35%;
                 @include flex-vertical();
                 &__name {
-                  @include font-mix();
+                  margin-bottom: 10px;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                  @include text-font(18px, 400, 18px, 0%);
                   text-align: left;
                   color: $color-white;
                 }
                 &__weight {
+                  padding-left: 10px;
                   @include font-description();
                   text-align: left;
                   color: $color-white;
                 }
               }
-              &__price-box {
+              .price-box {
                 margin: 0 auto;
                 width: 15%;
                 height: inherit;
                 @include flex-vertical();
                 @include font-price();
                 color: $color-white;
-                &__origin {
-                  @include text-font(18px, 400, 18px, 0%);
-                  font-style: italic;
-                  text-decoration: line-through;
-                  text-align: center;
-                  color: $color-grey-middle;
-                  display: none;
+                .price-origin-box {
+                  margin: 0 auto;
+                  @include flex-horizontal();
+                  .price-origin {
+                    margin: 0 auto;
+                    @include text-font(18px, 400, 18px, 0%);
+                    font-style: italic;
+                    text-decoration: line-through;
+                    text-align: center;
+                    color: $color-grey-middle;
+                  }
+                  .currency {
+                    margin: 0 auto;
+                    @include text-font(18px, 400, 18px, 0%);
+                    font-style: italic;
+                    text-decoration: line-through;
+                    text-align: center;
+                    color: $color-grey-middle;
+                  }
                 }
-                &__active {
-                  @include font-price();
-                  text-align: center;
-                  color: $color-white;
+                .price-active-box {
+                  margin: 0 auto;
+                  @include flex-horizontal();
+                  .price-active {
+                    margin: 0 auto;
+                    @include text-font(22px, 400, 22px, 0%);
+                    text-align: center;
+                    color: $color-white;
+                  }
+                  .currency {
+                    margin: 0 auto;
+                    @include text-font(22px, 400, 22px, 0%);
+                    text-align: center;
+                    color: $color-white;
+                  }
                 }
               }
-              &__counter-box {
+              .counter-box {
                 margin: 0 auto;
                 width: 15%;
                 height: inherit;
@@ -200,14 +247,15 @@ body {
                   height: fit-content;
                   vertical-align: middle;
                   @include flex-horizontal();
-                  &__minus {
+                  .counter-minus {
                     width: 25%;
                     @include font-mix();
                     color: $color-white;
                     background-color: $color-background-dark;
+                    border: none;
                     cursor: pointer;
                   }
-                  &__value {
+                  .counter-value {
                     width: 50%;
                     @include font-mix();
                     text-align: center;
@@ -215,156 +263,190 @@ body {
                     background-color: $color-background;
                     border: none;
                   }
-                  &__plus {
+                  .counter-plus {
                     width: 25%;
                     @include font-mix();
                     color: $color-white;
                     background-color: $color-background-dark;
+                    border: none;
                     cursor: pointer;
                   }
                 }
               }
 
-              &__total-box {
+              .total-box {
                 margin: 0 auto;
                 width: 15%;
                 height: inherit;
                 @include flex-vertical();
                 @include font-price();
                 color: $color-white;
-                &__origin {
-                  @include text-font(18px, 400, 18px, 0%);
-                  font-style: italic;
-                  text-decoration: line-through;
-                  text-align: center;
-                  color: $color-grey-middle;
-                  display: none;
+                .total-origin-box {
+                  margin: 0 auto;
+                  @include flex-horizontal();
+                  //display: none;
+                  .total-origin {
+                    margin: 0 auto;
+                    @include text-font(18px, 400, 18px, 0%);
+                    font-style: italic;
+                    text-decoration: line-through;
+                    text-align: center;
+                    color: $color-grey-middle;
+                  }
+                  .currency {
+                    margin: 0 auto;
+                    @include text-font(18px, 400, 18px, 0%);
+                    font-style: italic;
+                    text-decoration: line-through;
+                    text-align: center;
+                    color: $color-grey-middle;
+                  }
                 }
-                &__active {
+                .total-active-box {
+                  margin: 0 auto;
+                  @include flex-horizontal();
                   @include font-price();
+                  @include text-font(22px, 600, 22px, 0%);
                   text-align: center;
                   color: $color-white;
+                  .total-active {
+                    margin: 0 auto;
+                    @include font-price();
+                    @include text-font(22px, 600, 22px, 0%);
+                    text-align: center;
+                    color: $color-white;
+                  }
+                  .currency {
+                    margin: 0 auto;
+                    @include font-price();
+                    @include text-font(22px, 600, 22px, 0%);
+                    text-align: center;
+                    color: $color-white;
+                  }
                 }
               }
-              &__button-box {
+              .button-box {
                 margin: 0 auto;
                 width: 5%;
-                height: 100%;
+                height: inherit;
                 @include flex-vertical();
-                @include font-price();
-                color: $color-white;
                 .button-delete {
                   margin: 0 auto;
                   padding: 0;
-                  width: $button-to-cart-size;
-                  height: $button-to-cart-size;
+                  width: 100%;
+                  @include font-price();
+                  color: $color-banner; // $color-white;
                   background-color: $color-background-dark;
+                  border: none;
                   cursor: pointer;
+                  img {
+                    margin: 0 auto;
+                  }
                 }
               }
             }
           }
-        }
-        &__promocode {
-          margin: 0 auto;
-          margin-top: 40px;
-          width: 100%;
-          min-height: $input-height;
-          @include flex-horizontal();
-          justify-content: flex-end;
-          &__input {
-            margin: 0;
-            width: 15%;
+          .cart-promocode {
+            margin: 0 auto;
+            margin-top: 40px;
+            width: 100%;
             min-height: $input-height;
-            @include flex-vertical();
-            &__label {
-              @include font-description();
-              text-transform: uppercase;
-              color: $color-white;
-            }
-            &__field {
-              margin-top: 10px;
-              width: 100%;
-              height: $input-height;
-              background-color: $color-grey-light;
-            }
-          }
-          &__button {
-            margin: 0;
-            padding-left: 20px;
-            width: 20%;
-            min-height: $input-height;
-            @include flex-vertical();
+            @include flex-horizontal();
             justify-content: flex-end;
-            &__apply {
-              width: 70%;
-              height: $input-height;
-              @include font-description();
-              color: $color-button-to-cart;
-              text-transform: uppercase;
-              background-color: $color-background-dark;
-              border: 1px solid $color-button-to-cart;
-            }
-          }
-        }
-        &__total {
-          margin: 0 auto;
-          margin-top: 40px;
-          width: 100%;
-          min-height: $input-height;
-          @include flex-horizontal();
-          justify-content: flex-end;
-          &__block {
-            margin: 0;
-            width: 35%;
-            min-height: $input-height;
-            @include flex-vertical();
-            &__input {
+            .promocode-input {
               margin: 0;
-              width: auto;
-              height: fit-content;
-              @include flex-horizontal();
-              justify-content: flex-start;
-              align-items: flex-end;
+              width: 15%;
+              min-height: $input-height;
+              @include flex-vertical();
               &__label {
-                margin-right: 20px;
                 @include font-description();
                 text-transform: uppercase;
                 color: $color-white;
               }
-              &__value {
+              &__field {
                 margin-top: 10px;
-                padding: 0;
-                height: fit-content;
-                @include font-price();
-                text-align: center;
-                background-color: $color-background;
-                color: $color-white;
-                border: none;
-              }
-              &__currency {
-                margin-left: 10px;
-                @include font-price();
-                font-weight: 300;
-                color: $color-white;
+                width: 100%;
+                height: $input-height;
+                background-color: $color-grey-light;
               }
             }
-            &__button {
+            .promocode-button {
               margin: 0;
-              margin-top: 40px;
-              width: 100%;
+              padding-left: 20px;
+              width: 20%;
               min-height: $input-height;
-              @include flex-horizontal();
-              justify-content: flex-start;
-              align-self: flex-start;
-              &__apply {
-                width: 150px;
+              @include flex-vertical();
+              justify-content: flex-end;
+              .button-apply {
+                width: 70%;
                 height: $input-height;
                 @include font-description();
                 color: $color-button-to-cart;
                 text-transform: uppercase;
                 background-color: $color-background-dark;
                 border: 1px solid $color-button-to-cart;
+              }
+            }
+          }
+          .cart-total {
+            margin: 0 auto;
+            margin-top: 40px;
+            width: 100%;
+            min-height: $input-height;
+            @include flex-horizontal();
+            justify-content: flex-end;
+            .total-block {
+              margin: 0;
+              width: 35%;
+              min-height: $input-height;
+              @include flex-vertical();
+              .total-input {
+                margin: 0;
+                width: auto;
+                height: fit-content;
+                @include flex-horizontal();
+                justify-content: flex-start;
+                align-items: flex-end;
+                &__label {
+                  margin-right: 20px;
+                  @include font-description();
+                  text-transform: uppercase;
+                  color: $color-white;
+                }
+                &__value {
+                  margin-top: 10px;
+                  padding: 0;
+                  height: fit-content;
+                  @include font-price();
+                  text-align: center;
+                  background-color: $color-background;
+                  color: $color-white;
+                  border: none;
+                }
+                &__currency {
+                  margin-left: 10px;
+                  @include font-price();
+                  font-weight: 300;
+                  color: $color-white;
+                }
+              }
+              .total-button {
+                margin: 0;
+                margin-top: 40px;
+                width: 100%;
+                min-height: $input-height;
+                @include flex-horizontal();
+                justify-content: flex-start;
+                align-self: flex-start;
+                .button-apply {
+                  width: 150px;
+                  height: $input-height;
+                  @include font-description();
+                  color: $color-button-to-cart;
+                  text-transform: uppercase;
+                  background-color: $color-background-dark;
+                  border: 1px solid $color-button-to-cart;
+                }
               }
             }
           }

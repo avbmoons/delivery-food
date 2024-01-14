@@ -33,7 +33,7 @@ class CatalogItem {
   render() {
     return `<div class="item-box">
     <div class="item-box__image">
-      <img
+      <img class="item-image"
         src="${this.image}"
         id="image-${this.id}"
         alt="item"
@@ -52,7 +52,7 @@ class CatalogItem {
       </div>
       <div class="item-box__shopping-box__button-box">
         <button class="to-cart">
-          <img src="assets/icons/cart.png" alt="to-cart" />
+          <img src="assets/icons/cart3.png" alt="to-cart" />
         </button>
       </div>
     </div>
