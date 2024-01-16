@@ -135,11 +135,15 @@ function cartContainerFill() {
     productButtonBox.classList.add("button-box");
     const productDelete = document.createElement("button");
     productDelete.classList.add("button-delete");
+    productDelete.dataset.id = product.id;
     productButtonBox.appendChild(productDelete);
     productDelete.innerHTML = "&times;";
 
     productDelete.addEventListener("click", () => {
-      myCart.removeProduct(product);
+      let index = myCart.products.findIndex(
+        (product) => product.id == productDelete.dataset.id
+      );
+      myCart.removeProduct(index);
       localStorage.setItem("foodCart", JSON.stringify(myCart));
       cartContainerFill();
     });
