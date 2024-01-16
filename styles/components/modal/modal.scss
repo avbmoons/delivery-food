@@ -1,16 +1,6 @@
 @use "sass:math";
 
 @import "../../vars/vars.scss";
-// @import "../../components/header/header.scss";
-// @import "../../components/footer/footer.scss";
-
-// * {
-//   margin: 0;
-//   padding: 0;
-// }
-// body {
-//   font-family: Montserrat;
-// }
 
 .modal {
   position: fixed;
@@ -28,15 +18,13 @@
   &__block {
     margin: 0 auto;
     width: 65%;
-    //max-width: 65%;
-    height: auto; // 60%;
+    height: auto;
     @include flex-vertical();
     justify-content: space-around;
     overflow: auto;
     position: relative;
     border-radius: 2px;
-    background-color: $color-grey-light; // $color-white;
-    //border: 2px solid red;
+    background-color: $color-grey-light;
     &__close {
       position: absolute;
       top: 0;
@@ -51,7 +39,7 @@
       z-index: 999;
     }
     &__close:hover {
-      color: orange; // $color-marine;
+      color: orange;
     }
     &__items {
       margin: 0 auto;
@@ -61,8 +49,6 @@
       justify-content: space-between;
       flex-wrap: wrap;
       @include text-font(14px, 300, 14px, 0%);
-      //border: 2px solid orange;
-      //color: $color-white; // $color-primary-dark;
       .product {
         margin: 0 auto;
         width: 100%;
@@ -72,29 +58,24 @@
         border-radius: 2px;
         background-color: inherit; // $color-white;
         overflow-y: auto;
-        //border: 2px solid green;
         &__image-box {
           margin: 0;
           height: 100%;
           width: 50%; // auto;
           @include flex-vertical();
-          //border: 2px solid violet;
           &__image {
             margin: 0;
             width: auto;
             height: 100%;
-            border: 5px solid orangered;
+            //border: 5px solid orangered;
           }
         }
         &__text-box {
           margin: 0 auto;
           height: auto; // 100%;
-          //min-width: 50%;
-          //max-width: 50%;
           width: 50%;
           @include flex-vertical();
-          justify-content: space-around; // space-between; // space-around;
-          //border: 2px solid blue;
+          justify-content: space-around;
           &__heading {
             margin: 0 auto;
             margin-top: 10px;
@@ -147,10 +128,10 @@
             .to-product-page {
               padding: 5px;
               @include text-font(14px, 400, 14px, 0%);
-              color: orangered; // $color-primary;
+              color: orangered;
               font-style: italic;
               text-decoration: none;
-              border-bottom: 1px solid orangered; //$color-primary;
+              border-bottom: 1px solid orangered;
             }
             .to-cart {
               padding: 5px;
@@ -158,13 +139,13 @@
               border: 1px solid $color-grey-light;
               border-radius: 2px;
               @include text-font(18px, 400, 14px, 0%);
-              color: orangered; // $color-marine;
+              color: orangered;
               cursor: pointer;
               box-sizing: border-box;
             }
             .to-cart:hover {
-              border: 1px solid $color-background; // $color-primary;
-              color: orange; // $color-primary;
+              border: 1px solid $color-background;
+              color: orange;
             }
           }
         }

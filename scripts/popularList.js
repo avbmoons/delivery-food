@@ -1,3 +1,5 @@
+const dataTest = catalog;
+
 class CatalogItem {
   constructor(
     id,
@@ -31,7 +33,7 @@ class CatalogItem {
     this.isVegan = isVegan;
   }
   render() {
-    return `<div class="item-box">
+    return `<div data-id=${this.id} class="item-box">
     <div class="item-box__image">
       <img class="item-image"
         src="${this.image}"
