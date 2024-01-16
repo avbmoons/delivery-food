@@ -86,17 +86,17 @@ class Product {
       </div>
       <div class="counter-box">
         <div class="counter">
-          <button class="counter-minus" onclick="counterMinus()">
+          <button class="counter-minus" data-id="${this.id}" onclick="counterMinus()">
             -
           </button>
-          <input
+          <input data-id="${this.id}"
             class="counter-value"
             id="counter-${this.id}"
             type="text"
             value="1"
             readonly
           />
-          <button class="counter-plus" onclick="counterPlus()">
+          <button class="counter-plus" data-id="${this.id}" onclick="counterPlus()">
             +
           </button>
         </div>
