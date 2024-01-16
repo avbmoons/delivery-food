@@ -69,48 +69,48 @@ class Product {
   }
   render() {
     return `<div class="cart-item">
-      <div class="image-box">
-        <img
-          src="${this.image}"
-          id="image-${this.id}"
-          alt="photo"
+    <div class="image-box">
+      <img
+        src="${this.image}"
+        id="image-${this.id}"
+        alt="photo"
+      />
+    </div>
+    <div class="name-box">
+      <p class="name-box__name">${this.name}</p>
+      <p class="name-box__weight">${this.weight}&nbsp;${this.units}</p>
+    </div>
+    <div class="price-box">
+      <p class="price-origin">${this.priceOrigin}&nbsp;${this.currency}</p>
+      <p class="price-active">${this.priceActive}&nbsp;${this.currency}</p>
+    </div>
+    <div class="counter-box">
+      <div class="counter">
+        <button class="counter-minus" onclick="counterMinus()">
+          -
+        </button>
+        <input
+          class="counter-value"
+          id="counter-${this.id}"
+          type="text"
+          value="1"
+          readonly
         />
-      </div>
-      <div class="name-box">
-        <p class="name-box__name">${this.name}</p>
-        <p class="name-box__weight">${this.weight}&nbsp;${this.units}</p>
-      </div>
-      <div class="price-box">
-        <p class="price-origin">${this.priceOrigin}&nbsp;${this.currency}</p>
-        <p class="price-active">${this.priceActive}&nbsp;${this.currency}</p>
-      </div>
-      <div class="counter-box">
-        <div class="counter">
-          <button class="counter-minus" data-id="${this.id}" onclick="counterMinus()">
-            -
-          </button>
-          <input data-id="${this.id}"
-            class="counter-value"
-            id="counter-${this.id}"
-            type="text"
-            value="1"
-            readonly
-          />
-          <button class="counter-plus" data-id="${this.id}" onclick="counterPlus()">
-            +
-          </button>
-        </div>
-      </div>
-      <div class="total-box">
-        <p class="total-origin">620&nbsp;${this.currency}</p>
-        <p class="total-active">495&nbsp;${this.currency}</p>
-      </div>
-      <div class="button-box">
-        <button class="button-delete">
-          <img src="../assets/icons/delete.png" alt="to-cart" />
+        <button class="counter-plus" onclick="counterPlus()">
+          +
         </button>
       </div>
-    </div>`;
+    </div>
+    <div class="total-box">
+      <p class="total-origin">620&nbsp;${this.currency}</p>
+      <p class="total-active">495&nbsp;${this.currency}</p>
+    </div>
+    <div class="button-box">
+      <button class="button-delete">
+        <img src="../assets/icons/delete.png" alt="to-cart" />
+      </button>
+    </div>
+  </div>`;
   }
 }
 
@@ -120,14 +120,38 @@ const cartNum = document.querySelector("#cartBtnNum"); //счетчик това
 const cartBtn = document.querySelector("#cartBtn"); //кнопка открытия корзины
 
 const myCart = new Cart();
-if (localStorage.getItem("foodCart") == null) {
-  localStorage.setItem("foodCart", JSON.stringify(myCart));
+if (localStorage.getItem("cartTest") == null) {
+  localStorage.setItem("cartTest", JSON.stringify(myCart));
 }
 
-const savedCart = JSON.parse(localStorage.getItem("foodCart"));
+const savedCart = JSON.parse(localStorage.getItem("cartTest"));
 
 myCart.products = savedCart.products;
 cartNum.textContent = myCart.count;
+
+// console.log(myCart);
+// //  начальный массив количества товаров
+// let savedProductsNum = [];
+// function productsNum() {
+//   for (i = 0; i < myCart.products.length; i++) {
+//     savedProductsNum[i] = [
+//       {
+//         id: myCart.products[i].id,
+//         productNum: 1,
+//       },
+//     ];
+//   }
+//   return savedProductsNum;
+// }
+// savedProductsNum = productsNum();
+// console.log(savedProductsNum);
+
+// //  сохранение массива количества товаров
+// if (localStorage.getItem("productsNumTest") == null) {
+//   localStorage.setItem("productsNumTest", JSON.stringify(savedProductsNum));
+// }
+// const myProductsNum = JSON.parse(localStorage.getItem("productsNumTest"));
+// console.log(myProductsNum);
 
 // добавление товара в корзину
 myCart.products = cardAddArr.forEach((cardAdd) => {
@@ -140,23 +164,17 @@ myCart.products = cardAddArr.forEach((cardAdd) => {
     console.log(cardId);
 
     const product = new Product(cardId);
-    const savedCart = JSON.parse(localStorage.getItem("foodCart"));
+    const savedCart = JSON.parse(localStorage.getItem("cartTest"));
     myCart.products = savedCart.products;
     myCart.addProduct(product);
-    localStorage.setItem("foodCart", JSON.stringify(myCart));
+    localStorage.setItem("cartTest", JSON.stringify(myCart));
     cartNum.textContent = myCart.count;
   });
 });
 
-const locPage = location.pathname.match(/[^/]*$/);
-console.log(locPage[0]);
 ////функция перехода на страницу корзины
 const cartPage = function () {
-  if (!(locPage == "index.html")) {
-    window.location.href = "../pages/cart.html";
-  } else {
-    window.location.href = "pages/cart.html";
-  }
+  window.location.href = "../pages/cartTest.html";
   cartContainerFill();
 };
 

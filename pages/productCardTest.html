@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>productCardTest</title>
+    <link
+      rel="stylesheet"
+      href="../styles/productCardTest/productCardTest.css"
+    />
+    <script src="../data/catalogTest.js"></script>
+    <!-- <script defer src="../scripts/openModal.js"></script> -->
+    <script defer src="../scripts/catalogListTest.js"></script>
+    <script defer src="../scripts/showModalTest.js"></script>
+    <script defer src="../scripts/showCartTest.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="top">
+        <header>
+          <div id="headerin" class="header-block">
+            <section class="header-block__logo">
+              <div class="logo-box">
+                <a href="../index.html"
+                  ><img src="../assets/logo/logo2.png" alt="logo"
+                /></a>
+              </div>
+            </section>
+            <nav class="header-block__navigation">
+              <div class="nav-box">
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#">PROMO</a>
+                  </div>
+                  <img
+                    class="nav-item__image"
+                    src="../assets/icons/fire.svg"
+                    alt="promo"
+                  />
+                </div>
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a
+                      class="nav-item__button-box__button"
+                      href="../pages/catalog.html"
+                      >ALL&nbsp;DISHES</a
+                    >
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#">VEGAN</a>
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#">HOTS</a>
+                    <div class="nav-item__button-box__content">
+                      <ul class="nav-item__button-box__content__list">
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Meat</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Fish</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Vegetables</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Vegan</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#">COLDS</a>
+                    <div class="nav-item__button-box__content">
+                      <ul class="nav-item__button-box__content__list">
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Meat</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Fish</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Vegetables</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Vegan</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#">BAKERY</a>
+                    <div class="nav-item__button-box__content">
+                      <ul class="nav-item__button-box__content__list">
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Bread</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Cakes</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Rolls</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Vegan</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#"
+                      >DESSERTS</a
+                    >
+                    <div class="nav-item__button-box__content">
+                      <ul class="nav-item__button-box__content__list">
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Sugar</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Sweetener</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Vegan</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="nav-item">
+                  <div class="nav-item__button-box">
+                    <a class="nav-item__button-box__button" href="#"
+                      >BEVERAGE</a
+                    >
+                    <div class="nav-item__button-box__content">
+                      <ul class="nav-item__button-box__content__list">
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Soft&nbsp;Drinks</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Coffee</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Tea</a
+                          >
+                        </li>
+                        <li class="nav-item__button-box__content__list__row">
+                          <a
+                            class="nav-item__button-box__content__list__row__link"
+                            href="#"
+                            >Alcogol</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <section class="header-block__services">
+              <div class="services-box">
+                <a class="service-link" href="#" title="Search"
+                  ><img
+                    class="service-image"
+                    src="../assets/icons/search.svg"
+                    alt="search"
+                /></a>
+                <a class="service-link" href="#" title="Enter" target="_blank"
+                  ><img
+                    class="service-image"
+                    src="../assets/icons/user.svg"
+                    alt="user"
+                /></a>
+                <a
+                  class="service-link cart-btn"
+                  id="cartBtn"
+                  href="../pages/cart.html"
+                  title="Cart"
+                  target="_blank"
+                  ><img
+                    class="service-image"
+                    src="../assets/icons/cart.svg"
+                    alt="cart"
+                  />
+                  <div class="cart-num" id="cartBtnNum">0</div></a
+                >
+                <!-- <a
+                  class="cart-btn"
+                  id="cartBtn"
+                  href="../pages/cart.html"
+                  title="Cart"
+                  target="_blank"
+                  ><img
+                    class="service-image"
+                    src="../assets/icons/cart.svg"
+                    alt="cart"
+                  />
+                  <div class="cart-num" id="cartBtnNum">0</div></a
+                > -->
+              </div>
+            </section>
+          </div>
+        </header>
+        <main>
+          <!-- <button class="modal-open" id="modalOpen">Open modal</button> -->
+          <section class="catalog">
+            <p class="catalog__heading">Popular dishes</p>
+            <div class="catalog__block">
+              <div class="item-box">
+                <div class="item-box__image">
+                  <!-- <img
+                    class="item-image"
+                    src="../assets/catalog/image-1.png"
+                    id="image-1"
+                    alt="item"
+                    title="Product name"
+                  /> -->
+                </div>
+                <p class="item-box__heading" href="#"></p>
+                <p class="item-box__weight"></p>
+                <p class="item-box__text"></p>
+                <div class="item-box__shopping-box">
+                  <div class="item-box__shopping-box__price-box">
+                    <p class="item-box__shopping-box__price-box__origin"></p>
+                    <p class="item-box__shopping-box__price-box__active"></p>
+                  </div>
+                  <div class="item-box__shopping-box__button-box">
+                    <button class="to-cart" id="toCart-1"></button>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="item-box">
+                <div class="item-box__image">
+                  <img
+                    class="item-image"
+                    src="../assets/catalog/image-2.png"
+                    id="image-2"
+                    alt="item"
+                    title="Product name"
+                  />
+                </div>
+                <p class="item-box__heading" href="#">Product name</p>
+                <p class="item-box__weight">350&nbsp;g</p>
+                <p class="item-box__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam, ex. ipsum dolor sit
+                </p>
+                <div class="item-box__shopping-box">
+                  <div class="item-box__shopping-box__price-box">
+                    <p class="item-box__shopping-box__price-box__origin">
+                      17.4&nbsp;&euro;
+                    </p>
+                    <p class="item-box__shopping-box__price-box__active">
+                      17.2&nbsp;&euro;
+                    </p>
+                  </div>
+                  <div class="item-box__shopping-box__button-box">
+                    <button class="to-cart">
+                      <img src="../assets/icons/cart.png" alt="to-cart" />
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="item-box">
+                <div class="item-box__image">
+                  <img
+                    class="item-image"
+                    src="../assets/catalog/image-3.png"
+                    id="image-3"
+                    alt="item"
+                    title="Product name"
+                  />
+                </div>
+                <p class="item-box__heading" href="#">Product name</p>
+                <p class="item-box__weight">550&nbsp;g</p>
+                <p class="item-box__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Laboriosam, ex.
+                </p>
+                <div class="item-box__shopping-box">
+                  <div class="item-box__shopping-box__price-box">
+                    <p class="item-box__shopping-box__price-box__origin">
+                      7.4&nbsp;&euro;
+                    </p>
+                    <p class="item-box__shopping-box__price-box__active">
+                      7.2&nbsp;&euro;
+                    </p>
+                  </div>
+                  <div class="item-box__shopping-box__button-box">
+                    <button class="to-cart">
+                      <img src="../assets/icons/cart.png" alt="to-cart" />
+                    </button>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </section>
+          <section class="modal" id="modal">
+            <div class="modal__block" id="modal__block">
+              <button class="modal__block__close" id="modalClose">
+                &#10006;
+              </button>
+              <div class="modal__block__items">
+                <div data-id="1" class="product">
+                  <div class="product__image-box" id="productImage">
+                    <img
+                      class="product__image-box__image"
+                      id="product-1"
+                      src="../assets/catalog/image-3.png"
+                      alt="photo"
+                    />
+                  </div>
+                  <div class="product__text-box">
+                    <div class="product__text-box__heading" id="productTitle">
+                      <p class="product-title">Khinkali traditional</p>
+                    </div>
+                    <div class="product__text-box__weight" id="productWeight">
+                      <p class="product-weight">110&nbsp;g</p>
+                    </div>
+                    <div class="product__text-box__resume" id="productResume">
+                      <p class="product-resume">
+                        Beef, greens, onion, garlic; min. 5 units for order
+                      </p>
+                    </div>
+                    <div class="product__text-box__price-box" id="productPrice">
+                      <p class="product-price-origin" id="priceOrigin">
+                        1.6&nbsp;&euro;
+                      </p>
+                      <p class="product-price-active" id="priceActive">
+                        1.4&nbsp;&euro;
+                      </p>
+                    </div>
+                    <div class="product__text-box__button-box">
+                      <!-- <a class="to-product-page" href="#">More details...</a> -->
+                      <button class="to-cart">Add to cart</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+      </div>
+      <footer>
+        <div class="footer-top">
+          <div class="footer-top__left">
+            <div class="footer-top__left__box">
+              <section>
+                <div class="footer-top__left__box__logo">
+                  <img src="../assets/logo/logo2.png" alt="logo" />
+                </div>
+              </section>
+              <nav>
+                <div class="footer-top__left__box__navigation">
+                  <div class="footer-top__left__box__navigation__nav-item">
+                    <a
+                      class="footer-top__left__box__navigation__nav-item__text"
+                      href="feedback.html"
+                      >Feedback</a
+                    >
+                  </div>
+                  <div class="footer-top__left__box__navigation__nav-item">
+                    <a
+                      class="footer-top__left__box__navigation__nav-item__text"
+                      href="#"
+                      >Delivery</a
+                    >
+                  </div>
+                  <div class="footer-top__left__box__navigation__nav-item">
+                    <a
+                      class="footer-top__left__box__navigation__nav-item__text"
+                      href="#"
+                      >Payment</a
+                    >
+                  </div>
+                  <div class="footer-top__left__box__navigation__nav-item">
+                    <a
+                      class="footer-top__left__box__navigation__nav-item__text last"
+                      href="#"
+                      >Contacts</a
+                    >
+                  </div>
+                </div>
+              </nav>
+            </div>
+          </div>
+          <div class="footer-top__right">
+            <div class="footer-top__right__box">
+              <section>
+                <div class="footer-top__right__box__contacts">
+                  <a class="footer-top__right__box__contacts__text" href="#"
+                    >+7(777)123-45-67</a
+                  >
+                  <a
+                    class="footer-top__right__box__contacts__text email"
+                    href="#"
+                    >testmail@testmail.test</a
+                  >
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <div class="footer-bottom__left">
+            <div class="footer-bottom__left__box">
+              <section>
+                <p class="footer-bottom__left__box__copyrights">
+                  &#169;&nbsp;2020-2023 "maUkas ltd."
+                </p>
+              </section>
+            </div>
+          </div>
+          <div class="footer-bottom__right">
+            <div class="footer-bottom__right__box">
+              <section>
+                <div class="footer-bottom__right__box__roles">
+                  <a class="footer-bottom__right__box__roles__text" href="#"
+                    >VK</a
+                  >
+                  <a class="footer-bottom__right__box__roles__text" href="#"
+                    >Telegram</a
+                  >
+                  <a class="footer-bottom__right__box__roles__text" href="#"
+                    >Whatsapp</a
+                  >
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
