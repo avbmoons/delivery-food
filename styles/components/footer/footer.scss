@@ -7,11 +7,22 @@
 body {
   font-family: Montserrat;
 }
+@font-face {
+  font-family: Montserrat;
+  src: url(../../../assets/font/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../../assets/font/Montserrat-Black.ttf);
+}
 
 @mixin footer {
   margin: 0 auto;
   width: $site-width;
   height: $footer-height;
+  @media screen and (max-width: 1023px) {
+    height: auto;
+  }
   @include flex-vertical();
   background-color: $color-background-dark;
 
@@ -20,10 +31,17 @@ body {
     width: $block-width;
     height: 70%;
     @include flex-horizontal();
+    @media screen and (max-width: 1023px) {
+      margin-top: 20px;
+      @include flex-vertical();
+    }
     justify-content: space-between;
     &__left {
       margin: 0 auto;
       width: 50%;
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+      }
       height: 100%;
       @include flex-vertical();
       &__box {
@@ -31,8 +49,11 @@ body {
         width: 100%;
         @include flex-horizontal();
         justify-content: space-between;
+        @media screen and (max-width: 1023px) {
+          @include flex-vertical();
+        }
         &__logo {
-          margin: 0 auto;
+          margin: 0;
           height: $menu-height;
           @include flex-horizontal();
           justify-content: flex-start;
@@ -43,11 +64,31 @@ body {
         &__navigation {
           margin: 0 auto;
           height: $menu-height;
+          @media screen and (max-width: 1023px) {
+            width: 100%;
+            height: auto;
+            justify-content: flex-start;
+          }
           @include flex-horizontal();
+          flex-wrap: wrap;
           &__nav-item {
             margin: 0 auto;
             margin-left: 20px;
             height: inherit;
+            @media screen and (max-width: 767px) {
+              width: 40%;
+            }
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+              width: 23%;
+            }
+            @media screen and (max-width: 1023px) {
+              margin: 0;
+              margin-top: 20px;
+              margin-left: 0;
+              //width: 40%;
+              height: auto;
+              justify-content: flex-start;
+            }
             @include flex-horizontal();
             &__text {
               margin: 0 auto;
@@ -56,6 +97,10 @@ body {
               text-decoration: none;
               cursor: pointer;
               color: $color-white;
+              @media screen and (max-width: 1023px) {
+                width: 100%;
+                text-align: left;
+              }
             }
             &__text:hover {
               color: $color-button-to-cart;
@@ -70,6 +115,10 @@ body {
     &__right {
       margin: 0 auto;
       width: 50%;
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+        border-bottom: 2px solid $color-grey-light;
+      }
       height: 100%;
       @include flex-vertical();
       &__box {
@@ -77,8 +126,25 @@ body {
         width: 100%;
         @include flex-horizontal();
         justify-content: flex-end;
+        @media screen and (max-width: 1023px) {
+          @include flex-vertical();
+          justify-content: center;
+        }
         &__contacts {
           margin: 0 auto;
+          @media screen and (max-width: 1023px) {
+            margin: 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            @include flex-horizontal();
+            justify-content: flex-start;
+          }
+          @media screen and (min-width: 1024px) {
+            margin: auto 0;
+            @include flex-horizontal();
+            justify-content: flex-end;
+          }
           &__text {
             margin: 0 auto;
             margin-left: 20px;
@@ -86,6 +152,18 @@ body {
             text-decoration: none;
             cursor: pointer;
             color: $color-white;
+            @media screen and (max-width: 767px) {
+              width: 40%;
+            }
+            @media screen and (min-width: 768px) and (max-width: 1023px) {
+              width: 23%;
+            }
+            @media screen and (max-width: 1023px) {
+              margin: 0;
+              margin-left: 0;
+              //width: 40%;
+              text-align: left;
+            }
           }
           .email:hover {
             color: $color-button-to-cart;
@@ -100,9 +178,16 @@ body {
     height: 30%;
     @include flex-horizontal();
     justify-content: space-between;
+    @media screen and (max-width: 1023px) {
+      @include flex-vertical();
+    }
     &__left {
       margin: 0 auto;
       width: 50%;
+      @media screen and (max-width: 1023px) {
+        margin-top: 20px;
+        width: 100%;
+      }
       height: 100%;
       @include flex-vertical();
       &__box {
@@ -111,16 +196,22 @@ body {
         @include flex-horizontal();
         justify-content: flex-start;
         &__copyrights {
-          margin: 0 auto;
+          margin: 0;
           @include font-menu();
           text-decoration: none;
           color: $color-white;
+          text-align: left;
         }
       }
     }
     &__right {
       margin: 0 auto;
       width: 50%;
+      @media screen and (max-width: 1023px) {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 100%;
+      }
       height: 100%;
       @include flex-vertical();
       &__box {
@@ -128,8 +219,12 @@ body {
         width: 100%;
         @include flex-horizontal();
         justify-content: flex-end;
+        @media screen and (max-width: 1023px) {
+          justify-content: flex-start;
+        }
+        flex-wrap: wrap;
         &__roles {
-          margin: 0 auto;
+          margin: 0;
           &__text {
             margin: 0 auto;
             margin-left: 20px;
@@ -137,6 +232,10 @@ body {
             text-decoration: none;
             cursor: pointer;
             color: $color-button-to-cart;
+            @media screen and (max-width: 1023px) {
+              margin-left: 0;
+              margin-right: 20px;
+            }
           }
           &__text:hover {
             color: $color-banner;

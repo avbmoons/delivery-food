@@ -9,6 +9,7 @@
     <script defer src="scripts/popularList.js"></script>
     <script defer src="scripts/slider.js"></script>
     <script defer src="scripts/showModal.js"></script>
+    <script defer src="scripts/menuClose.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -232,6 +233,82 @@
                 </div>
               </div>
             </nav>
+            <div class="menu-mini">
+              <button class="menu-button" onclick="menuOpen();">
+                <img src="assets/icons/burger24.png" alt="menu" />
+              </button>
+              <div class="menu-mini-box">
+                <div class="menu-mini-close">
+                  <input
+                    class="menu-mini-search"
+                    type="text"
+                    placeholder="Find dishes..."
+                  />
+                  <button class="button-search">
+                    <img src="assets/icons/search-grey.png" alt="search" />
+                  </button>
+                  <button class="button-close" onclick="menuClose();">
+                    &#10006;
+                  </button>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="assets/icons/fire.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Promo</a>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="assets/catalog/image-2.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Vegan</a>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="assets/catalog/image-11.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Hots</a>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="assets/catalog/image-8.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Colds</a>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="assets/catalog/image-13.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Bakery</a>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="assets/catalog/image-19.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Desserts</a>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="assets/catalog/image-2.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Beverage</a>
+                </div>
+              </div>
+            </div>
             <section class="header-block__services">
               <div class="services-box">
                 <a class="service-link" href="#" title="Search"
@@ -354,11 +431,11 @@
         <div class="footer-top">
           <div class="footer-top__left">
             <div class="footer-top__left__box">
-              <section>
-                <div class="footer-top__left__box__logo">
-                  <img src="assets/logo/logo2.png" alt="logo" />
-                </div>
-              </section>
+              <!-- <section> -->
+              <div class="footer-top__left__box__logo">
+                <img src="assets/logo/logo2.png" alt="logo" />
+              </div>
+              <!-- </section> -->
               <nav>
                 <div class="footer-top__left__box__navigation">
                   <div class="footer-top__left__box__navigation__nav-item">
@@ -395,46 +472,44 @@
           </div>
           <div class="footer-top__right">
             <div class="footer-top__right__box">
-              <section>
-                <div class="footer-top__right__box__contacts">
-                  <a class="footer-top__right__box__contacts__text" href="#"
-                    >+7(777)123-45-67</a
-                  >
-                  <a
-                    class="footer-top__right__box__contacts__text email"
-                    href="#"
-                    >testmail@testmail.test</a
-                  >
-                </div>
-              </section>
+              <!-- <section> -->
+              <div class="footer-top__right__box__contacts">
+                <a class="footer-top__right__box__contacts__text" href="#"
+                  >+7(777)123-45-67</a
+                >
+                <a class="footer-top__right__box__contacts__text email" href="#"
+                  >testmail@testmail.test</a
+                >
+              </div>
+              <!-- </section> -->
             </div>
           </div>
         </div>
         <div class="footer-bottom">
           <div class="footer-bottom__left">
             <div class="footer-bottom__left__box">
-              <section>
-                <p class="footer-bottom__left__box__copyrights">
-                  &#169;&nbsp;2020-2023 "maUkas ltd."
-                </p>
-              </section>
+              <!-- <section> -->
+              <p class="footer-bottom__left__box__copyrights">
+                &#169;&nbsp;2020-2023 "maUkas ltd."
+              </p>
+              <!-- </section> -->
             </div>
           </div>
           <div class="footer-bottom__right">
             <div class="footer-bottom__right__box">
-              <section>
-                <div class="footer-bottom__right__box__roles">
-                  <a class="footer-bottom__right__box__roles__text" href="#"
-                    >VK</a
-                  >
-                  <a class="footer-bottom__right__box__roles__text" href="#"
-                    >Telegram</a
-                  >
-                  <a class="footer-bottom__right__box__roles__text" href="#"
-                    >Whatsapp</a
-                  >
-                </div>
-              </section>
+              <!-- <section> -->
+              <div class="footer-bottom__right__box__roles">
+                <a class="footer-bottom__right__box__roles__text" href="#"
+                  >VK</a
+                >
+                <a class="footer-bottom__right__box__roles__text" href="#"
+                  >Telegram</a
+                >
+                <a class="footer-bottom__right__box__roles__text" href="#"
+                  >Whatsapp</a
+                >
+              </div>
+              <!-- </section> -->
             </div>
           </div>
         </div>

@@ -15,6 +15,14 @@ body {
   font-family: Montserrat;
 }
 
+@font-face {
+  font-family: Montserrat;
+  src: url(../../../assets/font/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../../assets/font/Montserrat-Black.ttf);
+}
 header {
   margin: 0 auto;
   width: 100%;
@@ -33,14 +41,21 @@ header .header-block {
   justify-content: center;
   box-sizing: border-box;
   justify-content: space-between;
+  position: relative;
 }
 header .header-block__logo {
   margin: 0 auto;
   width: 15%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+}
+@media screen and (max-width: 1023px) {
+  header .header-block__logo {
+    width: 30%;
+  }
 }
 header .header-block__logo .logo-box {
   margin: 0 auto;
@@ -51,12 +66,16 @@ header .header-block__logo .logo-box {
   justify-content: flex-start;
 }
 header .header-block__logo .logo-box a {
-  margin: auto;
-  height: auto;
+  margin: 0 auto;
+  height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
 }
 header .header-block__logo .logo-box a img {
-  margin: 0 auto;
+  margin: auto;
   height: auto;
   width: 100%;
 }
@@ -66,6 +85,11 @@ header .header-block__navigation {
   display: flex;
   justify-content: center;
   box-sizing: border-box;
+}
+@media screen and (max-width: 1023px) {
+  header .header-block__navigation {
+    display: none;
+  }
 }
 header .header-block__navigation .nav-box {
   margin: 0 auto;
@@ -166,13 +190,154 @@ header .header-block__navigation .nav-box .nav-item__button-box__button:hover {
 header .header-block__navigation .nav-box .nav-item__button-box:hover .nav-item__button-box__content {
   display: block;
 }
-header .header-block__services {
+header .header-block .menu-mini {
   margin: 0 auto;
-  width: 15%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+}
+@media screen and (max-width: 1023px) {
+  header .header-block .menu-mini {
+    width: 40%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header .header-block .menu-mini {
+    display: none;
+  }
+}
+header .header-block .menu-mini .menu-button {
+  margin: 0 auto;
+  height: 100%;
+  background: none;
+  border: none;
+  outline: none;
+}
+header .header-block .menu-mini .menu-button img {
+  height: 60%;
+}
+header .header-block .menu-mini .menu-mini-box {
+  margin: 0 auto;
+  padding-top: 40.5px;
+  position: absolute;
+  top: 40.5px;
+  left: 0;
+  float: right;
+  width: 95vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  background-color: rgba(4, 14, 31, 0.9);
+  display: none;
+}
+header .header-block .menu-mini .menu-mini-box .menu-mini-close {
+  margin: auto;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+header .header-block .menu-mini .menu-mini-box .menu-mini-close .menu-mini-search {
+  margin: 0;
+  margin-left: 2%;
+  width: 85%;
+  height: 42px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 16px;
+  letter-spacing: 0%;
+  border: #b8b8b8;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+  outline: none;
+  background-color: #ffffff;
+  color: #040e1f;
+}
+header .header-block .menu-mini .menu-mini-box .menu-mini-close .menu-mini-search::-moz-placeholder {
+  padding-left: 10px;
+}
+header .header-block .menu-mini .menu-mini-box .menu-mini-close .menu-mini-search::placeholder {
+  padding-left: 10px;
+}
+header .header-block .menu-mini .menu-mini-box .menu-mini-close .button-search {
+  margin: 0;
+  padding: 0 10px;
+  height: 42px;
+  width: auto;
+  background-color: #ffffff;
+  border: none;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  outline: none;
+}
+header .header-block .menu-mini .menu-mini-box .menu-mini-close .button-close {
+  margin: auto 0;
+  padding: 0 10px;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #fbd13e;
+  background: none;
+  border: none;
+  outline: none;
+}
+header .header-block .menu-mini .menu-mini-box .menu-mini-item {
+  margin: auto;
+  padding: 10px 20px;
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  justify-content: flex-start;
+}
+header .header-block .menu-mini .menu-mini-box .menu-mini-item__image {
+  margin: 0 auto;
+  width: 38px;
+  height: auto;
+  border-radius: 50%;
+}
+header .header-block .menu-mini .menu-mini-box .menu-mini-item__link {
+  margin: 0 auto;
+  margin-left: 20px;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-align: left;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+header .header-block .menu-mini .menu-mini-box .menu-mini-item__link:hover {
+  color: #fbd13e;
+}
+header .header-block .menu-mini:hover .menu-mini-box {
+  display: flex;
+}
+header .header-block__services {
+  margin: 0 auto;
+  width: 15%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1023px) {
+  header .header-block__services {
+    width: 30%;
+  }
 }
 header .header-block__services .services-box {
   margin: 0 auto;
@@ -185,6 +350,7 @@ header .header-block__services .services-box {
 }
 header .header-block__services .services-box .service-link {
   margin: auto;
+  margin-right: 20px;
   width: 100%;
   height: auto;
   display: flex;
@@ -211,6 +377,7 @@ header .header-block__services .services-box .cart-btn {
   align-items: center;
   width: 100%;
   height: auto;
+  position: relative;
   cursor: pointer;
 }
 header .header-block__services .services-box .cart-btn .service-image {
@@ -231,5 +398,7 @@ header .header-block__services .services-box .cart-btn .cart-num {
   color: #ffffff;
   font-size: 16px;
   font-weight: 500;
-  top: 15px;
+  position: absolute;
+  top: -15px;
+  right: -5px;
 }/*# sourceMappingURL=header.css.map */

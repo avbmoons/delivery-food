@@ -21,6 +21,9 @@ body {
   @include flex-vertical();
   justify-content: space-between;
   background-color: $color-background;
+  @include media-phone();
+  @include media-smart();
+  @include media-tablet();
   .top {
     margin: 0 auto;
     width: $site-width;
@@ -42,9 +45,16 @@ body {
         width: 100%;
         height: 80vh;
         @include flex-horizontal();
+        @media only screen and (max-width: 768px) {
+          @include flex-vertical();
+          height: auto;
+        }
         &__info {
           margin: 0 auto;
           width: 25%;
+          @media only screen and (max-width: 767px) {
+            width: 90%;
+          }
           height: inherit;
           @include flex-vertical();
           justify-content: flex-start;
@@ -58,10 +68,17 @@ body {
             margin-top: 40px;
             width: 50%;
             height: auto;
+            @media only screen and (max-width: 767px) {
+              display: none;
+            }
           }
           &__contacts {
             margin-top: 40px;
             @include flex-vertical();
+            @media only screen and (max-width: 376px) {
+              display: none;
+            }
+
             &__phone {
               @include font-info();
               text-align: left;
@@ -86,6 +103,9 @@ body {
             margin: 0 auto;
             width: 100%;
             height: auto;
+            @media only screen and (max-width: 376px) {
+              display: none;
+            }
           }
         }
       }
@@ -113,142 +133,7 @@ body {
     }
   }
   footer {
-    margin: 0 auto;
-    width: $site-width;
-    height: $footer-height;
-    @include flex-vertical();
-    background-color: $color-background-dark;
-
-    .footer-top {
-      margin: 0 auto;
-      width: $block-width;
-      height: 70%;
-      @include flex-horizontal();
-      justify-content: space-between;
-      &__left {
-        margin: 0 auto;
-        width: 50%;
-        height: 100%;
-        @include flex-vertical();
-        &__box {
-          margin: 0 auto;
-          width: 100%;
-          @include flex-horizontal();
-          justify-content: space-between;
-          &__logo {
-            margin: 0 auto;
-            height: $menu-height;
-            @include flex-horizontal();
-            justify-content: flex-start;
-            img {
-              height: inherit;
-            }
-          }
-          &__navigation {
-            margin: 0 auto;
-            height: $menu-height;
-            @include flex-horizontal();
-            &__nav-item {
-              margin: 0 auto;
-              margin-left: 20px;
-              height: inherit;
-              @include flex-horizontal();
-              &__text {
-                margin: 0 auto;
-                @include flex-vertical();
-                @include font-menu();
-                text-decoration: none;
-                cursor: pointer;
-                color: $color-white;
-              }
-              &__text:hover {
-                color: $color-button-to-cart;
-              }
-              .last {
-                margin-right: 20px;
-              }
-            }
-          }
-        }
-      }
-      &__right {
-        margin: 0 auto;
-        width: 50%;
-        height: 100%;
-        @include flex-vertical();
-        &__box {
-          margin: 0 auto;
-          width: 100%;
-          @include flex-horizontal();
-          justify-content: flex-end;
-          &__contacts {
-            margin: 0 auto;
-            &__text {
-              margin: 0 auto;
-              margin-left: 20px;
-              @include font-menu();
-              text-decoration: none;
-              cursor: pointer;
-              color: $color-white;
-            }
-            .email:hover {
-              color: $color-button-to-cart;
-            }
-          }
-        }
-      }
-    }
-    .footer-bottom {
-      margin: 0 auto;
-      width: $block-width;
-      height: 30%;
-      @include flex-horizontal();
-      justify-content: space-between;
-      &__left {
-        margin: 0 auto;
-        width: 50%;
-        height: 100%;
-        @include flex-vertical();
-        &__box {
-          margin: 0 auto;
-          width: 100%;
-          @include flex-horizontal();
-          justify-content: flex-start;
-          &__copyrights {
-            margin: 0 auto;
-            @include font-menu();
-            text-decoration: none;
-            color: $color-white;
-          }
-        }
-      }
-      &__right {
-        margin: 0 auto;
-        width: 50%;
-        height: 100%;
-        @include flex-vertical();
-        &__box {
-          margin: 0 auto;
-          width: 100%;
-          @include flex-horizontal();
-          justify-content: flex-end;
-          &__roles {
-            margin: 0 auto;
-            &__text {
-              margin: 0 auto;
-              margin-left: 20px;
-              @include font-menu();
-              text-decoration: none;
-              cursor: pointer;
-              color: $color-button-to-cart;
-            }
-            &__text:hover {
-              color: $color-banner;
-            }
-          }
-        }
-      }
-    }
+    @include footer();
   }
 }
 .lock {

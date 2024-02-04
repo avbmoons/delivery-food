@@ -7,7 +7,14 @@
 body {
   font-family: Montserrat;
 }
-
+@font-face {
+  font-family: Montserrat;
+  src: url(../../../assets/font/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../../assets/font/Montserrat-Black.ttf);
+}
 @mixin header {
   margin: 0 auto;
   width: $site-width;
@@ -20,9 +27,14 @@ body {
     height: 60%;
     @include flex-horizontal();
     justify-content: space-between;
+    position: relative;
     &__logo {
       margin: 0 auto;
       width: 15%;
+      @media screen and (max-width: 1023px) {
+        width: 30%;
+      }
+      height: 100%;
       @include flex-vertical();
       .logo-box {
         margin: 0 auto;
@@ -30,11 +42,12 @@ body {
         @include flex-horizontal();
         justify-content: flex-start;
         a {
-          margin: auto;
-          height: auto;
+          margin: 0 auto;
+          height: 100%;
           width: 100%;
+          @include flex-vertical();
           img {
-            margin: 0 auto;
+            margin: auto;
             height: auto;
             width: 100%;
           }
@@ -45,6 +58,9 @@ body {
       margin: 0 auto;
       width: 70%;
       @include flex-horizontal();
+      @media screen and (max-width: 1023px) {
+        display: none;
+      }
       .nav-box {
         margin: 0 auto;
         height: auto;
@@ -125,9 +141,120 @@ body {
         }
       }
     }
+    .menu-mini {
+      margin: 0 auto;
+      @media screen and (max-width: 1023px) {
+        width: 40%;
+      }
+      height: 100%;
+      @include flex-vertical();
+      @media screen and (min-width: 1024px) {
+        display: none;
+      }
+      .menu-button {
+        margin: 0 auto;
+        height: 100%;
+        background: none;
+        border: none;
+        outline: none;
+        img {
+          height: 60%;
+        }
+      }
+      .menu-mini-box {
+        margin: 0 auto;
+        padding-top: $header-height * 0.45;
+        position: absolute;
+        top: $header-height * 0.45;
+        left: 0;
+        float: right;
+        width: 95vw;
+        height: auto;
+        @include flex-vertical();
+        background-color: rgba($color: $color-background-dark, $alpha: 0.9);
+        display: none;
+        .menu-mini-close {
+          margin: auto;
+          width: 100%;
+          height: fit-content;
+          @include flex-horizontal();
+          .menu-mini-search {
+            margin: 0;
+            margin-left: 2%;
+            width: 85%;
+            height: $input-height;
+            @include text-font(16px, 300, 16px, 0%);
+            border: $color-grey-middle;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px;
+            outline: none;
+            background-color: $color-white;
+            color: $color-background-dark;
+          }
+          .menu-mini-search::placeholder {
+            padding-left: 10px;
+          }
+          .button-search {
+            margin: 0;
+            padding: 0 10px;
+            height: $input-height;
+            width: auto;
+            background-color: $color-white;
+            border: none;
+            border-top-right-radius: 3px;
+            border-bottom-right-radius: 3px;
+            outline: none;
+          }
+          .button-close {
+            margin: auto 0;
+            padding: 0 10px;
+            @include text-font(28px, 500, 28px, 0%);
+            color: $color-button-to-cart;
+            background: none;
+            border: none;
+            outline: none;
+          }
+        }
+        .menu-mini-item {
+          margin: auto;
+          padding: 10px 20px;
+          width: 80%;
+          @include flex-horizontal();
+          justify-content: flex-start;
+          &__image {
+            margin: 0 auto;
+            width: 38px;
+            height: auto;
+            border-radius: 50%;
+          }
+          &__link {
+            margin: 0 auto;
+            margin-left: 20px;
+            width: 80%;
+            @include flex-vertical();
+            text-decoration: none;
+            text-align: left;
+            @include text-font(16px, 400, 16px, 0%);
+            color: $color-white;
+          }
+          &__link:hover {
+            color: $color-button-to-cart;
+          }
+        }
+      }
+    }
+    .menu-mini:hover {
+      .menu-mini-box {
+        display: flex;
+      }
+    }
     &__services {
       margin: 0 auto;
       width: 15%;
+      @media screen and (max-width: 1023px) {
+        width: 30%;
+      }
+      height: 100%;
       @include flex-vertical();
       .services-box {
         margin: 0 auto;
@@ -137,6 +264,7 @@ body {
         justify-content: flex-end;
         .service-link {
           margin: auto;
+          margin-right: 20px;
           width: 100%;
           height: auto;
           @include flex-vertical();
@@ -160,6 +288,7 @@ body {
           align-items: center;
           width: 100%;
           height: auto;
+          position: relative;
           cursor: pointer;
           .service-image {
             margin: 0 auto;
@@ -177,8 +306,9 @@ body {
             color: $color-white;
             font-size: 16px;
             font-weight: 500;
-            top: 15px;
-            //right: -5px;
+            position: absolute;
+            top: -15px;
+            right: -5px;
           }
         }
       }
