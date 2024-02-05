@@ -19,6 +19,9 @@
     margin: 0 auto;
     width: 65%;
     height: auto;
+    @media only screen and (max-width: 1023px) {
+      width: 85%;
+    }
     @include flex-vertical();
     justify-content: space-around;
     overflow: auto;
@@ -54,26 +57,35 @@
         width: 100%;
         height: 100%;
         @include flex-horizontal();
+        @media only screen and (max-width: 768px) {
+          @include flex-vertical();
+          height: auto;
+        }
         justify-content: space-between;
         border-radius: 2px;
-        background-color: inherit; // $color-white;
+        background-color: inherit;
         overflow-y: auto;
         &__image-box {
           margin: 0;
           height: 100%;
-          width: 50%; // auto;
+          width: 50%;
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+          }
           @include flex-vertical();
           &__image {
             margin: 0;
             width: auto;
             height: 100%;
-            //border: 5px solid orangered;
           }
         }
         &__text-box {
           margin: 0 auto;
-          height: auto; // 100%;
+          height: auto;
           width: 50%;
+          @media only screen and (max-width: 768px) {
+            width: 100%;
+          }
           @include flex-vertical();
           justify-content: space-around;
           &__heading {

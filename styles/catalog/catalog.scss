@@ -13,6 +13,15 @@
 body {
   font-family: Montserrat;
 }
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/font/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../assets/font/Montserrat-Black.ttf);
+}
+
 .wrapper {
   margin: 0 auto;
   width: $site-width;
@@ -46,6 +55,10 @@ body {
           margin-top: 40px;
           width: 100%;
           @include head-1();
+          @media only screen and (max-width: 1023px) {
+            @include head-2();
+            text-align: left;
+          }
           text-align: left;
           color: $color-white;
         }

@@ -1,0 +1,289 @@
+@import "../../vars/vars.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Montserrat;
+}
+
+@mixin header {
+  margin: 0 auto;
+  width: $site-width;
+  height: $header-height;
+  @include flex-vertical();
+  background-color: $color-background-dark;
+  .header-block {
+    margin: 0 auto;
+    width: $block-width;
+    height: 60%;
+    @include flex-horizontal();
+    justify-content: space-between;
+    &__logo {
+      margin: 0 auto;
+      width: 15%;
+      @include flex-vertical();
+      .logo-box {
+        margin: 0 auto;
+        height: 100%;
+        @include flex-horizontal();
+        justify-content: flex-start;
+        a {
+          margin: auto;
+          height: auto;
+          width: 100%;
+          img {
+            margin: 0 auto;
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+    &__navigation {
+      margin: 0 auto;
+      width: 70%;
+      @include flex-horizontal();
+      .nav-box {
+        margin: 0 auto;
+        height: auto;
+        width: 100%;
+        @include flex-horizontal();
+        justify-content: space-between;
+        .nav-item {
+          margin: 0 auto;
+          width: auto;
+          max-width: 12%;
+          height: auto;
+          @include flex-horizontal();
+          &__text {
+            margin: 0 auto;
+            width: 100%;
+            @include font-menu();
+            text-decoration: none;
+            cursor: pointer;
+            color: $color-white;
+          }
+          &__text:hover {
+            color: $color-button-to-cart;
+          }
+          .promo:hover {
+            color: $color-banner;
+          }
+          &__image {
+            margin: 0 auto;
+            height: 80%;
+          }
+          &__button-box {
+            margin: auto 0;
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+            &__button {
+              margin: 0 auto;
+              @include flex-vertical();
+              @include font-menu();
+              text-decoration: none;
+              cursor: pointer;
+              color: $color-white;
+            }
+            &__content {
+              position: absolute;
+              left: 0;
+              margin-top: 5px;
+              min-width: fit-content;
+              height: auto;
+              background-color: $color-background-dark;
+              color: $color-black;
+              @include flex-vertical();
+              display: none;
+              &__list {
+                list-style-type: none;
+                &__row {
+                  margin-bottom: 10px;
+                  padding-left: 10px;
+                  padding-right: 10px;
+                  &__link {
+                    text-decoration: none;
+                    @include font-menu();
+                    color: $color-white;
+                  }
+                  &__link:hover {
+                    color: $color-button-to-cart;
+                  }
+                }
+              }
+            }
+            &__button:hover {
+              color: $color-button-to-cart;
+            }
+          }
+          &__button-box:hover .nav-item__button-box__content {
+            display: block;
+          }
+        }
+      }
+    }
+    &__services {
+      margin: 0 auto;
+      width: 15%;
+      @include flex-vertical();
+      .services-box {
+        margin: 0 auto;
+        height: 100%;
+        width: auto;
+        @include flex-horizontal();
+        justify-content: flex-end;
+        .service-link {
+          margin: auto;
+          width: 100%;
+          height: auto;
+          @include flex-vertical();
+          cursor: pointer;
+          .service-image {
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+          }
+        }
+        .service-link:hover {
+          img {
+            background-color: $color-button-to-cart;
+          }
+        }
+        .cart-btn {
+          margin: auto;
+          width: 100%;
+          height: auto;
+          @include flex-horizontal();
+          align-items: center;
+          width: 100%;
+          height: auto;
+          cursor: pointer;
+          .service-image {
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+          }
+          .cart-num {
+            position: absolute;
+            background-color: #d62240;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            @include flex-horizontal();
+            align-items: center;
+            color: $color-white;
+            font-size: 16px;
+            font-weight: 500;
+            top: 15px;
+            //right: -5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.header-alt {
+  margin: 0 auto;
+  margin-top: 40px;
+  width: $site-width;
+  height: $header-height;
+  @include flex-vertical();
+  background-color: $color-background-dark;
+  &__block {
+    margin: 0 auto;
+    width: $block-width;
+    height: 60%; // $menu-height;
+    @include flex-horizontal();
+    justify-content: space-between;
+    border: 2px solid red;
+    &__logo {
+      margin: 0 auto;
+      width: 15%;
+      @include flex-vertical();
+      border: 2px solid green;
+      .logo-box {
+        margin: 0 auto;
+        height: 100%;
+        @include flex-horizontal();
+        justify-content: flex-start;
+        border: 2px solid red;
+        .logo-link {
+          margin: auto;
+          height: auto;
+          width: 100%;
+          .logo-image {
+            margin: auto;
+            height: auto;
+            width: 100%;
+          }
+        }
+      }
+    }
+    &__navigation {
+      margin: 0 auto;
+      width: 70%;
+      @include flex-vertical();
+      border: 2px solid yellowgreen;
+      .nav-box {
+        margin: 0 auto;
+        height: auto; // 100%;
+        width: 100%; // auto;
+        @include flex-horizontal();
+        justify-content: space-between;
+        border: 2px solid red;
+        .nav-item {
+          margin: auto;
+          //margin-left: 30px;
+          width: auto; // 100%;
+          max-width: 12%;
+          height: auto;
+          @include flex-horizontal();
+          border: 2px solid yellow;
+          .nav-text {
+            margin: 0 auto;
+            width: 100%;
+            height: auto;
+            @include font-menu();
+            text-decoration: none;
+            color: $color-white;
+          }
+        }
+      }
+    }
+    &__services {
+      margin: 0 auto;
+      width: 15%;
+      @include flex-vertical();
+      border: 2px solid green;
+      .services-box {
+        margin: 0 auto;
+        height: 100%;
+        width: auto;
+        @include flex-horizontal();
+        justify-content: flex-end;
+        border: 2px solid red;
+        .service-link {
+          margin: auto;
+          margin-left: 30px;
+          //height: fit-content; // auto;
+          width: 100%;
+          height: auto;
+          .service-image {
+            margin: auto;
+            //height: fit-content; // auto;
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+header {
+  @include header();
+}

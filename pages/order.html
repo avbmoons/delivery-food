@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order</title>
     <link rel="stylesheet" href="../styles/order/order.css" />
+    <script defer src="../scripts/menuClose.js"></script>
+    <script defer src="../scripts/showCart.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -228,6 +230,92 @@
                 </div>
               </div>
             </nav>
+            <div class="menu-mini">
+              <button class="menu-button" onclick="menuOpen();">
+                <img src="../assets/icons/burger24.png" alt="menu" />
+              </button>
+              <div class="menu-mini-box">
+                <div class="menu-mini-close">
+                  <input
+                    class="menu-mini-search"
+                    type="text"
+                    placeholder="Find dishes..."
+                  />
+                  <button class="button-search">
+                    <img src="../assets/icons/search-grey.png" alt="search" />
+                  </button>
+                  <button class="button-close" onclick="menuClose();">
+                    &#10006;
+                  </button>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="../assets/icons/heart24.png"
+                    alt="all"
+                  />
+                  <a class="menu-mini-item__link" href="../pages/catalog.html"
+                    >ALL dishes</a
+                  >
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="../assets/icons/fire.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Promo</a>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="../assets/catalog/image-2.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Vegan</a>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="../assets/catalog/image-11.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Hots</a>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="../assets/catalog/image-8.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Colds</a>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="../assets/catalog/image-13.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Bakery</a>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="../assets/catalog/image-19.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Desserts</a>
+                </div>
+                <div class="menu-mini-item">
+                  <img
+                    class="menu-mini-item__image"
+                    src="../assets/catalog/image-2.png"
+                    alt="promo"
+                  />
+                  <a class="menu-mini-item__link" href="#">Beverage</a>
+                </div>
+              </div>
+            </div>
             <section class="header-block__services">
               <div class="services-box">
                 <a class="service-link" href="#" title="Search"
@@ -259,7 +347,6 @@
             </section>
           </div>
         </header>
-
         <main>
           <section name="order">
             <div class="order">
@@ -376,7 +463,7 @@
                         <p
                           class="order__checkout__delivery__info__courier__price-box__price"
                         >
-                          400&nbsp;&#8381;
+                          2&nbsp;&euro;
                         </p>
                         <button
                           class="order__checkout__delivery__info__courier__price-box__plus"
@@ -616,12 +703,12 @@
                         <p
                           class="order__cart__block__props__item__total-box__origin"
                         >
-                          620&nbsp;&#8381;
+                          6.20&nbsp;&euro;
                         </p>
                         <p
                           class="order__cart__block__props__item__total-box__active"
                         >
-                          495&nbsp;&#8381;
+                          4.95&nbsp;&euro;
                         </p>
                       </div>
                     </div>
@@ -652,12 +739,12 @@
                         <p
                           class="order__cart__block__props__item__total-box__origin"
                         >
-                          620&nbsp;&#8381;
+                          6.20&nbsp;&euro;
                         </p>
                         <p
                           class="order__cart__block__props__item__total-box__active"
                         >
-                          495&nbsp;&#8381;
+                          4.95&nbsp;&euro;
                         </p>
                       </div>
                     </div>
@@ -669,9 +756,11 @@
                       <p class="order__cart__total__block__input__label">
                         Total amount:
                       </p>
-                      <p class="order__cart__total__block__input__value">990</p>
+                      <p class="order__cart__total__block__input__value">
+                        9.90
+                      </p>
                       <p class="order__cart__total__block__input__currency">
-                        &#8381;
+                        &euro;
                       </p>
                     </div>
                   </div>

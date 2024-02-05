@@ -448,6 +448,7 @@ footer {
 }
 @media screen and (max-width: 1023px) {
   footer {
+    margin-top: 40px;
     height: auto;
   }
 }
@@ -778,6 +779,14 @@ body {
   font-family: Montserrat;
 }
 
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/font/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../assets/font/Montserrat-Black.ttf);
+}
 .wrapper {
   margin: 0 auto;
   width: 100%;
@@ -1208,6 +1217,11 @@ body {
   box-sizing: border-box;
   justify-content: flex-start;
 }
+@media only screen and (max-width: 1023px) {
+  .wrapper .top main .feedback__message {
+    width: 100%;
+  }
+}
 .wrapper .top main .feedback__message__heading {
   margin: 0 auto;
   width: 100%;
@@ -1217,6 +1231,15 @@ body {
   letter-spacing: 0%;
   text-align: left;
   color: #ffffff;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper .top main .feedback__message__heading {
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 48px;
+    letter-spacing: 0%;
+    text-align: left;
+  }
 }
 .wrapper .top main .feedback__message .crumbs {
   margin: 0;
@@ -1276,6 +1299,11 @@ body {
   color: #ffffff;
   border: none;
 }
+@media only screen and (max-width: 1023px) {
+  .wrapper .top main .feedback__message__form__input__message {
+    width: 100%;
+  }
+}
 .wrapper .top main .feedback__message__form__input__useremail {
   margin-top: 20px;
   width: 60%;
@@ -1286,6 +1314,11 @@ body {
   letter-spacing: 0%;
   color: #ffffff;
   border: none;
+}
+@media only screen and (max-width: 1023px) {
+  .wrapper .top main .feedback__message__form__input__useremail {
+    width: 100%;
+  }
 }
 .wrapper .top main .feedback__message__form__input__label {
   width: 48%;
@@ -1336,6 +1369,11 @@ body {
   background-position: bottom;
   background-repeat: no-repeat;
 }
+@media only screen and (max-width: 1023px) {
+  .wrapper .top main .feedback__decor {
+    display: none;
+  }
+}
 .wrapper .top main .feedback__decor__block {
   margin: auto;
   width: 100%;
@@ -1365,6 +1403,7 @@ body {
 }
 @media screen and (max-width: 1023px) {
   .wrapper footer {
+    margin-top: 40px;
     height: auto;
   }
 }

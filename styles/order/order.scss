@@ -11,6 +11,15 @@
 body {
   font-family: Montserrat;
 }
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/font/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../assets/font/Montserrat-Black.ttf);
+}
+
 .wrapper {
   margin: 0 auto;
   width: $site-width;
@@ -40,16 +49,27 @@ body {
         min-height: $input-height;
         @include flex-horizontal();
         justify-content: space-between;
+        @media only screen and (max-width: 1023px) {
+          @include flex-vertical();
+          //flex-direction: column-reverse;
+        }
         &__checkout {
           margin: 0 auto;
           width: 50%;
           height: auto;
           @include flex-vertical();
           justify-content: flex-start;
+          @media only screen and (max-width: 1023px) {
+            width: 100%;
+          }
           &__heading {
             margin: 0 auto;
             width: 100%;
             @include head-1();
+            @media only screen and (max-width: 1023px) {
+              @include head-2();
+              text-align: left;
+            }
             text-align: left;
             color: $color-white;
           }
@@ -95,6 +115,10 @@ body {
               &__info {
                 margin: 0 auto 0 50%;
                 width: 50%;
+                @media only screen and (max-width: 1023px) {
+                  margin: 0;
+                  width: 100%;
+                }
                 @include flex-horizontal();
                 justify-content: flex-end;
                 @include font-menu();
@@ -107,8 +131,14 @@ body {
                 height: $input-height;
                 @include flex-horizontal();
                 justify-content: space-between;
+                @media only screen and (max-width: 1023px) {
+                  @include flex-vertical();
+                }
                 &__username {
                   width: 50%;
+                  @media only screen and (max-width: 1023px) {
+                    width: 100%;
+                  }
                   height: $input-height;
                   @include font-menu();
                   color: $color-white;
@@ -116,6 +146,9 @@ body {
                 }
                 &__userphone {
                   width: 50%;
+                  @media only screen and (max-width: 1023px) {
+                    width: 100%;
+                  }
                   height: $input-height;
                   @include font-menu();
                   color: $color-white;
@@ -123,6 +156,9 @@ body {
                 }
                 &__useremail {
                   width: 50%;
+                  @media only screen and (max-width: 1023px) {
+                    width: 100%;
+                  }
                   height: $input-height;
                   @include font-menu();
                   color: $color-white;
@@ -137,11 +173,18 @@ body {
                 }
                 &__label {
                   width: 48%;
+                  @media only screen and (max-width: 1023px) {
+                    margin-bottom: 10px;
+                    width: 100%;
+                  }
                   margin-right: 20px;
                   @include flex-vertical();
                   &__text {
                     @include font-menu();
                     text-align: right;
+                    @media only screen and (max-width: 1023px) {
+                      text-align: left;
+                    }
                     color: $color-white;
                     text-transform: uppercase;
                   }
@@ -172,9 +215,17 @@ body {
               height: 0.4 * $banner-height;
               @include flex-horizontal();
               justify-content: space-between;
+              @media only screen and (max-width: 1023px) {
+                height: auto;
+                @include flex-vertical();
+              }
               &__courier {
                 margin: 0 auto;
                 width: 45%;
+                @media only screen and (max-width: 1023px) {
+                  padding: 0 0 20px 10px;
+                  width: 100%;
+                }
                 height: inherit;
                 @include flex-horizontal();
                 justify-content: space-between;
@@ -237,6 +288,11 @@ body {
               &__pickup {
                 margin: 0 auto;
                 width: 45%;
+                @media only screen and (max-width: 1023px) {
+                  margin-top: 20px;
+                  padding: 0 0 20px 10px;
+                  width: 100%;
+                }
                 height: inherit;
                 @include flex-horizontal();
                 justify-content: space-between;
@@ -306,6 +362,10 @@ body {
               &__info {
                 margin: 0 auto 0 50%;
                 width: 50%;
+                @media only screen and (max-width: 1023px) {
+                  margin: 0;
+                  width: 100%;
+                }
                 @include flex-horizontal();
                 justify-content: flex-start;
                 @include font-menu();
@@ -318,8 +378,15 @@ body {
                 min-height: $input-height;
                 @include flex-horizontal();
                 justify-content: flex-end;
+                @media only screen and (max-width: 1023px) {
+                  @include flex-vertical();
+                  width: 100%;
+                }
                 &__userlocality {
                   width: 50%;
+                  @media only screen and (max-width: 1023px) {
+                    width: 100%;
+                  }
                   height: $input-height;
                   @include font-menu();
                   color: $color-white;
@@ -327,6 +394,9 @@ body {
                 }
                 &__userstreet {
                   width: 50%;
+                  @media only screen and (max-width: 1023px) {
+                    width: 100%;
+                  }
                   height: $input-height;
                   @include font-menu();
                   color: $color-white;
@@ -334,10 +404,16 @@ body {
                 }
                 &__house-flat {
                   width: 50%;
+                  @media only screen and (max-width: 1023px) {
+                    width: 100%;
+                  }
                   height: $input-height;
                   @include font-menu();
                   @include flex-horizontal();
                   justify-content: flex-end;
+                  @media only screen and (max-width: 1023px) {
+                    justify-content: space-between;
+                  }
                   &__userhouse {
                     width: 50%;
                     height: $input-height;
@@ -356,9 +432,14 @@ body {
                     width: 48%;
                     margin-right: 20px;
                     @include flex-vertical();
+
                     &__text {
                       @include font-menu();
                       text-align: right;
+                      @media only screen and (max-width: 1023px) {
+                        width: 45%;
+                        padding-left: 20px;
+                      }
                       color: $color-white;
                       text-transform: uppercase;
                     }
@@ -367,6 +448,9 @@ body {
 
                 &__comments {
                   width: 50%;
+                  @media only screen and (max-width: 1023px) {
+                    width: 100%;
+                  }
                   height: $textarea-height;
                   @include font-menu();
                   color: $color-white;
@@ -374,11 +458,18 @@ body {
                 }
                 &__label {
                   width: 48%;
+                  @media only screen and (max-width: 1023px) {
+                    margin-bottom: 10px;
+                    width: 100%;
+                  }
                   margin-right: 20px;
                   @include flex-vertical();
                   &__text {
                     @include font-menu();
                     text-align: right;
+                    @media only screen and (max-width: 1023px) {
+                      text-align: left;
+                    }
                     color: $color-white;
                     text-transform: uppercase;
                   }
@@ -407,6 +498,10 @@ body {
               margin-top: 40px;
               width: 100%;
               height: $payment-type-height;
+              @media only screen and (max-width: 1023px) {
+                margin-top: 20px;
+                height: $payment-type-height * 0.6;
+              }
               @include flex-vertical();
               border: 1px dotted $color-grey-middle;
               &__box {
@@ -427,10 +522,16 @@ body {
                   height: 100%;
                   @include flex-vertical();
                   justify-content: space-between;
+                  @media only screen and (max-width: 1023px) {
+                    justify-content: space-around;
+                  }
                   &__text {
                     margin: 0;
                     @include font-mix();
                     color: $color-white;
+                    @media only screen and (max-width: 1023px) {
+                      @include text-font(16px, 400, 16px, 0%);
+                    }
                   }
                   .only {
                     margin: auto 0;
@@ -445,6 +546,11 @@ body {
                       margin-right: 20px;
                       height: $payment-icon-height;
                       width: auto;
+                      @media only screen and (max-width: 1023px) {
+                        margin: auto;
+                        height: fit-content;
+                        width: 15%;
+                      }
                     }
                   }
                 }
@@ -465,6 +571,7 @@ body {
                 text-transform: uppercase;
                 color: $color-black;
                 background-color: $color-button-to-cart;
+                cursor: pointer;
               }
             }
           }
@@ -472,6 +579,9 @@ body {
         &__cart {
           margin: 0 auto;
           width: 48%;
+          @media only screen and (max-width: 1023px) {
+            width: 100%;
+          }
           height: auto;
           @include flex-vertical();
           justify-content: flex-start;
@@ -491,13 +601,19 @@ body {
               justify-content: center;
               &__item {
                 margin: 0 auto;
+                margin-bottom: 10px;
+                padding: 10px 0 10px 0;
                 width: 100%;
                 @include flex-horizontal();
                 justify-content: space-between;
+                border: 1px solid $color-grey-middle;
                 &__image {
                   margin: 0;
                   width: 15%;
                   @include flex-vertical();
+                  @media only screen and (max-width: 1023px) {
+                    display: none;
+                  }
                   img {
                     width: $item-order-height;
                   }
@@ -554,7 +670,6 @@ body {
                     }
                   }
                 }
-
                 &__total-box {
                   margin: 0 auto;
                   width: 20%;
@@ -589,6 +704,10 @@ body {
             &__block {
               margin: 0;
               width: 35%;
+              @media only screen and (max-width: 1023px) {
+                padding-right: 10px;
+                width: 100%;
+              }
               height: $item-order-height;
               @include flex-vertical();
               &__input {
@@ -597,6 +716,10 @@ body {
                 height: fit-content;
                 @include flex-horizontal();
                 justify-content: flex-start;
+                @media only screen and (max-width: 1023px) {
+                  justify-content: flex-end;
+                  width: 100%;
+                }
                 align-items: flex-end;
                 &__label {
                   margin-right: 20px;

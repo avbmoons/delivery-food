@@ -11,6 +11,15 @@
 body {
   font-family: Montserrat;
 }
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/font/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../assets/font/Montserrat-Black.ttf);
+}
+
 .wrapper {
   margin: 0 auto;
   width: $site-width;
@@ -43,6 +52,10 @@ body {
           margin: 0 auto;
           width: 100%;
           @include head-1();
+          @media only screen and (max-width: 1023px) {
+            @include head-2();
+            text-align: left;
+          }
           text-align: left;
           color: $color-white;
         }
@@ -72,14 +85,24 @@ body {
           width: 100%;
           height: $item-height;
           @include flex-horizontal();
+          @media only screen and (max-width: 1023px) {
+            height: auto;
+            @include flex-vertical();
+          }
           justify-content: space-between;
           background-color: $color-background-dark;
           &__image {
             margin: 0;
             width: 50%;
+            @media only screen and (max-width: 1023px) {
+              width: 100%;
+            }
             @include flex-vertical();
             img {
               width: $item-height;
+              @media only screen and (max-width: 1023px) {
+                width: 100%;
+              }
             }
           }
           &__parts {
@@ -87,6 +110,11 @@ body {
             margin-left: 40px;
             width: 60%;
             @include flex-vertical();
+            @media only screen and (max-width: 1023px) {
+              margin-left: 0;
+              width: 100%;
+              flex-direction: column-reverse;
+            }
             justify-content: flex-start;
             &__heading {
               margin: 0 auto;
@@ -94,6 +122,9 @@ body {
               @include font-mix();
               text-align: left;
               color: $color-white;
+              @media only screen and (max-width: 1023px) {
+                display: none;
+              }
             }
             &__component {
               margin: 0 auto;
@@ -103,6 +134,9 @@ body {
               &__name-box {
                 margin: 0 auto;
                 width: 50%;
+                @media only screen and (max-width: 1023px) {
+                  width: 40%;
+                }
                 @include flex-vertical();
                 &__name {
                   @include font-mix();
@@ -118,12 +152,17 @@ body {
               .counter {
                 margin: 0 auto;
                 width: 15%;
+                @media only screen and (max-width: 1023px) {
+                  width: 20%;
+                }
                 @include flex-horizontal();
                 &__minus {
                   width: 25%;
                   @include font-mix();
                   color: $color-white;
                   background-color: $color-background-dark;
+                  border: none;
+                  outline: none;
                   cursor: pointer;
                 }
                 &__value {
@@ -139,12 +178,18 @@ body {
                   @include font-mix();
                   color: $color-white;
                   background-color: $color-background-dark;
+                  border: none;
+                  outline: none;
                   cursor: pointer;
                 }
               }
               .shopping-box {
                 margin: 0 auto;
                 width: 25%;
+                @media only screen and (max-width: 1023px) {
+                  margin-left: 20px;
+                  width: 38%;
+                }
                 height: $button-to-cart-size;
                 @include flex-horizontal();
                 justify-content: flex-end;
@@ -188,6 +233,10 @@ body {
               margin: 0;
               margin-top: 40px;
               width: 75%;
+              @media only screen and (max-width: 1023px) {
+                margin-top: 20px;
+                width: 100%;
+              }
               @include flex-vertical();
               &__heading {
                 margin: 0 auto;
@@ -195,6 +244,9 @@ body {
                 @include font-mix();
                 text-align: left;
                 color: $color-white;
+                @media only screen and (max-width: 1023px) {
+                  display: none;
+                }
               }
               &__text {
                 margin: 0 auto;
@@ -218,6 +270,9 @@ body {
           margin-top: 40px;
           width: 100%;
           @include head-1();
+          @media only screen and (max-width: 1023px) {
+            @include head-2();
+          }
           text-align: left;
           color: $color-white;
         }
@@ -233,6 +288,15 @@ body {
             margin-left: 10px;
             width: $item-width;
             height: $item-height;
+            @media only screen and (max-width: 767px) {
+              width: $site-width * 0.47;
+            }
+            @media only screen and (min-width: 768px) and (max-width: 1023px) {
+              width: $site-width * 0.32;
+            }
+            @media only screen and (min-width: 1024px) and (max-width: 1280px) {
+              width: $site-width * 0.23;
+            }
             @include flex-vertical();
             justify-content: space-between;
             background-color: $color-background-dark;

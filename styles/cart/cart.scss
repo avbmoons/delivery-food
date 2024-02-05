@@ -11,6 +11,14 @@
 body {
   font-family: Montserrat;
 }
+@font-face {
+  font-family: Montserrat;
+  src: url(../../assets/font/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: Montserrat-Black;
+  src: url(../../assets/font/Montserrat-Black.ttf);
+}
 
 .wrapper {
   margin: 0 auto;
@@ -50,6 +58,10 @@ body {
             margin: 0;
             width: auto;
             @include head-1();
+            @media only screen and (max-width: 1023px) {
+              @include head-2();
+              text-align: left;
+            }
             text-align: left;
             color: $color-white;
           }
@@ -103,6 +115,9 @@ body {
           width: 100%;
           @include flex-horizontal();
           justify-content: flex-end;
+          @media only screen and (max-width: 1023px) {
+            display: none;
+          }
           .titles-point {
             padding-left: 10px;
             color: $color-white;
@@ -139,18 +154,10 @@ body {
             margin: 0 auto;
             margin-top: 10px;
             width: 100%;
-            //min-height: $cart-item-height;
             height: auto;
-            //@include flex-horizontal();
-            //justify-content: space-between;
             @include flex-vertical();
             justify-content: flex-start;
             background-color: $color-background-dark;
-            //   &__props {
-            //     margin: 0 auto;
-            //     width: 100%;
-            //     @include flex-vertical();
-            //     justify-content: center;
             .cart-item {
               margin: 0 auto;
               margin-bottom: 10px;
@@ -162,25 +169,33 @@ body {
               .image-box {
                 margin: 0;
                 width: 15%;
-                height: auto; // 100%;
+                height: auto;
                 @include flex-vertical();
+                @media only screen and (max-width: 1023px) {
+                  display: none;
+                }
                 img {
                   margin: 0 auto;
                   align-items: center;
                   width: 100%;
-                  //width: auto;
                   height: auto;
-                  //height: 100%;
                 }
               }
               .name-box {
                 margin: 0 auto;
                 width: 35%;
+                @media only screen and (max-width: 1023px) {
+                  width: 40%;
+                }
                 @include flex-vertical();
                 &__name {
                   margin-bottom: 10px;
                   padding-left: 10px;
                   padding-right: 10px;
+                  @media only screen and (max-width: 1023px) {
+                    padding-left: 5px;
+                    padding-right: 5px;
+                  }
                   @include text-font(18px, 400, 18px, 0%);
                   text-align: left;
                   color: $color-white;
@@ -199,6 +214,9 @@ body {
                 @include flex-vertical();
                 @include font-price();
                 color: $color-white;
+                @media only screen and (max-width: 1023px) {
+                  display: none;
+                }
                 .price-origin-box {
                   margin: 0 auto;
                   @include flex-horizontal();
@@ -239,6 +257,9 @@ body {
               .counter-box {
                 margin: 0 auto;
                 width: 15%;
+                @media only screen and (max-width: 1023px) {
+                  width: 20%;
+                }
                 height: inherit;
                 @include flex-vertical();
                 .counter {
@@ -277,6 +298,9 @@ body {
               .total-box {
                 margin: 0 auto;
                 width: 15%;
+                @media only screen and (max-width: 1023px) {
+                  width: 35%;
+                }
                 height: inherit;
                 @include flex-vertical();
                 @include font-price();
@@ -335,7 +359,7 @@ body {
                   padding: 0;
                   width: 100%;
                   @include font-price();
-                  color: $color-banner; // $color-white;
+                  color: $color-banner;
                   background-color: $color-background-dark;
                   border: none;
                   cursor: pointer;
@@ -398,6 +422,9 @@ body {
             .total-block {
               margin: 0;
               width: 35%;
+              @media only screen and (max-width: 1023px) {
+                min-width: 50%;
+              }
               min-height: $input-height;
               @include flex-vertical();
               .total-input {
@@ -437,6 +464,9 @@ body {
                 min-height: $input-height;
                 @include flex-horizontal();
                 justify-content: flex-start;
+                @media only screen and (max-width: 1023px) {
+                  justify-content: flex-end;
+                }
                 align-self: flex-start;
                 .button-apply {
                   width: 150px;

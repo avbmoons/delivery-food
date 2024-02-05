@@ -44,6 +44,9 @@ body {
         margin: 0 auto;
         width: 100%;
         height: 80vh;
+        @media only screen and (max-width: 1023px) {
+          height: auto;
+        }
         @include flex-horizontal();
         @media only screen and (max-width: 768px) {
           @include flex-vertical();
@@ -52,8 +55,9 @@ body {
         &__info {
           margin: 0 auto;
           width: 25%;
-          @media only screen and (max-width: 767px) {
-            width: 90%;
+          height: auto;
+          @media only screen and (max-width: 1023px) {
+            width: 100%;
           }
           height: inherit;
           @include flex-vertical();
@@ -68,17 +72,16 @@ body {
             margin-top: 40px;
             width: 50%;
             height: auto;
-            @media only screen and (max-width: 767px) {
+            @media only screen and (max-width: 1023px) {
               display: none;
             }
           }
           &__contacts {
             margin-top: 40px;
             @include flex-vertical();
-            @media only screen and (max-width: 376px) {
+            @media only screen and (max-width: 1023px) {
               display: none;
             }
-
             &__phone {
               @include font-info();
               text-align: left;
@@ -98,12 +101,11 @@ body {
           height: inherit;
           @include flex-vertical();
           justify-content: flex-start;
-          //display: none; //////
           &__image {
             margin: 0 auto;
             width: 100%;
-            height: auto;
-            @media only screen and (max-width: 376px) {
+            height: inherit; // auto;
+            @media only screen and (max-width: 1023px) {
               display: none;
             }
           }
@@ -119,6 +121,10 @@ body {
           margin-top: 40px;
           width: 100%;
           @include head-1();
+          @media only screen and (max-width: 1023px) {
+            @include head-2();
+            text-align: left;
+          }
           text-align: center;
           color: $color-white;
         }

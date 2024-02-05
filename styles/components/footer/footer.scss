@@ -21,6 +21,7 @@ body {
   width: $site-width;
   height: $footer-height;
   @media screen and (max-width: 1023px) {
+    margin-top: 40px;
     height: auto;
   }
   @include flex-vertical();
