@@ -1,8 +1,8 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import "../vars/vars.scss";
-@import "../components/header/header.scss";
-@import "../components/footer/footer.scss";
+@import '../vars/vars.scss';
+@import '../components/header/header.scss';
+@import '../components/footer/footer.scss';
 
 * {
   margin: 0;
@@ -476,6 +476,7 @@ body {
                   text-transform: uppercase;
                   background-color: $color-background-dark;
                   border: 1px solid $color-button-to-cart;
+                  cursor: pointer;
                 }
               }
             }

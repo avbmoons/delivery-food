@@ -375,6 +375,9 @@ header .header-block__services .services-box .service-link .service-image {
 header .header-block__services .services-box .service-link:hover img {
   background-color: #fbd13e;
 }
+header .header-block__services .services-box .service-link:hover path {
+  fill: #fbd13e;
+}
 header .header-block__services .services-box .cart-btn {
   margin: auto;
   width: 100%;
@@ -1146,6 +1149,9 @@ header .header-block__services .services-box .service-link .service-image {
 }
 header .header-block__services .services-box .service-link:hover img {
   background-color: #fbd13e;
+}
+header .header-block__services .services-box .service-link:hover path {
+  fill: #fbd13e;
 }
 header .header-block__services .services-box .cart-btn {
   margin: auto;
@@ -2273,6 +2279,9 @@ body {
 }
 .wrapper .top header .header-block__services .services-box .service-link:hover img {
   background-color: #fbd13e;
+}
+.wrapper .top header .header-block__services .services-box .service-link:hover path {
+  fill: #fbd13e;
 }
 .wrapper .top header .header-block__services .services-box .cart-btn {
   margin: auto;

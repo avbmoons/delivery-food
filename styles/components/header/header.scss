@@ -1,4 +1,4 @@
-@import "../../vars/vars.scss";
+@import '../../vars/vars.scss';
 
 * {
   margin: 0;
@@ -278,6 +278,9 @@ body {
         .service-link:hover {
           img {
             background-color: $color-button-to-cart;
+          }
+          path {
+            fill: $color-button-to-cart;
           }
         }
         .cart-btn {
