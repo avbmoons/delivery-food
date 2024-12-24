@@ -1,5 +1,4 @@
 const dataTest = catalog;
-//console.log(dataTest);
 
 class CatalogItem {
   constructor(
@@ -63,20 +62,21 @@ class CatalogItem {
   }
 }
 
-class CatalogList {
-  constructor(cart) {
-    this.ccatalog = []; //массив товаров
+class RelatedList {
+  constructor() {
+    this.ccatalog = [];
   }
-  fetchCatalog() {
-    this.ccatalog = catalog;
+  fetchRelated() {
+    this.ccatalog = catalog.filter((catalog) => catalog.type == productType);
   }
-
   render() {
     let listHtml = '';
+
     this.ccatalog.forEach((ccatalog) => {
       const catalogItem = new CatalogItem(
         ccatalog.id,
         ccatalog.name,
+        //ccatalog.image.replace('../', ''),
         ccatalog.image,
         ccatalog.weight,
         ccatalog.units,
@@ -96,8 +96,6 @@ class CatalogList {
   }
 }
 
-const list = new CatalogList();
-
-list.fetchCatalog();
-
+const list = new RelatedList();
+list.fetchRelated();
 list.render();

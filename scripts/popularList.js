@@ -42,7 +42,7 @@ class CatalogItem {
         title="${this.name}"
       />
     </div>
-    <p class="item-box__heading" href="#">${this.name}</p>
+    <a class="item-box__heading" href="./product.html?id=" id="product${this.id}">${this.name}</a>
     <p class="item-box__weight">${this.weight}&nbsp;${this.units}</p>
     <p class="item-box__text">${this.resume}</p>
     <div class="item-box__shopping-box">
@@ -67,16 +67,16 @@ class PopularList {
     this.ccatalog = [];
   }
   fetchPopular() {
-    this.ccatalog = catalog.filter((catalog) => catalog.isPopular == "true");
+    this.ccatalog = catalog.filter((catalog) => catalog.isPopular == 'true');
   }
   render() {
-    let listHtml = "";
+    let listHtml = '';
 
     this.ccatalog.forEach((ccatalog) => {
       const catalogItem = new CatalogItem(
         ccatalog.id,
         ccatalog.name,
-        ccatalog.image.replace("../", ""),
+        ccatalog.image.replace('../', ''),
         ccatalog.weight,
         ccatalog.units,
         ccatalog.resume,
@@ -91,7 +91,7 @@ class PopularList {
       );
       listHtml += catalogItem.render();
     });
-    document.querySelector(".catalog__block").innerHTML = listHtml;
+    document.querySelector('.catalog__block').innerHTML = listHtml;
   }
 }
 

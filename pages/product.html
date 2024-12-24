@@ -3,8 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
+    <title>DFood_dish</title>
     <link rel="stylesheet" href="../styles/product/product.css" />
+    <script src="../data/catalog.js"></script>
+    <script defer src="../scripts/productShow.js"></script>
+    <script defer src="../scripts/relatedList.js"></script>
+    <script defer src="../scripts/productUrl.js"></script>
+    <script defer src="../scripts/showModaProduct.js"></script>
     <script defer src="../scripts/menuClose.js"></script>
     <script defer src="../scripts/showCart.js"></script>
   </head>
@@ -350,7 +355,7 @@
         <main>
           <section name="product">
             <div class="product">
-              <p class="product__heading">Product name</p>
+              <p class="product__heading" id="pageTitle">Product name</p>
               <li class="crumbs">
                 <a class="crumbs__link" href="#">Home /</a>
                 <a class="crumbs__link" href="#">Hots /</a>
@@ -358,7 +363,11 @@
               </li>
               <div class="product__block">
                 <div class="product__block__image">
-                  <img src="../assets/catalog/image-11.png" alt="photo" />
+                  <img
+                    id="productImage"
+                    src="../assets/catalog/image-11.png"
+                    alt="photo"
+                  />
                 </div>
                 <div class="product__block__parts">
                   <p class="product__block__parts__heading">Components</p>
@@ -366,14 +375,38 @@
                     <div class="product__block__parts__component__name-box">
                       <p
                         class="product__block__parts__component__name-box__name"
+                        id="productName"
                       >
                         Cheese
                       </p>
+                      <div
+                        class="product__block__parts__component__name-box__weight-box"
+                      >
+                        <p
+                          class="product__block__parts__component__name-box__weight-box__weight"
+                          id="productWeight"
+                        >
+                          100
+                        </p>
+                        <p
+                          class="product__block__parts__component__name-box__weight-box__weight"
+                          id="productUnits"
+                        >
+                          g
+                        </p>
+                      </div>
+                      <!--<p
+                        class="product__block__parts__component__name-box__weight"
+                        id="productWeight"
+                      >
+                        100
+                      </p>
                       <p
                         class="product__block__parts__component__name-box__weight"
+                        id="productUnits"
                       >
-                        100 g
-                      </p>
+                        g
+                      </p>-->
                     </div>
                     <div class="counter">
                       <button class="counter__minus">-</button>
@@ -382,12 +415,34 @@
                     </div>
                     <div class="shopping-box">
                       <div class="shopping-box__price-box">
-                        <p class="shopping-box__price-box__origin">
-                          620&nbsp;&#8381;
-                        </p>
-                        <p class="shopping-box__price-box__active">
-                          495&nbsp;&#8381;
-                        </p>
+                        <div class="shopping-box__price-box__origin-box">
+                          <p
+                            class="shopping-box__price-box__origin-box__origin"
+                            id="productPriceOrigin"
+                          >
+                            620
+                          </p>
+                          <p
+                            class="shopping-box__price-box__origin-box__origin"
+                            id="currencyOrigin"
+                          >
+                            &#8381;
+                          </p>
+                        </div>
+                        <div class="shopping-box__price-box__active-box">
+                          <p
+                            class="shopping-box__price-box__active-box__active"
+                            id="productPriceActive"
+                          >
+                            495
+                          </p>
+                          <p
+                            class="shopping-box__price-box__active-box__active"
+                            id="currencyActive"
+                          >
+                            &#8381;
+                          </p>
+                        </div>
                       </div>
                       <div class="shopping-box__button-box">
                         <button class="to-cart">
@@ -396,7 +451,7 @@
                       </div>
                     </div>
                   </div>
-                  <div class="product__block__parts__component">
+                  <!-- <div class="product__block__parts__component">
                     <div class="product__block__parts__component__name-box">
                       <p
                         class="product__block__parts__component__name-box__name"
@@ -416,10 +471,16 @@
                     </div>
                     <div class="shopping-box">
                       <div class="shopping-box__price-box">
-                        <p class="shopping-box__price-box__origin">
+                        <p
+                          class="shopping-box__price-box__origin"
+                          id="productPriceOrigin"
+                        >
                           620&nbsp;&#8381;
                         </p>
-                        <p class="shopping-box__price-box__active">
+                        <p
+                          class="shopping-box__price-box__active"
+                          id="productPriceActive"
+                        >
                           495&nbsp;&#8381;
                         </p>
                       </div>
@@ -429,12 +490,15 @@
                         </button>
                       </div>
                     </div>
-                  </div>
+                  </div> -->
                   <div class="product__block__parts__description">
                     <p class="product__block__parts__description__heading">
                       Description
                     </p>
-                    <p class="product__block__parts__description__text">
+                    <p
+                      class="product__block__parts__description__text"
+                      id="productDescription"
+                    >
                       Lorem ipsum dolor sit amet consectetur adipisicing elit.
                       Optio sequi repudiandae odit, aliquam totam libero? Nihil
                       consectetur distinctio possimus odit necessitatibus,
@@ -446,11 +510,11 @@
               </div>
             </div>
           </section>
-          <section name="relations">
-            <div class="catalog">
-              <p class="catalog__heading">Related Dishes</p>
-              <div class="catalog__block">
-                <div class="catalog__block__item">
+          <section class="catalog" name="relations">
+            <!-- <div class="catalog"> -->
+            <p class="catalog__heading">Related Dishes</p>
+            <div class="catalog__block">
+              <!-- <div class="catalog__block__item">
                   <div class="catalog__block__item__image">
                     <img src="../assets/catalog/image-4.png" alt="item" />
                   </div>
@@ -511,6 +575,67 @@
                       <button class="to-cart">
                         <img src="../assets/icons/cart.png" alt="to-cart" />
                       </button>
+                    </div>
+                  </div>
+                </div> -->
+            </div>
+            <!-- </div> -->
+          </section>
+          <section class="modal" id="modal">
+            <div class="modal__block" id="modal__block">
+              <button class="modal__block__close" id="modalClose">
+                &#10006;
+              </button>
+              <div class="modal__block__items">
+                <div data-id="1" class="product-modal">
+                  <div class="product-modal__image-box" id="productImageModal">
+                    <img
+                      class="product-modal__image-box__image"
+                      id="product-1"
+                      src="../assets/catalog/image-3.png"
+                      alt="photo"
+                    />
+                  </div>
+                  <div class="product-modal__text-box">
+                    <div
+                      class="product-modal__text-box__heading"
+                      id="productTitleModal"
+                    >
+                      <p class="product-title-modal">Khinkali traditional</p>
+                    </div>
+                    <div
+                      class="product-modal__text-box__weight"
+                      id="productWeightModal"
+                    >
+                      <p class="product-weight-modal">110&nbsp;g</p>
+                    </div>
+                    <div
+                      class="product-modal__text-box__resume"
+                      id="productResumeModal"
+                    >
+                      <p class="product-resume-modal">
+                        Beef, greens, onion, garlic; min. 5 units for order
+                      </p>
+                    </div>
+                    <div
+                      class="product-modal__text-box__price-box"
+                      id="productPriceModal"
+                    >
+                      <p
+                        class="product-price-origin-modal"
+                        id="priceOriginModal"
+                      >
+                        1.6&nbsp;&euro;
+                      </p>
+                      <p
+                        class="product-price-active-modal"
+                        id="priceActiveModal"
+                      >
+                        1.4&nbsp;&euro;
+                      </p>
+                    </div>
+                    <div class="product-modal__text-box__button-box">
+                      <button class="to-cart">Add to cart</button>
                     </div>
                   </div>
                 </div>
