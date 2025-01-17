@@ -1,10 +1,10 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import "../vars/vars.scss";
-@import "../components/header/header.scss";
-@import "../components/footer/footer.scss";
-@import "../components/itemBox/itemBox.scss";
-@import "../components/modal/modal.scss";
+@import '../vars/vars.scss';
+@import '../components/header/header.scss';
+@import '../components/footer/footer.scss';
+@import '../components/itemBox/itemBox.scss';
+@import '../components/modal/modal.scss';
 
 * {
   margin: 0;
@@ -39,37 +39,113 @@ body {
       width: $block-width;
       min-height: $slide-height;
       @include flex-vertical();
+      .search-block {
+        margin: 0 auto;
+        margin-top: 10px;
+        width: 100%;
+        height: 30px; // fit-content;
+        //border: 1px solid yellowgreen;
+        @include flex-vertical();
+
+        .search-box {
+          margin: 0 auto;
+          width: inherit;
+          height: inherit;
+          @include flex-horizontal();
+          justify-content: flex-end;
+          display: none;
+        }
+        .search-input {
+          padding-left: 10px;
+          width: 30%;
+          height: 30px;
+          background-color: $color-grey-light;
+          border: none;
+          //border-radius: 3px;
+          outline: none;
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+        .search-input::placeholder {
+          @include text-font(14px, 400, 14px, 0%);
+          color: $color-grey-dark;
+        }
+        .search-button {
+          margin-left: 3px;
+          width: 30px;
+          height: 30px;
+          border: none;
+          background-color: $color-background;
+          outline: none;
+          color: $color-grey-light;
+          @include font-mix();
+          font-weight: 300;
+          cursor: pointer;
+        }
+        .clear {
+          margin-left: 0;
+          background-color: $color-grey-light;
+          color: $color-button-to-cart;
+          outline-color: white;
+          @include text-font(18px, 400, 18px, 0%);
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+        .search-close {
+          width: 30px;
+          height: 30px;
+          border: none;
+          background-color: $color-background;
+          outline: none;
+          color: $color-banner;
+          @include font-mix();
+          font-weight: 300;
+          cursor: pointer;
+        }
+        .search-button:hover {
+          color: $color-button-to-cart;
+        }
+        .search-close:hover {
+          color: $color-button-to-cart;
+        }
+      }
 
       .poster {
         margin: 0 auto;
+        margin-top: 20px;
         width: 100%;
-        height: 80vh;
+        height: 75vh; // 80vh;
+        box-sizing: border-box;
+        //border: 2px solid orange;
         @media only screen and (max-width: 1023px) {
           height: auto;
         }
         @include flex-horizontal();
+        justify-content: space-between;
         @media only screen and (max-width: 768px) {
           @include flex-vertical();
           height: auto;
         }
         &__info {
           margin: 0 auto;
+          margin-left: 0;
           width: 25%;
-          height: auto;
+          height: inherit; // auto;
           @media only screen and (max-width: 1023px) {
             width: 100%;
           }
           height: inherit;
           @include flex-vertical();
-          justify-content: flex-start;
+          justify-content: space-evenly;
+          //justify-content: flex-start;
           &__text {
-            margin-top: 40px;
+            //margin-top: 20px; // 40px;
             @include font-info();
             text-align: left;
             color: $color-white;
           }
           &__decor {
-            margin-top: 40px;
+            //margin-top: 40px;
             width: 50%;
             height: auto;
             @media only screen and (max-width: 1023px) {
@@ -77,7 +153,7 @@ body {
             }
           }
           &__contacts {
-            margin-top: 40px;
+            //margin-top: 40px;
             @include flex-vertical();
             @media only screen and (max-width: 1023px) {
               display: none;
@@ -97,14 +173,16 @@ body {
         }
         &__slide {
           margin: 0 auto;
+          margin-right: 0;
           width: auto; // 75%;
           height: inherit;
           @include flex-vertical();
-          justify-content: flex-start;
+          //justify-content: flex-start;
           &__image {
             margin: 0 auto;
-            width: 100%;
-            height: inherit; // auto;
+            margin-right: 0;
+            width: auto; // 100%;
+            height: 98%; // 100%; // inherit; // auto;
             @media only screen and (max-width: 1023px) {
               display: none;
             }
@@ -113,6 +191,7 @@ body {
       }
       .catalog {
         margin: 0 auto;
+        margin-bottom: 40px;
         width: 100%;
         min-height: $item-height;
         @include flex-vertical();
@@ -132,7 +211,7 @@ body {
           margin: 0 auto;
           width: 100%;
           @include flex-horizontal();
-          justify-content: space-between;
+          justify-content: space-evenly; // space-between;
           flex-wrap: wrap;
         }
       }

@@ -40,10 +40,11 @@ header {
   justify-content: center;
   box-sizing: border-box;
   background-color: #040e1f;
+  box-sizing: border-box;
 }
 header .header-block {
   margin: 0 auto;
-  width: 93.75%;
+  width: 80%;
   height: 60%;
   display: flex;
   justify-content: center;
@@ -120,9 +121,9 @@ header .header-block__navigation .nav-box .nav-item {
 header .header-block__navigation .nav-box .nav-item__text {
   margin: 0 auto;
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -136,7 +137,11 @@ header .header-block__navigation .nav-box .nav-item .promo:hover {
 }
 header .header-block__navigation .nav-box .nav-item__image {
   margin: 0 auto;
-  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 70%;
 }
 header .header-block__navigation .nav-box .nav-item__button-box {
   margin: auto 0;
@@ -150,9 +155,9 @@ header .header-block__navigation .nav-box .nav-item__button-box__button {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -183,9 +188,9 @@ header .header-block__navigation .nav-box .nav-item__button-box__content__list__
 }
 header .header-block__navigation .nav-box .nav-item__button-box__content__list__row__link {
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   color: #ffffff;
 }
@@ -335,6 +340,7 @@ header .header-block .menu-mini:hover .menu-mini-box {
 }
 header .header-block__services {
   margin: 0 auto;
+  margin-right: 0;
   width: 15%;
   height: 100%;
   display: flex;
@@ -358,7 +364,7 @@ header .header-block__services .services-box {
 }
 header .header-block__services .services-box .service-link {
   margin: auto;
-  margin-right: 20px;
+  margin-left: 20px;
   width: 100%;
   height: auto;
   display: flex;
@@ -380,6 +386,8 @@ header .header-block__services .services-box .service-link:hover path {
 }
 header .header-block__services .services-box .cart-btn {
   margin: auto;
+  margin-right: 0;
+  margin-left: 20px;
   width: 100%;
   height: auto;
   display: flex;
@@ -407,8 +415,8 @@ header .header-block__services .services-box .cart-btn .cart-num {
   box-sizing: border-box;
   align-items: center;
   color: #ffffff;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
   position: absolute;
   top: -15px;
   right: -5px;
@@ -457,7 +465,7 @@ footer {
 }
 footer .footer-top {
   margin: 0 auto;
-  width: 93.75%;
+  width: 80%;
   height: 70%;
   display: flex;
   justify-content: center;
@@ -562,9 +570,9 @@ footer .footer-top__left__box__navigation__nav-item__text {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -641,9 +649,9 @@ footer .footer-top__right__box__contacts {
 footer .footer-top__right__box__contacts__text {
   margin: 0 auto;
   margin-left: 20px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -671,7 +679,7 @@ footer .footer-top__right__box__contacts .email:hover {
 }
 footer .footer-bottom {
   margin: 0 auto;
-  width: 93.75%;
+  width: 80%;
   height: 30%;
   display: flex;
   justify-content: center;
@@ -711,9 +719,9 @@ footer .footer-bottom__left__box {
 }
 footer .footer-bottom__left__box__copyrights {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   color: #ffffff;
@@ -755,9 +763,9 @@ footer .footer-bottom__right__box__roles {
 footer .footer-bottom__right__box__roles__text {
   margin: 0 auto;
   margin-left: 20px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -813,10 +821,11 @@ body {
   justify-content: center;
   box-sizing: border-box;
   background-color: #040e1f;
+  box-sizing: border-box;
 }
 .wrapper .top header .header-block {
   margin: 0 auto;
-  width: 93.75%;
+  width: 80%;
   height: 60%;
   display: flex;
   justify-content: center;
@@ -893,9 +902,9 @@ body {
 .wrapper .top header .header-block__navigation .nav-box .nav-item__text {
   margin: 0 auto;
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -909,7 +918,11 @@ body {
 }
 .wrapper .top header .header-block__navigation .nav-box .nav-item__image {
   margin: 0 auto;
-  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 70%;
 }
 .wrapper .top header .header-block__navigation .nav-box .nav-item__button-box {
   margin: auto 0;
@@ -923,9 +936,9 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -956,9 +969,9 @@ body {
 }
 .wrapper .top header .header-block__navigation .nav-box .nav-item__button-box__content__list__row__link {
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   color: #ffffff;
 }
@@ -1108,6 +1121,7 @@ body {
 }
 .wrapper .top header .header-block__services {
   margin: 0 auto;
+  margin-right: 0;
   width: 15%;
   height: 100%;
   display: flex;
@@ -1131,7 +1145,7 @@ body {
 }
 .wrapper .top header .header-block__services .services-box .service-link {
   margin: auto;
-  margin-right: 20px;
+  margin-left: 20px;
   width: 100%;
   height: auto;
   display: flex;
@@ -1153,6 +1167,8 @@ body {
 }
 .wrapper .top header .header-block__services .services-box .cart-btn {
   margin: auto;
+  margin-right: 0;
+  margin-left: 20px;
   width: 100%;
   height: auto;
   display: flex;
@@ -1180,8 +1196,8 @@ body {
   box-sizing: border-box;
   align-items: center;
   color: #ffffff;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 14px;
+  font-weight: 400;
   position: absolute;
   top: -15px;
   right: -5px;
@@ -1204,7 +1220,7 @@ body {
 }
 .wrapper footer .footer-top {
   margin: 0 auto;
-  width: 93.75%;
+  width: 80%;
   height: 70%;
   display: flex;
   justify-content: center;
@@ -1309,9 +1325,9 @@ body {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -1388,9 +1404,9 @@ body {
 .wrapper footer .footer-top__right__box__contacts__text {
   margin: 0 auto;
   margin-left: 20px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -1418,7 +1434,7 @@ body {
 }
 .wrapper footer .footer-bottom {
   margin: 0 auto;
-  width: 93.75%;
+  width: 80%;
   height: 30%;
   display: flex;
   justify-content: center;
@@ -1458,9 +1474,9 @@ body {
 }
 .wrapper footer .footer-bottom__left__box__copyrights {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   color: #ffffff;
@@ -1502,9 +1518,9 @@ body {
 .wrapper footer .footer-bottom__right__box__roles__text {
   margin: 0 auto;
   margin-left: 20px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;

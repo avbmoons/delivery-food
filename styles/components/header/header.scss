@@ -21,6 +21,8 @@ body {
   height: $header-height;
   @include flex-vertical();
   background-color: $color-background-dark;
+  box-sizing: border-box;
+  //border: 2px solid orangered;
   .header-block {
     margin: 0 auto;
     width: $block-width;
@@ -28,6 +30,7 @@ body {
     @include flex-horizontal();
     justify-content: space-between;
     position: relative;
+    //border: 2px solid orange;
     &__logo {
       margin: 0 auto;
       width: 15%;
@@ -89,7 +92,9 @@ body {
           }
           &__image {
             margin: 0 auto;
-            height: 80%;
+            @include flex-vertical();
+            height: 70%; // 80%;
+            //border: 2px solid orange;
           }
           &__button-box {
             margin: auto 0;
@@ -250,12 +255,14 @@ body {
     }
     &__services {
       margin: 0 auto;
+      margin-right: 0;
       width: 15%;
       @media screen and (max-width: 1023px) {
         width: 30%;
       }
       height: 100%;
       @include flex-vertical();
+      //border: 2px solid orangered;
       .services-box {
         margin: 0 auto;
         height: 100%;
@@ -264,7 +271,8 @@ body {
         justify-content: flex-end;
         .service-link {
           margin: auto;
-          margin-right: 20px;
+          //margin-right: 20px;
+          margin-left: 20px;
           width: 100%;
           height: auto;
           @include flex-vertical();
@@ -285,6 +293,8 @@ body {
         }
         .cart-btn {
           margin: auto;
+          margin-right: 0;
+          margin-left: 20px;
           width: 100%;
           height: auto;
           @include flex-horizontal();
@@ -292,6 +302,7 @@ body {
           width: 100%;
           height: auto;
           position: relative;
+          //border: 2px solid violet;
           cursor: pointer;
           .service-image {
             margin: 0 auto;
@@ -307,8 +318,8 @@ body {
             @include flex-horizontal();
             align-items: center;
             color: $color-white;
-            font-size: 16px;
-            font-weight: 500;
+            font-size: 14px;
+            font-weight: 400;
             position: absolute;
             top: -15px;
             right: -5px;

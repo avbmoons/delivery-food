@@ -1,17 +1,19 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import "../../vars/vars.scss";
-@import "../../components/header/header.scss";
-@import "../../components/footer/footer.scss";
+@import '../../vars/vars.scss';
+@import '../../components/header/header.scss';
+@import '../../components/footer/footer.scss';
 
 .item-box {
   margin: 0;
-  margin-top: 40px;
-  width: $item-width;
+  margin-top: 20px;
+  //padding: 10px;
+  width: 18%; // $item-width;
   height: $item-height;
   @include flex-vertical();
   justify-content: space-between;
   background-color: $color-background-dark;
+  border-radius: 3px;
   @media only screen and (max-width: 767px) {
     width: $site-width * 0.47;
   }
@@ -24,35 +26,67 @@
 
   &__image {
     margin: 0 auto;
+    padding: 0;
     @include flex-horizontal();
     width: 100%;
     height: auto;
     cursor: pointer;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
     img {
       width: 100%;
+      border-top-left-radius: 3px;
+      border-top-right-radius: 3px;
     }
   }
   &__heading {
+    margin-top: 10px;
+    padding: 0 10px;
     @include font-mix();
+    font-size: 16px;
     text-decoration: none;
     text-align: left;
     color: $color-white;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    //white-space: nowrap;
+    overflow: hidden;
+  }
+  &__heading:hover {
+    color: $color-button-to-cart;
   }
   &__weight {
+    padding: 0 10px;
     @include font-description();
+    font-size: 12px;
     text-align: left;
     color: $color-white;
   }
   &__text {
+    padding: 0 10px;
     @include font-description();
+    font-size: 12px;
     text-align: left;
     color: $color-white;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    //white-space: nowrap;
+    overflow: hidden;
   }
   &__shopping-box {
+    padding: 0 10px;
     margin: 0 auto;
+    margin-bottom: 10px;
     width: 100%;
     height: $button-to-cart-size;
     @include flex-horizontal();
+    justify-content: space-between;
     &__price-box {
       width: 50%;
       height: inherit;
@@ -60,29 +94,35 @@
       @include font-price();
       color: $color-white;
       &__origin {
-        @include text-font(18px, 400, 18px, 0%);
+        @include text-font(16px, 400, 16px, 0%);
         font-style: italic;
         text-decoration: line-through;
         color: $color-grey-middle;
       }
       &__active {
-        @include font-price();
+        //@include font-price();
+        @include text-font(18px, 500, 18px, 0%);
         color: $color-white;
       }
     }
     &__button-box {
-      width: 50%;
+      width: fit-content; // 50%;
       height: 100%;
       @include flex-vertical();
       @include font-price();
       color: $color-white;
+      border-radius: 3px;
       .to-cart {
         margin: 0;
         padding: 0;
         width: $button-to-cart-size;
         height: 100%;
         background-color: $color-button-to-cart;
+        border-radius: 3px;
         cursor: pointer;
+      }
+      .to-cart:hover {
+        background-color: $color-button-to-cart-hover;
       }
     }
   }

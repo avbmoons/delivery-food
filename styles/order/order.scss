@@ -1,8 +1,8 @@
-@use "sass:math";
+@use 'sass:math';
 
-@import "../vars/vars.scss";
-@import "../components/header/header.scss";
-@import "../components/footer/footer.scss";
+@import '../vars/vars.scss';
+@import '../components/header/header.scss';
+@import '../components/footer/footer.scss';
 
 * {
   margin: 0;
@@ -43,8 +43,78 @@ body {
       min-height: $slide-height;
       @include flex-vertical();
       justify-content: flex-start;
-      .order {
+      .search-block {
         margin: 0 auto;
+        margin-top: 10px;
+        width: 100%;
+        height: 30px; // fit-content;
+        //border: 1px solid yellowgreen;
+        @include flex-vertical();
+
+        .search-box {
+          margin: 0 auto;
+          width: inherit;
+          height: inherit;
+          @include flex-horizontal();
+          justify-content: flex-end;
+          display: none;
+        }
+        .search-input {
+          padding-left: 10px;
+          width: 30%;
+          height: 30px;
+          background-color: $color-grey-light;
+          border: none;
+          //border-radius: 3px;
+          outline: none;
+          border-top-left-radius: 3px;
+          border-bottom-left-radius: 3px;
+        }
+        .search-input::placeholder {
+          @include text-font(14px, 400, 14px, 0%);
+          color: $color-grey-dark;
+        }
+        .search-button {
+          margin-left: 3px;
+          width: 30px;
+          height: 30px;
+          border: none;
+          background-color: $color-background;
+          outline: none;
+          color: $color-grey-light;
+          @include font-mix();
+          font-weight: 300;
+          cursor: pointer;
+        }
+        .clear {
+          margin-left: 0;
+          background-color: $color-grey-light;
+          color: $color-button-to-cart;
+          outline-color: white;
+          @include text-font(18px, 400, 18px, 0%);
+          border-top-right-radius: 3px;
+          border-bottom-right-radius: 3px;
+        }
+        .search-close {
+          width: 30px;
+          height: 30px;
+          border: none;
+          background-color: $color-background;
+          outline: none;
+          color: $color-banner;
+          @include font-mix();
+          font-weight: 300;
+          cursor: pointer;
+        }
+        .search-button:hover {
+          color: $color-button-to-cart;
+        }
+        .search-close:hover {
+          color: $color-button-to-cart;
+        }
+      }
+      .order {
+        margin: 40px auto;
         width: 100%;
         min-height: $input-height;
         @include flex-horizontal();
@@ -55,7 +125,7 @@ body {
         }
         &__checkout {
           margin: 0 auto;
-          width: 50%;
+          width: 45%; // 50%;
           height: auto;
           @include flex-vertical();
           justify-content: flex-start;
@@ -135,41 +205,49 @@ body {
                   @include flex-vertical();
                 }
                 &__username {
+                  padding-left: 10px;
                   width: 50%;
                   @media only screen and (max-width: 1023px) {
                     width: 100%;
                   }
                   height: $input-height;
-                  @include font-menu();
-                  color: $color-white;
+                  @include font-description();
+                  color: $color-black;
                   border: none;
+                  border-radius: 3px;
                 }
                 &__userphone {
+                  padding-left: 10px;
                   width: 50%;
                   @media only screen and (max-width: 1023px) {
                     width: 100%;
                   }
                   height: $input-height;
-                  @include font-menu();
-                  color: $color-white;
+                  @include font-description();
+                  color: $color-black;
                   border: none;
+                  border-radius: 3px;
                 }
                 &__useremail {
+                  padding-left: 10px;
                   width: 50%;
                   @media only screen and (max-width: 1023px) {
                     width: 100%;
                   }
                   height: $input-height;
-                  @include font-menu();
-                  color: $color-white;
+                  @include font-description();
+                  color: $color-black;
                   border: none;
+                  border-radius: 3px;
                 }
                 &__persons {
-                  width: 15%;
+                  padding-left: 10px;
+                  width: 50%; // 15%;
                   height: $input-height;
-                  @include font-menu();
-                  color: $color-white;
+                  @include font-description();
+                  color: $color-black;
                   border: none;
+                  border-radius: 3px;
                 }
                 &__label {
                   width: 48%;
@@ -221,6 +299,7 @@ body {
               }
               &__courier {
                 margin: 0 auto;
+                padding-left: 10px;
                 width: 45%;
                 @media only screen and (max-width: 1023px) {
                   padding: 0 0 20px 10px;
@@ -230,6 +309,7 @@ body {
                 @include flex-horizontal();
                 justify-content: space-between;
                 border: 1px dotted $color-grey-middle;
+                border-radius: 3px;
                 @include font-menu();
                 color: $color-white;
                 &__text-box {
@@ -287,6 +367,7 @@ body {
               }
               &__pickup {
                 margin: 0 auto;
+                padding-left: 10px;
                 width: 45%;
                 @media only screen and (max-width: 1023px) {
                   margin-top: 20px;
@@ -297,6 +378,7 @@ body {
                 @include flex-horizontal();
                 justify-content: space-between;
                 border: 1px dotted $color-grey-middle;
+                border-radius: 3px;
                 @include font-menu();
                 color: $color-white;
                 &__text-box {
@@ -383,50 +465,59 @@ body {
                   width: 100%;
                 }
                 &__userlocality {
+                  padding-left: 10px;
                   width: 50%;
                   @media only screen and (max-width: 1023px) {
                     width: 100%;
                   }
                   height: $input-height;
-                  @include font-menu();
-                  color: $color-white;
+                  @include font-description();
+                  color: $color-black;
                   border: none;
+                  border-radius: 3px;
                 }
                 &__userstreet {
+                  padding-left: 10px;
                   width: 50%;
                   @media only screen and (max-width: 1023px) {
                     width: 100%;
                   }
                   height: $input-height;
-                  @include font-menu();
-                  color: $color-white;
+                  @include font-description();
+                  color: $color-black;
                   border: none;
+                  border-radius: 3px;
                 }
                 &__house-flat {
+                  padding-left: 10px;
                   width: 50%;
                   @media only screen and (max-width: 1023px) {
                     width: 100%;
                   }
                   height: $input-height;
-                  @include font-menu();
+                  @include font-description();
                   @include flex-horizontal();
                   justify-content: flex-end;
                   @media only screen and (max-width: 1023px) {
                     justify-content: space-between;
                   }
                   &__userhouse {
+                    padding-left: 10px;
                     width: 50%;
                     height: $input-height;
-                    @include font-menu();
-                    color: $color-white;
+                    @include font-description();
+                    color: $color-black;
                     border: none;
+                    border-radius: 3px;
                   }
                   &__userflat {
+                    padding-left: 10px;
                     width: 50%;
                     height: $input-height;
-                    @include font-menu();
-                    color: $color-white;
+                    @include font-description();
+                    color: $color-black;
                     border: none;
+                    border-radius: 3px;
                   }
                   &__label {
                     width: 48%;
@@ -447,14 +538,16 @@ body {
                 }
 
                 &__comments {
+                  padding: 10px;
                   width: 50%;
                   @media only screen and (max-width: 1023px) {
                     width: 100%;
                   }
                   height: $textarea-height;
-                  @include font-menu();
-                  color: $color-white;
+                  @include font-description();
+                  color: $color-black;
                   border: none;
+                  border-radius: 3px;
                 }
                 &__label {
                   width: 48%;
@@ -486,6 +579,7 @@ body {
             width: 100%;
             min-height: $payment-type-height;
             @include flex-vertical();
+            //@include flex-horizontal();
             justify-content: flex-start;
             &__heading {
               margin: 0;
@@ -495,7 +589,7 @@ body {
             }
             &__type {
               margin: 0 auto;
-              margin-top: 40px;
+              margin-top: 20px;
               width: 100%;
               height: $payment-type-height;
               @media only screen and (max-width: 1023px) {
@@ -504,12 +598,14 @@ body {
               }
               @include flex-vertical();
               border: 1px dotted $color-grey-middle;
+              border-radius: 3px;
               &__box {
                 margin: 0 auto;
                 width: 90%;
-                height: 60%;
+                height: 70%; // 60%;
                 @include flex-horizontal();
                 justify-content: flex-start;
+                //border: 2px solid orange;
                 input {
                   margin: auto 0;
                   width: 20px;
@@ -565,12 +661,13 @@ body {
               margin-bottom: 20px;
               &__confirm {
                 width: $button-confirm-maket-width;
-                height: $button-to-cart-size;
+                height: $button-to-cart-size + 10px;
                 @include font-description();
                 font-weight: 700;
                 text-transform: uppercase;
                 color: $color-black;
                 background-color: $color-button-to-cart;
+                border-radius: 3px;
                 cursor: pointer;
               }
             }
@@ -578,7 +675,7 @@ body {
         }
         &__cart {
           margin: 0 auto;
-          width: 48%;
+          width: 38%; // 48%;
           @media only screen and (max-width: 1023px) {
             width: 100%;
           }
@@ -602,11 +699,12 @@ body {
               &__item {
                 margin: 0 auto;
                 margin-bottom: 10px;
-                padding: 10px 0 10px 0;
+                //padding: 10px 0 10px 0;
                 width: 100%;
                 @include flex-horizontal();
                 justify-content: space-between;
                 border: 1px solid $color-grey-middle;
+                border-radius: 3px;
                 &__image {
                   margin: 0;
                   width: 15%;
@@ -615,7 +713,7 @@ body {
                     display: none;
                   }
                   img {
-                    width: $item-order-height;
+                    width: auto; // $item-order-height;
                   }
                 }
                 &__name-box {
@@ -623,7 +721,7 @@ body {
                   width: 40%;
                   @include flex-vertical();
                   &__name {
-                    @include font-mix();
+                    @include font-menu();
                     text-align: left;
                     color: $color-white;
                   }
@@ -654,7 +752,7 @@ body {
                     }
                     &__value {
                       width: 50%;
-                      @include font-mix();
+                      @include font-banner();
                       text-align: center;
                       color: $color-white;
                       background-color: $color-background;
@@ -678,7 +776,7 @@ body {
                   @include font-price();
                   color: $color-white;
                   &__origin {
-                    @include text-font(18px, 400, 18px, 0%);
+                    @include text-font(14px, 400, 14px, 0%);
                     font-style: italic;
                     text-decoration: line-through;
                     text-align: center;
@@ -686,7 +784,7 @@ body {
                     display: none;
                   }
                   &__active {
-                    @include font-price();
+                    @include font-banner();
                     text-align: center;
                     color: $color-white;
                   }

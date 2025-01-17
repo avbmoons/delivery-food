@@ -5,8 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Order</title>
     <link rel="stylesheet" href="../styles/order/order.css" />
+    <script defer src="../scripts/catalogUrl.js"></script>
+    <script defer src="../scripts/searchUrl.js"></script>
     <script defer src="../scripts/menuClose.js"></script>
     <script defer src="../scripts/showCart.js"></script>
+    <script defer src="../scripts/showSearch.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -22,34 +25,42 @@
             </section>
             <nav class="header-block__navigation">
               <div class="nav-box">
-                <div class="nav-item">
+                <div class="nav-item" name="promo">
                   <div class="nav-item__button-box">
                     <a class="nav-item__button-box__button" href="#">PROMO</a>
                   </div>
                   <img
                     class="nav-item__image"
-                    src="../assets/icons/fire.svg"
+                    src="../assets/icons/fire.png"
                     alt="promo"
                   />
                 </div>
-                <div class="nav-item">
+                <div class="nav-item" name="all">
                   <div class="nav-item__button-box">
                     <a
                       class="nav-item__button-box__button"
-                      href="../pages/catalog.html"
+                      href="../pages/catalog.html?category="
                       >ALL&nbsp;DISHES</a
                     >
                   </div>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item" name="vegan">
                   <div class="nav-item__button-box">
-                    <a class="nav-item__button-box__button" href="#">VEGAN</a>
+                    <a
+                      class="nav-item__button-box__button"
+                      href="../pages/catalog.html?category="
+                      >VEGAN</a
+                    >
                   </div>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item" name="hots">
                   <div class="nav-item__button-box">
-                    <a class="nav-item__button-box__button" href="#">HOTS</a>
-                    <div class="nav-item__button-box__content">
+                    <a
+                      class="nav-item__button-box__button"
+                      href="../pages/catalog.html?category="
+                      >HOTS</a
+                    >
+                    <!-- <div class="nav-item__button-box__content">
                       <ul class="nav-item__button-box__content__list">
                         <li class="nav-item__button-box__content__list__row">
                           <a
@@ -80,13 +91,17 @@
                           >
                         </li>
                       </ul>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item" name="colds">
                   <div class="nav-item__button-box">
-                    <a class="nav-item__button-box__button" href="#">COLDS</a>
-                    <div class="nav-item__button-box__content">
+                    <a
+                      class="nav-item__button-box__button"
+                      href="../pages/catalog.html?category="
+                      >COLDS</a
+                    >
+                    <!-- <div class="nav-item__button-box__content">
                       <ul class="nav-item__button-box__content__list">
                         <li class="nav-item__button-box__content__list__row">
                           <a
@@ -117,13 +132,17 @@
                           >
                         </li>
                       </ul>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item" name="bakery">
                   <div class="nav-item__button-box">
-                    <a class="nav-item__button-box__button" href="#">BAKERY</a>
-                    <div class="nav-item__button-box__content">
+                    <a
+                      class="nav-item__button-box__button"
+                      href="../pages/catalog.html?category="
+                      >BAKERY</a
+                    >
+                    <!-- <div class="nav-item__button-box__content">
                       <ul class="nav-item__button-box__content__list">
                         <li class="nav-item__button-box__content__list__row">
                           <a
@@ -154,15 +173,17 @@
                           >
                         </li>
                       </ul>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item" name="desserts">
                   <div class="nav-item__button-box">
-                    <a class="nav-item__button-box__button" href="#"
+                    <a
+                      class="nav-item__button-box__button"
+                      href="../pages/catalog.html?category="
                       >DESSERTS</a
                     >
-                    <div class="nav-item__button-box__content">
+                    <!-- <div class="nav-item__button-box__content">
                       <ul class="nav-item__button-box__content__list">
                         <li class="nav-item__button-box__content__list__row">
                           <a
@@ -186,15 +207,17 @@
                           >
                         </li>
                       </ul>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
-                <div class="nav-item">
+                <div class="nav-item" name="beverages">
                   <div class="nav-item__button-box">
-                    <a class="nav-item__button-box__button" href="#"
-                      >BEVERAGE</a
+                    <a
+                      class="nav-item__button-box__button"
+                      href="../pages/catalog.html?category="
+                      >BEVERAGES</a
                     >
-                    <div class="nav-item__button-box__content">
+                    <!-- <div class="nav-item__button-box__content">
                       <ul class="nav-item__button-box__content__list">
                         <li class="nav-item__button-box__content__list__row">
                           <a
@@ -225,7 +248,7 @@
                           >
                         </li>
                       </ul>
-                    </div>
+                    </div> -->
                   </div>
                 </div>
               </div>
@@ -248,17 +271,19 @@
                     &#10006;
                   </button>
                 </div>
-                <div class="menu-mini-item">
+                <div class="menu-mini-item" name="all">
                   <img
                     class="menu-mini-item__image"
                     src="../assets/icons/heart24.png"
                     alt="all"
                   />
-                  <a class="menu-mini-item__link" href="../pages/catalog.html"
-                    >ALL dishes</a
+                  <a
+                    class="menu-mini-item__link"
+                    href="../pages/catalog.html?category="
+                    >All dishes</a
                   >
                 </div>
-                <div class="menu-mini-item">
+                <div class="menu-mini-item" name="promo">
                   <img
                     class="menu-mini-item__image"
                     src="../assets/icons/fire.png"
@@ -266,59 +291,88 @@
                   />
                   <a class="menu-mini-item__link" href="#">Promo</a>
                 </div>
-                <div class="menu-mini-item">
+                <div class="menu-mini-item" name="vegan">
                   <img
                     class="menu-mini-item__image"
                     src="../assets/catalog/image-2.png"
                     alt="promo"
                   />
-                  <a class="menu-mini-item__link" href="#">Vegan</a>
+                  <a
+                    class="menu-mini-item__link"
+                    href="../pages/catalog.html?category="
+                    >Vegan</a
+                  >
                 </div>
-                <div class="menu-mini-item">
+                <div class="menu-mini-item" name="hots">
                   <img
                     class="menu-mini-item__image"
                     src="../assets/catalog/image-11.png"
                     alt="promo"
                   />
-                  <a class="menu-mini-item__link" href="#">Hots</a>
+                  <a
+                    class="menu-mini-item__link"
+                    href="../pages/catalog.html?category="
+                    >Hots</a
+                  >
                 </div>
-                <div class="menu-mini-item">
+                <div class="menu-mini-item" name="colds">
                   <img
                     class="menu-mini-item__image"
                     src="../assets/catalog/image-8.png"
                     alt="promo"
                   />
-                  <a class="menu-mini-item__link" href="#">Colds</a>
+                  <a
+                    class="menu-mini-item__link"
+                    href="../pages/catalog.html?category="
+                    >Colds</a
+                  >
                 </div>
-                <div class="menu-mini-item">
+                <div class="menu-mini-item" name="bakery">
                   <img
                     class="menu-mini-item__image"
                     src="../assets/catalog/image-13.png"
                     alt="promo"
                   />
-                  <a class="menu-mini-item__link" href="#">Bakery</a>
+                  <a
+                    class="menu-mini-item__link"
+                    href="../pages/catalog.html?category="
+                    >Bakery</a
+                  >
                 </div>
-                <div class="menu-mini-item">
+                <div class="menu-mini-item" name="desserts">
                   <img
                     class="menu-mini-item__image"
                     src="../assets/catalog/image-19.png"
                     alt="promo"
                   />
-                  <a class="menu-mini-item__link" href="#">Desserts</a>
+                  <a
+                    class="menu-mini-item__link"
+                    href="../pages/catalog.html?category="
+                    >Desserts</a
+                  >
                 </div>
-                <div class="menu-mini-item">
+                <div class="menu-mini-item" name="beverages">
                   <img
                     class="menu-mini-item__image"
                     src="../assets/catalog/image-2.png"
                     alt="promo"
                   />
-                  <a class="menu-mini-item__link" href="#">Beverage</a>
+                  <a
+                    class="menu-mini-item__link"
+                    href="../pages/catalog.html?category="
+                    >Beverages</a
+                  >
                 </div>
               </div>
             </div>
             <section class="header-block__services">
               <div class="services-box">
-                <a class="service-link" href="#" title="Search">
+                <a
+                  class="service-link"
+                  href="#"
+                  title="Search"
+                  onclick="showSearch()"
+                >
                   <svg
                     class="service-image"
                     width="24"
@@ -398,15 +452,44 @@
           </div>
         </header>
         <main>
+          <div class="search-block">
+            <div class="search-box">
+              <input
+                class="search-input"
+                id="inputSearch"
+                type="text"
+                placeholder="Enter you seach here"
+              />
+              <button
+                class="search-button clear"
+                id="btnSearch"
+                type="button"
+                onclick="searchReset()"
+              >
+                &#8634;
+              </button>
+              <button
+                class="search-button"
+                id="btnSearch"
+                type="button"
+                onclick="searchAction()"
+              >
+                &#128269;
+              </button>
+              <button class="search-close" onclick="closeSearch()">
+                &#10006;
+              </button>
+            </div>
+          </div>
           <section name="order">
             <div class="order">
               <div class="order__checkout">
                 <p class="order__checkout__heading">Checkout</p>
-                <li class="crumbs">
+                <!-- <li class="crumbs">
                   <a class="crumbs__link" href="../index.html">Home /</a>
                   <a class="crumbs__link" href="cart.html">Cart /</a>
                   <a class="crumbs__link" href="#">Checkout</a>
-                </li>
+                </li> -->
                 <div class="order__checkout__contacts">
                   <p class="order__checkout__contacts__heading">Contacts</p>
                   <form
@@ -415,8 +498,9 @@
                     action="#"
                   >
                     <p class="order__checkout__contacts__form__info">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Illum earum amet quia, asperiores praesentium debitis. Ex.
+                      Please, enter your contact information for selected
+                      delivery. Be sure your contacts will be used only for this
+                      purpose.
                     </p>
                     <div class="order__checkout__contacts__form__input">
                       <div
@@ -482,8 +566,8 @@
                       <input
                         class="order__checkout__contacts__form__input__persons"
                         id="persons"
-                        type="number"
-                        placeholder=""
+                        type="text"
+                        placeholder="Number of persons"
                       />
                     </div>
                   </form>
@@ -652,7 +736,7 @@
                   <p class="order__checkout__payment__heading">Payment</p>
                   <div class="order__checkout__payment__type">
                     <div class="order__checkout__payment__type__box">
-                      <input type="radio" name="type" value="bank" />
+                      <input type="radio" name="type" value="bank" checked />
                       <div
                         class="order__checkout__payment__type__box__card-label"
                       >
@@ -734,12 +818,12 @@
                         <p
                           class="order__cart__block__props__item__name-box__name"
                         >
-                          Cheese
+                          Kharcho
                         </p>
                         <p
                           class="order__cart__block__props__item__name-box__weight"
                         >
-                          100 g
+                          350 g
                         </p>
                       </div>
                       <div class="order__cart__block__props__item__counter-box">
@@ -753,12 +837,12 @@
                         <p
                           class="order__cart__block__props__item__total-box__origin"
                         >
-                          6.20&nbsp;&euro;
+                          3.70&nbsp;&euro;
                         </p>
                         <p
                           class="order__cart__block__props__item__total-box__active"
                         >
-                          4.95&nbsp;&euro;
+                          3.70&nbsp;&euro;
                         </p>
                       </div>
                     </div>
@@ -770,12 +854,12 @@
                         <p
                           class="order__cart__block__props__item__name-box__name"
                         >
-                          Fish
+                          Chicken Soup
                         </p>
                         <p
                           class="order__cart__block__props__item__name-box__weight"
                         >
-                          100 g
+                          350 g
                         </p>
                       </div>
                       <div class="order__cart__block__props__item__counter-box">
@@ -789,12 +873,12 @@
                         <p
                           class="order__cart__block__props__item__total-box__origin"
                         >
-                          6.20&nbsp;&euro;
+                          2.60&nbsp;&euro;
                         </p>
                         <p
                           class="order__cart__block__props__item__total-box__active"
                         >
-                          4.95&nbsp;&euro;
+                          2.60&nbsp;&euro;
                         </p>
                       </div>
                     </div>

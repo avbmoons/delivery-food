@@ -60,6 +60,32 @@ class CatalogItem {
       </div>
     </div>`;
   }
+  renderOnePrice() {
+    return `<div data-id=${this.id} class="item-box">
+      <div class="item-box__image">
+        <img class="item-image"
+          src="${this.image}"
+          id="image-${this.id}"
+          alt="item"
+          title="${this.name}"
+        />
+      </div>
+      <a class="item-box__heading" href="./product.html?id=" id="product${this.id}">${this.name}</a>
+      <p class="item-box__weight">${this.weight}&nbsp;${this.units}</p>
+      <p class="item-box__text">${this.resume}</p>
+      <div class="item-box__shopping-box">
+        <div class="item-box__shopping-box__price-box">
+          <p class="item-box__shopping-box__price-box__active">
+            ${this.priceActive}&nbsp;${this.currency}</p>
+        </div>
+        <div class="item-box__shopping-box__button-box">
+          <button type=""button" class="to-cart" id="toCart-${this.id}">
+            <img src="../assets/icons/cart3.png" alt="to-cart" />
+          </button>
+        </div>
+      </div>
+    </div>`;
+  }
 }
 
 class RelatedList {
@@ -90,7 +116,12 @@ class RelatedList {
         ccatalog.isPopular,
         ccatalog.isVegan
       );
-      listHtml += catalogItem.render();
+      if (catalogItem.priceActive == catalogItem.priceOrigin) {
+        listHtml += catalogItem.renderOnePrice();
+      } else {
+        listHtml += catalogItem.render();
+      }
+      //listHtml += catalogItem.render();
     });
     document.querySelector('.catalog__block').innerHTML = listHtml;
   }

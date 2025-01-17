@@ -41,7 +41,7 @@ footer {
 }
 footer .footer-top {
   margin: 0 auto;
-  width: 93.75%;
+  width: 80%;
   height: 70%;
   display: flex;
   justify-content: center;
@@ -146,9 +146,9 @@ footer .footer-top__left__box__navigation__nav-item__text {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -225,9 +225,9 @@ footer .footer-top__right__box__contacts {
 footer .footer-top__right__box__contacts__text {
   margin: 0 auto;
   margin-left: 20px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -255,7 +255,7 @@ footer .footer-top__right__box__contacts .email:hover {
 }
 footer .footer-bottom {
   margin: 0 auto;
-  width: 93.75%;
+  width: 80%;
   height: 30%;
   display: flex;
   justify-content: center;
@@ -295,9 +295,9 @@ footer .footer-bottom__left__box {
 }
 footer .footer-bottom__left__box__copyrights {
   margin: 0;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   color: #ffffff;
@@ -339,9 +339,9 @@ footer .footer-bottom__right__box__roles {
 footer .footer-bottom__right__box__roles__text {
   margin: 0 auto;
   margin-left: 20px;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;

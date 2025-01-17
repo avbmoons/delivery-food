@@ -28,7 +28,7 @@ body {
 }
 .header-alt__block {
   margin: 0 auto;
-  width: 93.75%;
+  width: 80%;
   height: 60%;
   display: flex;
   justify-content: center;
@@ -97,9 +97,9 @@ body {
   margin: 0 auto;
   width: 100%;
   height: auto;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   color: #ffffff;
@@ -147,7 +147,7 @@ header {
 }
 header .header-block {
   margin: 0 auto;
-  width: 93.75%;
+  width: 80%;
   height: 60%;
   display: flex;
   justify-content: center;
@@ -208,9 +208,9 @@ header .header-block__navigation .nav-box .nav-item {
 header .header-block__navigation .nav-box .nav-item__text {
   margin: 0 auto;
   width: 100%;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -238,9 +238,9 @@ header .header-block__navigation .nav-box .nav-item__button-box__button {
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   text-decoration: none;
   cursor: pointer;
@@ -271,9 +271,9 @@ header .header-block__navigation .nav-box .nav-item__button-box__content__list__
 }
 header .header-block__navigation .nav-box .nav-item__button-box__content__list__row__link {
   text-decoration: none;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  line-height: 12px;
+  line-height: 14px;
   letter-spacing: 0%;
   color: #ffffff;
 }
